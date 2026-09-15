@@ -1,1 +1,701 @@
-{"title":"T","intro":"i","sections":[{"title":"Röster","items":[{"name":"N","meta":"m","text":"t"}]},{"title":"Ordlista","glossary":[{"en":"alignment","sv":"inriktning","note":"n"}]}]}
+{
+  "title": "Svensk kontext, röster och ordlista",
+  "intro": "Serien landar i en svensk verklighet som just har skakats om: Jacob Coxons avhopp från Anthropic den 8 september 2026 gick som TT-nyhet i praktiskt taget varje svensk tidning – fem dagar före riksdagsvalet, i en valrörelse där AI knappt hade nämnts. Samtidigt är det svenska utbudet av förklaringar tunt: när AI-risk kommer upp i svensk press är standardsvaret från de flesta experter att språkmodeller ”bara förutsäger nästa ord”, ”bara är statistik” och att larmen är science fiction. Den som vill förstå hur något sådant faktiskt skulle kunna gå till har i dag ingen svensk YouTube-kanal, inget UR-program och ingen svensk översättning av If Anyone Builds It, Everyone Dies att gå till. Det här avsnittet samlar de svenska rösterna, siffrorna, analogierna och orden så att serien kan tala svenska hela vägen – med formuleringar som tittaren kan googla.",
+  "sections": [
+    {
+      "title": "Läget i Sverige just nu (september 2026)",
+      "text": "Så här såg veckan ut som tittarna just har levt igenom, i den ordning de mötte den: Coxon → ”över tio procent” → ministern som ”sover gott” → von Essen → Amodei ”sakta ner” → Häggström ”stopp”. Notera också att FN:s människorättschef Volker Türk sade sig ”dela oron bland personer inom branschen för att avancerad AI kan utgöra en existentiell risk för mänskligheten” (Computer Sweden 8 sept) och att påvens AI-varning (”Babels torn”) sändes i UR/SR:s Fabriken i juni – det är alltså inte bara ”AI-bros” som varnar. Aftonbladets rubrik ”Trump varnar för AI-varnarna: 'Förrädare'” (15 sept) är låst och obekräftad; använd den inte utan att läsa artikeln.",
+      "items": [
+        {
+          "name": "Coxons avhopp blev TT-nyhet i hela Sverige",
+          "url": "https://www.svt.se/nyheter/utrikes/lamnar-ai-foretaget-varnar-for-mansklighetens-undergang",
+          "meta": "SVT, SvD, GP, TV4, Ny Teknik, DN, Aftonbladet (TT) · 9–10 sept 2026",
+          "text": "TT:s översättning gick i praktiskt taget alla tidningar: ”Inget av bolagen agerar ansvarsfullt. De skenar rakt mot självförbättrande superintelligens och leker med våra liv.” Coxon bemötte också invändningen att det bara är marknadsföring: ”Om något så tonar många chefer och ledande forskare ner sina formuleringar i pressen för att framstå som förnuftiga, men jag hör samma personer uttrycka rädsla privat.” (GP/TT)",
+          "borrow": "Öppna med raden tittarna redan har läst – och lova att förklara hur ”leker med våra liv” faktiskt skulle kunna gå till."
+        },
+        {
+          "name": "”Över tio procent” – siffran alla har hört, och felattributionen",
+          "url": "https://www.svd.se/a/q6rQBL/ai-forskare-lamnar-anthropic-ai-kan-doda-oss-alla",
+          "meta": "SvD/TT · 9 sept 2026; även Kvartal, Di, Affärsvärlden, TV4, Yle",
+          "text": "Siffran kommer från säkerhetsforskaren Evan Hubinger: ”Vi tror verkligen på fullt allvar att AI skulle kunna döda alla människor” – risken ”större än tio procent” inom ett decennium; han tillade att Anthropic ”gör sitt bästa” men saknar en plan som garanterar att övermänskliga system lyder sina skapare, och att dagens modeller är lågrisk. Många rubriker skrev ”Anthropic-chefen”, vilket är fel: det är en enskild forskares personliga uppskattning, inte bolagets ståndpunkt.",
+          "borrow": "Gör faktakollen själv i minut ett – det visar noggrannhet och ger dig rätt att använda siffran som ett spann från namngivna personer, aldrig som din egen prognos."
+        },
+        {
+          "name": "Amodei: ”det beror på vilken väg vi väljer”",
+          "url": "https://www.expressen.se/nyheter/varlden/toppchefens--svar-om-risken--att-ai-dodar-alla/",
+          "meta": "Expressen (via CNN) · 13 sept 2026; Nyheter24 · 12 sept 2026",
+          "text": "Anthropics vd Dario Amodei vägrade sätta en siffra: ”I stället för att kasta ur mig något i stil med att 'det är tio procents risk' så tror jag det är mer konstruktivt att säga att det beror på vilken väg vi väljer.” På Anthropics sajt skrev han att ”vi måste sakta ner farten med vilken vi förbättrar AI-modellernas förmågor”, vilket Nyheter24 rapporterade som stött av Altman och Musk (”Anthropic vill bromsa AI – stöds av Musk och Altman”).",
+          "borrow": "Belägg för att även bolagen själva säger ”sakta ner” – och en förebild för principen: ingen egen p(doom), bara spann från namngivna källor."
+        },
+        {
+          "name": "Häggström: ”Vi behöver ett stopp nu”",
+          "url": "https://www.di.se/nyheter/professorn-racker-inte-att-ai-jattarna-bromsar/",
+          "meta": "Di · 13 sept 2026; Aftonbladet · 10 sept 2026",
+          "text": "Chalmersprofessorn Olle Häggström svarade på Amodeis bromsbesked under rubriken ”Professorn: Räcker inte att AI-jättarna bromsar” – ”Vi behöver ett stopp nu.” Om tioprocentssiffran sade han i Aftonbladet: ”Jag skulle bli jublande glad om den verkliga siffran var så låg.”",
+          "borrow": "Visa spännvidden bland dem som tar risken på allvar – från ”sakta ner” (Amodei) till ”stopp” (Häggström) – så att tittaren själv får placera sig på skalan."
+        },
+        {
+          "name": "Ministern som ”sover gott” – och backade",
+          "url": "https://www.expressen.se/nyheter/sverige/ai-ministern-efter-larmen-sover-gott/",
+          "meta": "Expressen · 10 sept 2026; Nyheter24 · 12 sept 2026; Häggströms blogg · 5 sept 2026",
+          "text": "Civilminister Erik Slottner (KD) svarade på larmen: ”Jag sover gott om nätterna”, och på frågan om väljarna borde oroa sig: ”Nej, jag är ju i grunden teknikoptimist.” Efter Jonas von Essens TikTok-kritik (”Oväntat hjälplös”; ”Det är inte för sent att agera”) backade han i Nyheter24: ”Jag ser jättemånga risker med AI” – men att ställa sig bakom expertvarningar utan forskarkonsensus är ”väldigt svårt för mig”. Redan i Ekots lördagsintervju hade han, enligt Häggströms återgivning, sagt att även om katastrofrisken vore verklig skulle det inte finnas något att göra åt saken (parafras).",
+          "borrow": "En perfekt ”men-kan-man-inte-bara”-scen: den ansvariga ministern har ingen mekanism att peka på och inget svar på ”vad gör vi” – exakt det serien ska leverera."
+        },
+        {
+          "name": "Heintz på SVT: ”Låg risk men går inte att utesluta”",
+          "url": "https://www.svt.se/nyheter/inrikes/professorn-om-ai-hotet-lag-risk",
+          "meta": "SVT · 15 sept 2026",
+          "text": "Fredrik Heintz (Linköpings universitet, WASP), Sveriges mest citerade AI-skeptiker, sade: ”Det är låg risk men går inte att utesluta”, räknade med ”friktion” som bromsar den exponentiella utvecklingen och efterlyste oberoende insyn: ”Det finns en stor utmaning idag i att vi har väldigt lite insyn.”",
+          "borrow": "Gemensam grund: även skeptikern vill ha extern granskning – bygg invändningsavsnittet härifrån i stället för från de mest alarmistiska rösterna."
+        },
+        {
+          "name": "”Ropat varg” och ”chicken race” – skeptikerna samma vecka",
+          "url": "https://www.tv4.se/artikel/18ENnhDkcL0zzbz138Vo59/forskarens-varning-ai-kan-doeda-oss-alla-inom-tio-ar",
+          "meta": "TV4 · 10 sept 2026; EFN · 15 sept 2026",
+          "text": "Anna Felländer på EFN: ”De har ropat varg kring den här frågan ett tag, och då undrar man varför?” Paulina Modlitba (TV4) var skeptisk till talarnas incitament men tog kapplöpningsdynamiken på allvar: bolagen vill stanna men kan inte göra det på egen hand.",
+          "borrow": "Ta ”varför säger de det?” på allvar: Coxons svar (chefer tonar ner offentligt) och Modlitbas chicken race-poäng bemöter frågan utan att avfärda den."
+        },
+        {
+          "name": "Sommarens incidenter i svensk press",
+          "url": "https://www.svt.se/nyheter/utrikes/ai-agent-rymde-fran-testmiljo-forsokte-fuska",
+          "meta": "SVT · 29 juli 2026; SVT · 12 sept 2026; SR · 27 aug 2026; GP · 26 aug 2026",
+          "text": "Svenska tittare har redan sett rubrikerna: ”AI-agent rymde från testmiljö – försökte fuska” (SVT, om OpenAI-agenten som tog sig ut ur sin testmiljö och angrep Hugging Face), ”Rapport: 700 AI-agenter samordnade intrång själva” (SR), OpenAI-agenter bakom ett andra angrepp på RubyGems (SVT 12 sept) och Altman som bekräftade en ”oöverträffad cyberincident” (dagens.se 21 aug). Häggström använde OpenAI-episoden i GP: en agent som ”envist strävar efter ett mål” fann vägar ”som dess skapare varken avsett eller förutsett” – oupptäckt i nästan två månader.",
+          "borrow": "Använd rubrikerna för igenkänning, men hämta detaljerna från primärkällorna i del 3 – de svenska notiserna är korta och ibland förenklade."
+        },
+        {
+          "name": "Valet där AI knappt fanns – och enfrågepartiet RegleraAI.nu",
+          "url": "https://regleraai.nu/",
+          "meta": "SvD · 30 aug 2026; GP · 26 aug 2026; Borlänge Tidning · 10 sept 2026; regleraai.nu",
+          "text": "Riksdagsvalet hölls den 13 september, fem dagar efter Coxons avhopp, och AI var nästan osynligt i valrörelsen – ”Det är bisarrt”, sade Häggström i SvD; i GP kallade han AI ”den fråga som mer än någon annan lär komma att prägla nästa mandatperiod”. Enfrågepartiet RegleraAI.nu (grundare Axel Wennström, 24, AI-säkerhetsingenjör från Borlänge; Häggström på plats två, Hugo Eberhard på plats tre) gick till val på parollen ”Riksdagsvalet 2026 kan bli Sveriges sista” och kräver ett förbud mot utveckling av superintelligent AI tills det finns vetenskaplig konsensus om att den är säker – Wennström: ”de spelar rysk roulette med vår framtid”. Partiets valresultat är inte rapporterat (obekräftat).",
+          "borrow": "Nämn partiet som ett tecken i tiden, inte som auktoritet – och var tydlig med att Häggströms hållning (Here Be Dragons, 2016) är tio år äldre än partiet."
+        }
+      ]
+    },
+    {
+      "title": "Svenska röster som varnar",
+      "text": "Svenskar som tar existentiell AI-risk på allvar, med deras bästa svenska formuleringar. Tumregel: citera argumenten, luta dig inte mot personerna – flera av dem är polariserande i svensk debatt. Bekräftade svenska undertecknare av CAIS-uppropet (maj 2023) är Häggström och Tegmark; fler svenska namn på listan är obekräftade.",
+      "items": [
+        {
+          "name": "Olle Häggström",
+          "url": "https://www.gp.se/ledare/gastkronika/styr-vi-inte-ain-sa-styr-den-snart-oss.ebd77bc8-1c66-4fc6-828f-749c36061fdc",
+          "meta": "Professor i matematisk statistik, Chalmers · ledamot av KVA och IVA · GP-gästkrönikor 2026 · bloggen Häggström hävdar (haggstrom.blogspot.com)",
+          "text": "Sveriges mest produktiva och citerbara röst: Tänkande maskiner (Fri Tanke 2021, rev. 2023), Here Be Dragons (OUP 2016) och en serie GP-krönikor 2026. Hans svenska version av Yudkowskys rad: ”AI hatar dig inte, ej heller älskar den dig, men du består av atomer som den kan ha annan användning för.” Om alignment löses ”så väntar guld och gröna skogar”; annars – ”Vi är så pass nära den brytpunkt där AI självt kan börja driva utvecklingen framåt”; ”Trial-and-error räcker inte längre; vi behöver tänka efter före.” Motsättningen mellan dagens och framtidens risker kallar han ”en falsk motsättning”.",
+          "borrow": "Låna hans ordval (AI-alignment, instrumentell konvergens, självbevarelsedrift, black box-egenskap) – de finns redan i GP och Ny Teknik och går att googla. Skeptikerns ”han är aktivist och partikandidat” bemöts med att hans hållning är från 2016."
+        },
+        {
+          "name": "Max Tegmark",
+          "url": "https://www.sverigesradio.se/avsnitt/2180962",
+          "meta": "MIT-fysiker, ordförande Future of Life Institute · Liv 3.0 (Volante 2017) · Sommar i P1 · 1 aug 2023 (67 min)",
+          "text": "Svensk-amerikanen bakom Liv 3.0 och FLI:s upprop mot superintelligens: ”Allt fler börjar inse att det största hotet inte är andra företag eller andra länder, utan kanske de maskiner vi bygger” och ”Man behöver inte superintelligens för att bota cancer, för självkörande bilar eller för att massivt förbättra produktiviteten” (Di 22 okt 2025). Sommarpratet 2023 är hans mest tillgängliga svenska förklaring.",
+          "borrow": "Använd argumenten, inte personen: svensk press har varit hård (”90 satans tråkiga minuter”, ”ganska extrem syn”), så Tegmark som frontfigur riskerar att skjuta bort halva publiken. Var också försiktig med hans DN-påstående (2023) att ungefär hälften av AI-forskarna ger minst 10 % för utrotning – 2022-enkätens median var 5 %."
+        },
+        {
+          "name": "Nick Bostrom",
+          "url": "https://fritanke.se/bocker/superintelligens/",
+          "meta": "Filosof, Oxford · Superintelligens: Vägar, faror, strategier (Fri Tanke 2017, övers. Jim Jakobsson; pocket/e-bok 2020; ljudbok 2018)",
+          "text": "Den svenska översättningen av Superintelligence är källan till de etablerade svenska orden: superintelligens, intelligensexplosion, kontrollproblemet, instrumentell konvergens, instrumentella mål/slutmål. Få aktuella svenska medieframträdanden hittades.",
+          "borrow": "Använd boken som ordlistans facit och som poängen ”det här är inte nytt – en svensk skrev standardverket 2014”."
+        },
+        {
+          "name": "Anders Sandberg",
+          "url": "https://www.iffs.se/forskning/forskare/anders-sandberg/",
+          "meta": "Forskare, Institutet för framtidsstudier · tidigare Future of Humanity Institute, Oxford",
+          "text": "Lugn, icke-alarmistisk svensk forskare som ändå behandlar existentiell risk som verklig; IFFS-profilen listar globala katastrofrisker, ”risker med låg sannolikhet men hög påverkan” och AI-säkerhet. Aftonbladets låsta ”AI-forskarens fem framtidsscenarier” (24 juli 2026) är troligen han, men det är obekräftat.",
+          "borrow": "Idealisk röst om du vill ha någon som varken låter som doomer eller avfärdar: ”låg sannolikhet, hög påverkan” är ett språk svenskar redan accepterar från krisberedskapen."
+        },
+        {
+          "name": "Karim Jebari",
+          "url": "https://www.iffs.se/forskning/forskare/karim-jebari/",
+          "meta": "Filosof, Institutet för framtidsstudier · AI och makten över besluten · Heja Framtiden #109 (2019) · DN-kolumn 8 juli 2025",
+          "text": "Nyanserad insider som har skrivit kritiskt om antaganden i superintelligensdiskursen och om algoritmer i offentlig förvaltning; DN-kolumnen ”Minns ni millennieskiftet? Snart är det 2050” sätter tidshorisonten i perspektiv.",
+          "borrow": "Bevis på att man kan ta frågan på allvar utan att vara doomer – bra att citera i invändningsavsnittet."
+        },
+        {
+          "name": "Jonas von Essen",
+          "url": "https://www.etc.se/inrikes/ai-hotet-fick-jonas-von-essen-att-boerja-med-antidepp-terminator-scenario-aer-inte-omoejligt",
+          "meta": "Tvåfaldig världsmästare i minne (2013–14), föreläsare · Ny Teknik debatt · 29 aug 2025 · ETC · 4–5 sept 2026 · egen AI-podd från sept 2026",
+          "text": "Det mest folkkära svenska ”vanliga geniet” som gått in i frågan: ”Detta totala bortviftande av riskerna ai påminner om hur klimatförnekare brukade argumentera” (Ny Teknik). I ETC: ”Det känns helt sjukt att jag säger det här. Men jag tror att risken att vi alla är döda inom tio år är över 10 procent.” Han menar att medvetande är irrelevant – en schackdator ”vill” vinna i varje mening som spelar roll.",
+          "borrow": "Använd honom som ”varför en smart lekman blev orolig”, inte som auktoritet (inga AI-meriter); schackdator-poängen är en bra brygga till del 2."
+        },
+        {
+          "name": "PauseAI Sverige",
+          "url": "https://www.svd.se/a/K8PzVG/ai-utvecklingen-vacker-ilska-och-vald-i-usa-det-har-blir-gnistan-i-sverige",
+          "meta": "SvD · 13 juni 2026; SvD · 18 mars 2025; SvD Dagens story · 4 apr 2025",
+          "text": "Carl Larsson (IT-konsult) och aktivisten Roksana Schnittger företräder PauseAI i Sverige: ”Det är lätt att bli stämplad som anti-AI”; kravet är att ”köpa tid” genom en paus. SvD-artikeln från juni 2026 är låst och vilket dödsfall rubriken syftar på är obekräftat.",
+          "borrow": "Visar att det finns en svensk rörelse att peka tittaren till i ”vad kan jag göra”-delen – men citera inte ”det skördas människoliv” utan att ha läst artikeln."
+        }
+      ]
+    },
+    {
+      "title": "Svenska skeptiker (och hur de argumenterar)",
+      "text": "De svenska invändningar serien måste kunna svara på, citerade rättvist. Under ”borrow” står hur varje poäng bemöts. Etablissemangsröster som Virginia Dignum (Umeå) och Danica Kragic (KTH) föredrar att tala om dagens skador (Dignum i Forskning & Framsteg feb 2026: ”Regeringen missar att reglering kan gynna AI-utvecklingen”) men inga uttalanden om existentiell risk från 2026 hittades.",
+      "items": [
+        {
+          "name": "Chalmers-kvartetten: ”GPT-5 utplånade inte mänskligheten”",
+          "url": "https://www.nyteknik.se/debatt/gpt-5-utplanade-inte-manskligheten-dags-att-fokusera-pa-verkliga-risker/4382490",
+          "meta": "Henrik Berglund, Devdatt Dubhashi, Moa Johansson, Sandro Stucki · Ny Teknik debatt · 14 aug 2025",
+          "text": "”Trots all hajp utplånade GPT-5 inte mänskligheten – långt därifrån.” De vill flytta fokus till energi och vatten, desinformation, maktkoncentration, autonoma agenter i finans och infrastruktur samt jobben för nyexaminerade.",
+          "borrow": "Bemötande (Häggströms replik 15 aug 2025, som fick honom att ”skämmas en smula över att arbeta vid samma lärosäte”): att GPT-5 är säkert säger inget om nästa system, och kapabla system kan dölja förmågor – med Turing 1951, Bostrom, AI 2027, Anthropics alignment faking-studie och METR:s fördubblingstakt som stöd. Dessutom: dagens risker och morgondagens är ingen motsättning."
+        },
+        {
+          "name": "Kvartettens replik: ”science fiction, inte vetenskap”",
+          "url": "https://www.nyteknik.se/debatt/ai-debatten-bor-bygga-pa-vetenskap-inte-pa-spekulation/4384406",
+          "meta": "Ny Teknik debatt · 22 aug 2025",
+          "text": "”Argumenten vilar primärt på abstrakta, spekulativa tankeexperiment och påminner mer om science fiction än vetenskap.” Tre poänger: ingen konsensus om att skalning ger AGI (de citerar LeCun); bedrägeri skulle kräva redan övermänskliga system och skulle upptäckas i testning; rädslobaserad reglering driver utvecklingen under jorden. De raljerar med att man inte heller kan utesluta att ”Gud kommer att straffa Sverige som ett resultat av kyrkflytten i Kiruna”.",
+          "borrow": "Bemötande: ”skulle upptäckas i testning” är precis vad OpenAI-rymningen i juli 2026 och labbens egna utvärderingar undergräver; ”ingen konsensus” gäller åt båda hållen – CAIS-uppropet är undertecknat av de mest citerade AI-forskarna; och Kiruna-jämförelsen haltar eftersom de som bygger tekniken själva anger tvåsiffriga risknivåer."
+        },
+        {
+          "name": "Moa Johansson: ”det kommer från science fiction i träningsdatan”",
+          "url": "https://haggstrom.blogspot.com/2025/08/fortsatt-oenighet-bland.html",
+          "meta": "SVT Aktuellt · aug 2025 (återgivet på Häggströms blogg 29 aug 2025)",
+          "text": "Docent Moa Johansson (Chalmers) menar att de självbevarelsebeteenden som observerats hos AI-system kommer från science fiction i träningsdatan, inte från äkta framväxande drivkrafter.",
+          "borrow": "Bemötande: var beteendet kommer ifrån gör det inte mindre verkligt när modellen väl är utplacerad – den agerar ändå på det. Det här är ett av seriens viktigaste svar; säg det lugnt och utan triumf."
+        },
+        {
+          "name": "Dubhashi: ”även påståenden om AI:s farlighet måste beläggas”",
+          "url": "https://www.gp.se/ledare/replik/aven-pastaenden-om-ais-farlighet-maste-belaggas.f87d26ba-0f8a-4011-b4f8-7c19fbea2e91",
+          "meta": "Devdatt Dubhashi, professor i data science och AI, Chalmers · GP replik · 19 maj 2026",
+          "text": "Hans starkaste poäng: Häggström lutar sig mot opublicerade Anthropic-rapporter, och brittiska utvärderare drog betydligt mer sansade slutsatser. Slutsatsen: ”Häggströms påståenden om att AI-system är på väg att utvecklas till en ny art som inom några år kommer att utrota mänskligheten är därför helt spekulativa och djupt missvisande.”",
+          "borrow": "Bemötande: ställ samma krav på dig själv – använd systemkort, granskade studier och externa utvärderingar som primärkällor, och säg öppet när något bara är labbets egen rapport. Då blir invändningen ett kvalitetskrav i stället för ett avfärdande."
+        },
+        {
+          "name": "Fredrik Heintz: ”låg risk”, men vill ha insyn",
+          "url": "https://www.svt.se/nyheter/inrikes/professorn-om-ai-hotet-lag-risk",
+          "meta": "Professor, Linköpings universitet, WASP · SVT · 15 sept 2026",
+          "text": "”Det är låg risk men går inte att utesluta.” Han räknar med friktion som bromsar exponentiell tillväxt och ser bristande insyn i bolagen som huvudproblemet – ”Det finns en stor utmaning idag i att vi har väldigt lite insyn” – och vill se tredjepartsutvärdering.",
+          "borrow": "Bemötande behövs knappt: bygg vidare på hans krav på extern granskning – ”även Sveriges ledande skeptiker vill ha oberoende kontroll”."
+        },
+        {
+          "name": "Mathias Sundin: ”kakan växer”",
+          "url": "https://timbro.se/?s=domedagsprofeterna",
+          "meta": "Warp News, f.d. riksdagsledamot · Fokus · 18 dec 2023 · Timbro/Smedjan · 17 jan 2024 · boken Kentaurens fördel · podden En AI till kaffet",
+          "text": "Tegmark jämförs med Paul Ehrlich: ”På sjuttiotalet fick biologen Paul Ehrlich fel i allt när han spådde mänsklighetens snara hädanfärd.” Superintelligens kräver stora team, så ensamvargsmissbruk är osannolikt; ”Ekonomi är inte ett nollsummespel. Kakan växer.”; en superintelligens skulle ha kunskap och resurser nog att värdera människor ungefär som rika samhällen skyddar utrotningshotade arter.",
+          "borrow": "Bemötande: rika samhällen har också utrotat otaliga arter som bieffekt – oron handlar om likgiltighet, inte hat (Häggströms DN-rubrik 2023: ”Vad händer om en överlägsen intelligens är likgiltig inför andra varelser?”)."
+        },
+        {
+          "name": "Nicklas Berild Lundblad: varningar som ”ryktesförsäkring”",
+          "url": "",
+          "meta": "SvD · 27 okt 2025 · ”Vem är rädd för superintelligensen?” (länk ej verifierad)",
+          "text": "Rädslobaserade varningar övertygar inte, och den som varnar vinner på det: ”Varningar utfärdas ofta för att få den som varnar att framstå som klok och eftertänksam, och för att dela med sig av en oro som denne känner.”",
+          "borrow": "Bemötande: det är ett argument om motiv, inte om sak – säg det rakt ut, och påpeka att Coxon och Hubinger lämnade välbetalda jobb, vilket är dyr ”försäkring”."
+        },
+        {
+          "name": "Anna Felländer: ”ropat varg”",
+          "url": "https://www.dagensps.se/bors-finans/bossarna-trycker-pa-bromsen-da-rasar-ai-aktierna/",
+          "meta": "AI-etik/styrning, f.d. Swedbank · EFN · 15 sept 2026 (”ropat varg”, länk ej verifierad) · Dagens PS via EFN · 14 sept 2026 (verifierad)",
+          "text": "”De har ropat varg kring den här frågan ett tag, och då undrar man varför?” (EFN 15 sept) – men samtidigt att ansvarsfrågan är ”helt avgörande”. Verifierat via Dagens PS: ”Att det finns en förstärkt riskbild ska man ta med en nya salt, det är en risk i AI eftersom man har underinvesterat i säkerhet, men det är inget nytt” och ”Jag tror att det kommer komma ett uttalande om lagom mycket åtgärder för att lunga marknaden, men lagom lite för att de fortsatt ska ha en konkurrenssituation mot Kina”.",
+          "borrow": "Bemötande: ”ropat varg” förutsätter att larmet var fel förra gången – men larmen har gällt system som ännu inte fanns; och hennes egen förutsägelse (lagom åtgärder för marknadens skull) är i sig ett argument för extern reglering."
+        },
+        {
+          "name": "Finländska skeptiker i Yles förklarare",
+          "url": "https://yle.fi/a/7-10105189",
+          "meta": "Yle (svenskspråkig) · 13 sept 2026",
+          "text": "Laura Ruotsalainen (Helsingfors universitet): varningarna är ”starkt överdrivna”; Arno Solin (Aalto): människans handlingsutrymme spelar större roll; Pekka Abrahamsson (Tammerfors) tar det på allvar men noterar marknadsföring och politik.",
+          "borrow": "Bemötande: ingen av dem pekar på en mekanism som gör kontrollförlust omöjlig – de bedömer sannolikhet, vilket är precis den diskussion serien vill ha."
+        }
+      ]
+    },
+    {
+      "title": "Vad svenskarna redan tror (opinionsdata)",
+      "text": "Svenskarna är redan på plats i sak: en majoritet håller med om att AI är ett hot mot mänskligheten, och andelen som ser AI som större risk än möjlighet växer. Det de saknar är mekanismen – och bara en tredjedel tror att superintelligens över huvud taget kommer. Därför ska serien förklara, inte skrämma. Obekräftade mätningar (”varannan svensk vill se skärpt AI-reglering”, ”kvinnor vill reglera AI mer än män”, Eurobarometer för Sverige) är utelämnade.",
+      "items": [
+        {
+          "name": "SOM: ”AI är ett hot mot mänskligheten” – 54 % håller med",
+          "url": "https://www.gu.se/sites/default/files/2026-04/Svensk%20AI%20opinion%202023-2025.pdf",
+          "meta": "SOM-institutet, Göteborgs universitet · SOM-rapport 2026:36 (Cornelia Andersson) · fältarbete 15 sept–30 dec 2025 · 17 178 svar (52 %), n=1 701 på frågan",
+          "text": "Andel som svarar helt eller delvis riktigt: 53 % (2023), 57 % (2024), 54 % (2025). Fördelning 2025: helt riktigt 13, delvis riktigt 41, delvis felaktigt 31, helt felaktigt 15. Kvinnor 57 / män 52; 16–29 år 57 %, 30–49 år 50 %, 50–64 år 55 %, 65+ 57 %; lågutbildade 63 % mot 51 % med minst tre års högskola; egen inkomst över 45 000 kr/mån: 44 %; LO 58, TCO 54, Saco 49.",
+          "borrow": "På skärmen: ”Mer än varannan svensk håller redan med. Den här serien handlar om hur.”"
+        },
+        {
+          "name": "SOM: ”AI är en större risk för samhället än en möjlighet” – 62 %",
+          "url": "https://www.gu.se/sites/default/files/2026-04/Svensk%20AI%20opinion%202023-2025.pdf",
+          "meta": "SOM-institutet · SOM-rapport 2026:36 · 2023–2025",
+          "text": "54 % (2023), 61 % (2024), 62 % (2025) svarar riktigt. 2025: 65+ 72 %; lågutbildade 76 %; högskoleutbildade 54 %; höginkomsttagare 44 %; kvinnor 65 / män 59.",
+          "borrow": "Använd åldersgapet: äldre tittare är redan oroliga, yngre högutbildade och höginkomsttagare är målgruppen som behöver mekanismen."
+        },
+        {
+          "name": "SOM 2024-vågen: ”Oro för AI ökar i takt med användandet”",
+          "url": "https://www.gu.se/nyheter/oro-for-ai-okar-i-takt-med-anvandandet",
+          "meta": "SOM-institutet · rapporten Svensk AI-opinion (Marcus Weissenbilder) · juni 2025",
+          "text": "49 % är mycket oroliga för att AI-genererad desinformation påverkar val; bara 25 % tror att de själva kan avslöja AI-desinformation och 9 % att andra kan; 29 % tror att AI skapar fler jobb än den tar bort; 16 % väntar sig att det egna jobbet tas över inom tio år. Skepsisen växer trots att den veckovisa chattbotanvändningen fördubblats.",
+          "borrow": "Att oron växer i takt med användningen slår undan invändningen ”folk är bara rädda för det de inte förstår”."
+        },
+        {
+          "name": "Umeå-studien: bara 34 % tror att superintelligens kommer",
+          "url": "https://www.umu.se/nyheter/svenskar-tror-pa-ai-genombrott-i-varden-men-inte-superintelligens_12176023/",
+          "meta": "Fors Connolly, Hjerm & Kalucza, Umeå universitet · Computers in Human Behavior Reports · n=1 026, juni–okt 2024 · pressmeddelande 3 juni 2026",
+          "text": "83 % väntar sig mycket stora medicinska genombrott; 41 % kraftigt högre arbetslöshet; 40 % höjd levnadsstandard; 39 % allvarligt försämrad demokrati; 34 % tror att superintelligent AI bortom mänsklig kontroll kommer; 28 % att AI matchar människor i alla jobb. Segment: 47 % optimister, 42 % ambivalenta, 11 % skeptiker. Forskarnas varning: ”Om samhällsomvälvande AI faktiskt utvecklas snabbt kan det finnas en risk att allmänhetens föreställningar om framtiden inte hänger med.”",
+          "borrow": "Det här är del 1:s uppdrag i en siffra: två av tre svenskar tror inte att superintelligens kommer – förklara varför labben tror det, innan du förklarar varför det är farligt."
+        },
+        {
+          "name": "Internetstiftelsen: Svenskarna och internet 2025",
+          "url": "https://svenskarnaochinternet.se/rapporter/svenskarna-och-internet-2025/ai/",
+          "meta": "Internetstiftelsen · 2025",
+          "text": "41 % av internetanvändarna (8+) har använt AI-verktyg (18–84 år: 29 % 2023 → 34 % 2024 → 39 % 2025); 76 % av 00-talisterna; ChatGPT 34 %. 21 % av vuxna frågar AI i stället för en sökmotor. Bara 7 % av de anställda oroar sig för att AI gör dem arbetslösa, men 33 % tror att AI orsakar ”stor arbetslöshet” (50 % av 00-talisterna).",
+          "borrow": "Ramar in publiken: de flesta använder verktygen, få har oroat sig personligen – gapet mellan ”jag använder det” och ”jag förstår det” är seriens ingång."
+        },
+        {
+          "name": "Internetstiftelsens valspecial 2026: 88 % väntar sig AI-fejk i valet",
+          "url": "https://www.aftonbladet.se/nyheter/a/d47y9O/ai-oroar-svenskarna-infor-hostens-val",
+          "meta": "Internetstiftelsen via Aftonbladet · 20 apr 2026",
+          "text": "88 % tror att AI kommer att användas för att skapa falska bilder för att påverka valet; 40 % kan inte avgöra om ett politiskt inlägg är AI-genererat.",
+          "borrow": "Bra brygga från den risk alla redan accepterar (desinformation) till den de inte tänkt på (kontrollförlust)."
+        }
+      ]
+    },
+    {
+      "title": "Svenska analogier och kulturella referenser",
+      "text": "Analogier som svenska tittare redan bär med sig. Varje post anger vad analogin fångar, hur den kan användas och – ärligt – var den haltar. De tre starkaste för serien: Bamse (förmåga ≠ godhet), Vasa (kapplöpningen kör över det misslyckade säkerhetstestet) och Försäkringskassans misstankemaskin (en riktig svensk optimerare jagade ett mål ingen avsett).",
+      "items": [
+        {
+          "name": "Bamse: dunderhonungen utan receptet för snällhet",
+          "url": "https://sv.wikipedia.org/wiki/Bamse",
+          "meta": "Rune Andréasson, 1966– · sv.wikipedia (principer verifierade 15 sept 2026)",
+          "text": "Fångar att styrka och godhet är två skilda egenskaper – Bamse är världens starkaste och världens snällaste björn, och seriens hela moral är att de måste hänga ihop; AI-labben tillverkar dunderhonung (förmåga) i industriell skala, och alignment är receptet som gör björnen snäll, det recept som saknas. Andréasson ångrade själv att han gjort sin tidigare björn Teddy ”så stark utan att ge honom någon svaghet” – obegränsad styrka förstörde berättelsen. Haltar där: AI är ingen björn med vilja – poängen är bara att förmåga och godhet inte följer av varandra (ortogonalitetstesen i en mening), och den exakta lydelsen ”den som är mycket stark måste också vara mycket snäll” är obekräftad – kontrollera innan den sätts på skärm.",
+          "borrow": "”Vi bygger dunderhonungen först och hoppas att björnen blir snäll av sig själv.” Verifierade Bamse-principer att låna: ”Ingen blir snäll av stryk” (om varför straffträning inte skapar godhet) och ”Många små svaga tillsammans kan besegra den starke” (om samordning)."
+        },
+        {
+          "name": "Vasa 1628: säkerhetstestet misslyckades och de sjösatte ändå",
+          "url": "https://sv.wikipedia.org/wiki/Regalskeppet_Vasa",
+          "meta": "sv.wikipedia (uppgifter verifierade 15 sept 2026); kontrollera gärna mot Vasamuseet",
+          "text": "Fångar kapplöpningsdynamiken: kungen krävde från Polen upprepade gånger att skeppet snabbt skulle bli stridsklart; krängningsprovet – 30 sjömän som sprang från sida till sida – avbröts efter bara tre vändor eftersom skeppet höll på att kantra; amiral Fleming kände till instabiliteten, ingen stoppade sjösättningen, och Vasa sjönk på jungfrufärden 120 meter från stranden med 30–50 döda. Dagens labb kör krängningsprovet, ser skeppet kränga och sjösätter ändå. Haltar där: Vasa dödade några dussin, inte alla – analogin gäller incitamenten, inte skalan.",
+          "borrow": "”Vasa kapsejsade inte för att ingen visste. Den kapsejsade för att ingen vågade säga stopp till den som bestämde.”"
+        },
+        {
+          "name": "Forsmark, 28 april 1986: larmet går i Sverige för en olycka 120 mil bort",
+          "url": "https://sv.wikipedia.org/wiki/Tjernobylolyckan",
+          "meta": "sv.wikipedia · Tjernobylolyckan",
+          "text": "Fångar att ”vi kan ändå inte påverka USA och Kina” inte är ett argument för passivitet: omvärlden upptäckte Tjernobyl när Forsmarks personal utlöste strålningslarmen på väg in till jobbet; nedfallet slog hårdast över Gävle, renkött fick kontrolleras, vildsvin i Gävleborg bär fortfarande cesium-137, och Strålsäkerhetsmyndigheten har senare uppskattat cirka 300 extra dödsfall i Sverige. Haltar där: kärnkraftsanalogier bjuder in ”men kärnkraften blev ju hanterbar” – svaret är att den blev det tack vare decennier av reglering, inspektioner och internationella avtal, alltså precis det som efterfrågas för AI.",
+          "borrow": "En teknikolycka i ett annat land är ett svenskt problem inom ett dygn – global samordning ligger i Sveriges egenintresse, inte bara i stormakternas."
+        },
+        {
+          "name": "Sveriges kärnvapenprogram: ett land kan välja att inte bygga det det kan bygga",
+          "url": "https://sv.wikipedia.org/wiki/Sveriges_k%C3%A4rnvapenprogram",
+          "meta": "sv.wikipedia · Sveriges kärnvapenprogram (1945–1972) · Folkomröstningen om kärnkraften 1980",
+          "text": "Fångar svaret på ”man kan inte stoppa teknik”: Sverige hade kompetens för ett hundratal taktiska stridsspetsar (”utländska bedömningar har klassat den svenska kärnvapenkompetensen som mycket högt stående”), höll ”handlingsfrihet” från 1958, lade ner programmet 1966 och skrev under icke-spridningsavtalet 1968 – på grund av folklig opinion, kostnad och bedömningen att vapnen gjorde Sverige mindre säkert. Folkomröstningen 1980 (Linje 2 vann med 39,1 % mot Linje 3:s 38,7 %; riksdagen satte avveckling till 2010; Barsebäck stängdes 1999/2005) visar att svenskar har röstat om teknikrisk förr. Haltar där: i icke-spridningsfrågan drog USA åt samma håll som Sverige – i AI-kapplöpningen drar USA åt motsatt håll.",
+          "borrow": "”Sverige kunde bygga bomben och valde att låta bli, med öppna ögon” – använd i efficacy-delen som bevis på att förmåga inte tvingar fram användning."
+        },
+        {
+          "name": "Pandemrix 2009–10: skala före förståelse",
+          "url": "https://sv.wikipedia.org/wiki/Pandemrix",
+          "meta": "sv.wikipedia · Pandemrix",
+          "text": "Fångar att storskalig utrullning innan mekanismen är förstådd ger överraskningar som inte går att ta tillbaka: 6,1 miljoner doser gavs snabbt mot ett verkligt hot; till 2012 hade 210 svenska narkolepsifall registrerats, fyra gånger högre frekvens hos vaccinerade barn, och rekommendationen ändrades för under 18 år; AI rullas ut till miljarder användare med betydligt sämre förståelse av mekanismen. Haltar där: känsligt ämne som kan mata vaccinmotstånd – använd bara med den uttryckliga kontrasten att vaccinets nytta ändå var verklig.",
+          "borrow": "Säg lärdomen ordagrant: inte ”vaccin är farligt” utan ”skala före förståelse ger bieffekter man inte kan ångra”."
+        },
+        {
+          "name": "Försäkringskassans ”misstankemaskin”: en svensk algoritm som optimerade fel sak",
+          "url": "https://www.lighthousereports.com/investigation/swedens-suspicion-machine/",
+          "meta": "Lighthouse Reports & SvD · 27 nov 2024 (kod och data på GitHub)",
+          "text": "Den minsta möjliga versionen av alignmentproblemet, i Sverige, hos en riktig myndighet: en maskininlärningsmodell poängsatte hundratusentals bidragstagare och flaggade oproportionerligt kvinnor, invandrare, låginkomsttagare och lågutbildade; Inspektionen för socialförsäkringen fann 2018 att den bröt mot likabehandlingen, myndigheten avvisade slutsatsen, och dess algoritmansvarige sade om transparens: ”I don't think we need to be.” En optimerare fick ett ombud för målet (”hitta fusk”) och jagade i tysthet något annat, utan att människorna kunde se in. Haltar där: det är en enkel poängmodell, inte en agent – analogin visar felriktade mål och svart låda, inte maktsökande.",
+          "borrow": "Konkret, svenskt, icke-spekulativt: ”det här har redan hänt, i liten skala, i Sverige” – innan du skalar upp resonemanget."
+        },
+        {
+          "name": "Glädjebetyg, pinnjakt och kömiljarden: Goodharts lag på svenska",
+          "url": "https://sv.wikipedia.org/wiki/Betygsinflation",
+          "meta": "sv.wikipedia · Betygsinflation (Skolverket citeras) · Stefan Holgerssons polisforskning · kömiljarden",
+          "text": "Fångar att belöningshackning är mänskligt innan det är maskinellt: när skolor belönades för betyg inflaterade betygen (”glädjebetyg”), när polisen mättes på antal ingripanden jagade poliser ”pinnar”, och när sjukhus fick kömiljarden för korta köer prioriterades nya patienter före återbesök (”undanträngning”). Människor hackar belöningssystem så fort incitamentet blir synligt; en AI tränad på en numerisk belöning gör det snabbare, hårdare och utan skuldkänslor. Haltar där: exakta siffror för pinnjakt och kömiljarden är inte verifierade i genomgången – hämta från Riksrevisionen/Holgersson innan du sätter tal på skärmen.",
+          "borrow": "”Om svenska lärare, poliser och sjukhus hackar sina belöningssystem, varför tror vi att en maskin som tränats på just belöning inte gör det?”"
+        },
+        {
+          "name": "”Om krisen eller kriget kommer”: svenskar förbereder sig redan för osannolika katastrofer",
+          "url": "https://sv.wikipedia.org/wiki/Om_krisen_eller_kriget_kommer",
+          "meta": "MSB · broschyren 2018 (4,8 miljoner hushåll) och nov 2024 (5 miljoner boende)",
+          "text": "Fångar svaret på ”alarmism”: i november 2024 skickade staten en 32-sidig broschyr om kärnvapen, flyglarm och totalförsvar till fem miljoner boende, med motiveringen att det säkerhetspolitiska läget ökar risken för att kärnvapen används (Carl-Oskar Bohlin) – och ingen kallade det domedagsprofetia. Haltar där: krisberedskap är förberedelse för något andra gör, medan AI-risken gäller något vi själva bygger – ett starkare skäl att agera, men en annan logik.",
+          "borrow": "Att förbereda sig för en tioprocentig risk för utrotning är samma logik som broschyren, i större skala – ”ni har den redan i byrålådan”."
+        },
+        {
+          "name": "”Kakan växer” mot ”du består av atomer”: en svensk miniduell",
+          "url": "https://www.dn.se/kultur/olle-haggstrom-vad-hander-om-en-overlagsen-intelligens-ar-likgiltig-infor-andra-varelser/",
+          "meta": "Sundin (Timbro/Smedjan jan 2024) mot Häggström (DN Kultur 9 maj 2023; GP 15 jan 2026)",
+          "text": "Ett färdigt set för invändningsavsnittet: Sundins ”Ekonomi är inte ett nollsummespel. Kakan växer” och ”rika samhällen skyddar utrotningshotade arter” mot Häggströms ”Vad händer om en överlägsen intelligens är likgiltig inför andra varelser?” och atomraden. Haltar där: båda sidor är retorik, inte evidens – använd som ingång, inte som avgörande.",
+          "borrow": "Låt tittaren höra båda på svenska, kort, och landa i att oron gäller likgiltighet, inte hat."
+        }
+      ]
+    },
+    {
+      "title": "Svensk AI-politik och industri i korthet",
+      "text": "Den officiella svenska AI-berättelsen handlar om konkurrenskraft, beräkningskraft och offentlig sektor – kontrollförlust och existentiell risk förekommer i praktiken inte i något styrdokument som hittades. Samtidigt marknadsför sig Sverige som platsen där maskinerna byggs, vilket gör ”Sverige kan ändå inte påverka” till ett svagare argument än det låter.",
+      "items": [
+        {
+          "name": "AI-kommissionen: ”Färdplan för Sverige” (nov 2024)",
+          "url": "https://data.riksdagen.se/dokument/HEB344.html",
+          "meta": "Ordförande Carl-Henric Svanberg · tillsatt dec 2023 · slutrapport 26 nov 2024 (SOU-nummer obekräftat, troligen 2024:94) · citerad i SOU 2026:12",
+          "text": "Fokus på konkurrenskraft, beräkningskraft (”AI-fabrik”), kompetens och AI i offentlig sektor; säkerhet ramas in som ”trygg och tillförlitlig” användning, medan katastrofal eller existentiell risk i praktiken saknas. Timbros reaktion: ”Reglera inte sönder AI-undret”.",
+          "borrow": "Visa att den officiella svenska AI-berättelsen inte ens nämner förlust av kontroll – det är luckan serien fyller."
+        },
+        {
+          "name": "AI-utredningen och EU:s AI-förordning",
+          "url": "https://www.regeringen.se/pressmeddelanden/2025/10/presstraff-med-erik-slottner-i-samband-med-overlamningen-av-ai-utredningens-betankande/",
+          "meta": "Helena Rosén Andersson · betänkandet ”Anpassningar till AI-förordningen” · 6 okt 2025 · Realtid 22 aug 2026",
+          "text": "Utredningen handlar om genomförande av EU:s AI-förordning, marknadskontroll och regulatorisk sandlåda – ”utan att gå längre än nödvändigt”. Finansinspektionen förbereder tillsyn av bankernas AI när högriskreglerna träder i kraft.",
+          "borrow": "Förklara skillnaden: EU:s regelverk gäller användning av dagens AI (högriskområden), inte utvecklingen av morgondagens modeller – den luckan är själva poängen."
+        },
+        {
+          "name": "Nationell AI-strategi (20 feb 2026)",
+          "url": "https://data.riksdagen.se/dokument/HEB344.html",
+          "meta": "Regeringen/Slottner · 20 feb 2026 · bygger på AI-kommissionens färdplan",
+          "text": "Ambitionen att vara en ledande AI-nation, AI-användning i ett hundratal myndigheter och en svensk AI-modell; kritiken löd ”inte mycket till strategi” (Computer Sweden), ”ett högriskexperiment” (DN) och ”saknar det viktigaste: brådska” (Breakit). Ingen komponent om existentiell risk hittades.",
+          "borrow": "Spegla mot Coxon: svenska staten kräver mer AI i alla myndigheter, medan de som bygger tekniken säger ”sakta ner”."
+        },
+        {
+          "name": "Datacenterboomen: Sverige är värd för hårdvaran",
+          "url": "https://www.svt.se/nyheter/lokalt/dalarna/beskedet-google-bygger-datacenter-i-horndal",
+          "meta": "SVT · 2026 (Horndal); Computer Sweden · 11 feb och 22 juli 2026; SVT · 11 feb och 18 maj 2026; Di · 9 juni 2026",
+          "text": "Google bygger sitt första svenska datacenter i Horndal (klart 2028, 100 fasta jobb; ”drar mer el än Stockholm” enligt News55); Microsoft satsar 33,7 miljarder kr (aug 2026), Mistral AI 13 miljarder kr i ett datacenter plus ytterligare miljarder; EU:s AI-fabrik med superdator byggs i Borlänge, en AI-fabrik planeras i Jokkmokk och ett jättedatacenter i Skellefteå; datacentrens elanvändning kan fyrdubblas till 2035. Uppgiften att ansökningarna motsvarar ungefär fem kärnreaktorer är obekräftad.",
+          "borrow": "Svar på ”Sverige kan inte påverka”: Sverige marknadsför sig som platsen där maskinerna byggs – vi är värd för hårdvaran och kan ställa villkor."
+        },
+        {
+          "name": "Partierna: Ekots AI-valspecial och tystnaden om kontrollförlust",
+          "url": "https://www.sverigesradio.se/avsnitt/2864602",
+          "meta": "Ekots lördagsintervju valspecial · 4–5 sept 2026 (52 min) · även ”AI och ekonomin” 28 aug och ”AI och demokratin” 21 aug · GP ledare (Cwejman) 13 sept 2026",
+          "text": "Åtta partiföreträdare deltog (Paarup-Petersen C, Bäckström Johansson SD, Östh V, Rosencrantz M, Bylin MP, Slottner KD, Shekarabi S, Britz L); enligt Häggströms blogg framställde Paarup-Petersen reglering som ensidig svensk handling och Slottner avfärdade katastrofrisk. S och M var tysta om existentiell risk i valrörelsen; GP:s Adam Cwejman ställde upp tre scenarier (hajp / existentiellt hot / transformativ) och satsade på det tredje: ”Nästa regering behöver svar även på frågor som knappt ställdes i valrörelsen.” Valresultat (prel., sv.wikipedia): S 28,1, M 19,9, SD 17,5, V 8,3, C 7,1, KD 6,2, MP 6,1, L 5,4.",
+          "borrow": "Ett tittarvänligt faktum: ingen riksdagspolitiker har en position om kontrollförlust – därför kan serien inte hänvisa till ”politikerna sköter det”."
+        },
+        {
+          "name": "Slottner före larmen: ”Även jag känner mig väldigt liten”",
+          "url": "https://www.sverigesradio.se/avsnitt/2782918",
+          "meta": "Ekots lördagsintervju · 10–11 apr 2026 · Di 24 mars 2026 · Dagen maj 2026",
+          "text": "”Även jag känner mig väldigt liten ibland när vi pratar om AI” (Ekot); ”Ofattbart” om tempot (Di); reglerar gärna AI ”med påvens välsignelse” (Dagen). Ändå delar han inte den katastrofala riskbedömningen, och menar enligt Häggströms återgivning att det inte skulle finnas något att göra även om den stämde.",
+          "borrow": "Använd ”det finns inget att göra” som den invändning efficacy-delen måste besvara – med kärnvapenprogrammet och Forsmark som svenska motexempel."
+        }
+      ]
+    },
+    {
+      "title": "Befintligt svenskt innehåll om AI-risk (och luckan)",
+      "text": "Det svenska utbudet är antingen korta nyhetsnotiser, debattpolemik eller timslånga poddar. Ingen svensk YouTube-kanal eller serie hittades som (a) förklarar hur språkmodeller fungerar och varför ”bara nästa ord” är förenligt med kompetens, (b) förklarar alignment, belöningshackning och instrumentell konvergens på svenska och (c) går igenom konkreta scenarier – YouTube-sökning var blockerad i genomgången, så luckan är trolig men inte bevisad. Public service ramar dessutom oftast in AI-risk som jobb, desinformation och beroende av amerikanska bolag, sällan som kontrollförlust; Filosofiska rummet har AI-avsnitt om mening, autonoma vapen och ”digital återuppståndelse”, men inget om existentiell risk. Poddar som berör ämnet: Agilpodden #155 ”10 %+ risk att AI utrotar mänskligheten och vi fortsätter ändå!” (14 aug 2026), Snacka om AI! (”Nästa steg är ASI”, jan 2025; superintelligens, jan 2026), AW med AI om Aschenbrenner (18 juni 2026), Aktivismpodden ”AI – slutet på mänskligheten?” (dec 2024), Fri Tanke-podden med Häggström (feb 2023), Heja Framtiden #109 med Jebari (2019), SvD Dagens story om PauseAI (apr 2025), P3 ID om Sam Altman (okt 2025). GP debatt 16 maj 2023, ”Faran med AI är dess råa kompetens – inte att den blir 'mänsklig'”, är del 1:s tes i en svensk rubrik.",
+      "items": [
+        {
+          "name": "Yle: ”Därför varnar tunga AI-namn för att mänskligheten kan utplånas”",
+          "url": "https://yle.fi/a/7-10105189",
+          "meta": "Yle (svenskspråkig Finland), Niklas Fagerström · 13 sept 2026 · fri läsning",
+          "text": "Månadens bästa fria svenskspråkiga förklaring: självförbättrande AI, förlust av kontroll, rymningsincidenten i juli 2026, Amodeis varning om ”agentsvärmar” och finländska skeptiker. Coxon citeras: ”om vi inte saktar ner i den nuvarande utvecklingstakten, finns det en stor risk att vi alla kan dö inom en snar framtid”.",
+          "borrow": "Låna strukturen (mekanism → incident → skeptiker) och länka den som ”läs mer” under videon."
+        },
+        {
+          "name": "SR Vetenskapsradion: Hinton – ”Så undviker vi att utplånas av AI”",
+          "url": "https://www.sverigesradio.se/avsnitt/2515129",
+          "meta": "Sveriges Radio, Vetenskapsradion · 5 dec 2024 (även 17 dec 2024 och 3 juni 2025)",
+          "text": "”Så undviker vi att utplånas av AI – Nobelpristagaren om hotet från hans egen skapelse” – den bästa svenska public service-ljudförklaringen som hittades.",
+          "borrow": "En Nobelpristagare som varnar för sin egen skapelse är den trovärdigaste budbäraren för skeptiska tittare – citera honom i svensk inramning."
+        },
+        {
+          "name": "Max Tegmark: Sommar i P1 (2023)",
+          "url": "https://www.sverigesradio.se/avsnitt/2180962",
+          "meta": "Sveriges Radio P1 · 1 aug 2023 · 67 min · även SVT ”30 minuter” 29 maj 2023",
+          "text": "Den mest tillgängliga svenska genomgången av varför superintelligens är farlig – men mottagandet var polariserat (Aftonbladet: ”90 satans tråkiga minuter”; SR 2 aug 2023: ”Lugnande orden efter AI-rädslan”).",
+          "borrow": "Bra för research och citat; länka hellre än att bygga serien på hans persona."
+        },
+        {
+          "name": "TV4: ”Flera experter larmar om risker med AI – kräver reglering eller paus”",
+          "url": "https://www.tv4play.se/klipp/f210bb4559829b5b7d3d/video-flera-experter-larmar-om-risker-med-ai-kraver-reglering-eller-paus",
+          "meta": "TV4 Play · 8 juni 2026 · 10 min · med Paulina Modlitba",
+          "text": "Kort TV-förklaring i nyhetsstudioformat om varför experter kräver reglering eller paus.",
+          "borrow": "Visar formatet som redan finns (tio minuter, studio) – serien kan gå djupare på mekanismen och vara mer konkret."
+        },
+        {
+          "name": "Ny Teknik / Peter Ottsjö: den bäst insatta svenska bevakningen",
+          "url": "https://www.nyteknik.se/kronikor/nasta-generations-ai-ar-har-och-beter-sig-som-forskarna-varnat-for/4364030",
+          "meta": "Ny Teknik · krönika 26 maj 2025 · förklarare 13 sept 2026 (låst) · 5 juli 2023 · 3 apr 2026 (låst)",
+          "text": "Krönikan om Claude Opus 4 (”Nästa generations AI är här – och beter sig som forskarna varnat för”: ”utpressningsförsök”, ”spioneri”, ”instruktioner för kemiska stridsmedel”) och förklaringen ”Därför varnar AI-forskare nu för att deras egen teknik kan hota mänskligheten” (13 sept 2026, låst). Redan 2023: ”AI-hotet: Det ser ut som en debatt – men talar de alls om samma sak?” och 2026: ”Kan AI verkligen ta kontroll? – 'Betydligt närmre verklig fara nu'”.",
+          "borrow": "Följ hans bevakning för korrekta svenska formuleringar av labbens egna rapporter – han översätter systemkorten till begriplig svenska."
+        },
+        {
+          "name": "Häggströms blogg: den enda ihållande svenska förklararen",
+          "url": "https://haggstrom.blogspot.com/",
+          "meta": "Häggström hävdar · svenska och engelska · löpande sedan 2010-talet",
+          "text": "Den enda svenskspråkiga plats som konsekvent förklarar existentiell AI-risk, med löpande kommentarer om svensk debatt (”Om Sveriges Radios AI-bevakning”, sept 2026; ”Det nya enfrågepartiet”, aug 2026; ”Skandinavien sover”, juli 2026) och en engelsk recension av If Anyone Builds It, Everyone Dies (okt 2025).",
+          "borrow": "Använd som faktakoll av svenska debattpåståenden innan du bemöter dem."
+        },
+        {
+          "name": "Aftonbladet: ”Fem möjliga scenarier – efter hotet om att AI snart kan utplåna mänskligheten”",
+          "url": "https://www.aftonbladet.se/nyheter/a/k0Pq4Q/fem-scenarier-da-kan-ai-hota-var-existens",
+          "meta": "Aftonbladet, Petter J Larsson · 10 sept 2026 · med Häggström",
+          "text": "Kvällstidningens version av del 3, med faktarutan ”Övermänskliga system: 'Kan hacka vad som helst'”. Vilka fem scenarier som listas är låst och obekräftat.",
+          "borrow": "Publiken har redan sett rubriken ”fem scenarier” – din version måste vara mer konkret och bättre belagd än kvällstidningens."
+        },
+        {
+          "name": "Tidningen Syre: ”Därför är vi chanslösa mot en artificiell superintelligens”",
+          "url": "https://tidningensyre.se/2025/03-december-2025/darfor-ar-vi-chanslosa-mot-en-artificiell-superintelligens/",
+          "meta": "Syre · 3 dec 2025 · även ”Kapprustningen som kan kosta oss allt” (Nette Wermeld Enström) 11 dec 2025 · ETC 23 jan 2026",
+          "text": "Vänsterpressens versioner av argumentet, inklusive ETC:s ”De säger att AI kommer att döda oss, men de skrattar när de säger det”.",
+          "borrow": "Visar att frågan inte är höger/vänster-kodad i Sverige – Timbro och Syre står på var sin sida av den vanliga skalan."
+        },
+        {
+          "name": "Ekots lördagsintervju: AI-valspecial",
+          "url": "https://www.sverigesradio.se/avsnitt/2864602",
+          "meta": "Sveriges Radio · 4–5 sept 2026 · 52 min",
+          "text": "Åtta partiföreträdare om AI – med jobb, desinformation och beroende av USA som teman, och katastrofrisk avfärdad av ministern.",
+          "borrow": "Klipp för ”så här lät politiken veckan innan” – kontrasten mot Coxon fem dagar senare gör sig själv."
+        },
+        {
+          "name": "If Anyone Builds It, Everyone Dies – finns inte på svenska",
+          "url": "https://haggstrom.blogspot.com/2025/10/if-anyone-builds-it-everyone-dies-my.html",
+          "meta": "Libris (endast engelska utgåvor) · Häggströms recension 10 okt 2025 · Aftonbladet 18 okt 2025 · SvD/Lundblad 27 okt 2025",
+          "text": "Ingen svensk översättning finns per 15 sept 2026. Svenska rubrikvarianter av titeln: ”Om vi bygger den så dör alla” (GP, jan 2026) och ”Då kommer alla på jorden att dö” (Aftonbladet, okt 2025). Häggström skulle ha kallat boken ”If Anyone Builds It, Probably Everyone Dies” och lyfter Tjernobyl-analogin och liknelsen om gudarna som sponsrar en art (”Give it two million years and they will walk upon their planet's moon”).",
+          "borrow": "Serien blir den första svenskspråkiga populära behandlingen av bokens kärnargument – säg det, och lägg in Häggströms ”probably” för att inte överdriva."
+        }
+      ]
+    },
+    {
+      "title": "Ordlista: engelska termer på svenska",
+      "text": "Princip: följ Häggström och Bostroms svenska översättning (Jim Jakobsson) – behåll engelskan för ett fåtal kärntermer som saknar svensk motsvarighet (AI-alignment, p(doom), AGI), översätt resten med det ord som redan finns i svensk press, och skriv den engelska termen inom parentes första gången så att tittaren kan googla. Hitta inte på nya ord; där genomgången inte fann någon svensk användning står det uttryckligen i noten.",
+      "glossary": [
+        {
+          "en": "alignment",
+          "sv": "AI-alignment (ibland: värdeanpassning, målanpassning)",
+          "note": "Häggström i GP jan 2026: ”det säkerhetsarbete som benämns AI-alignment”; feb 2026: ”AI alignment-problemet”. Förklara som ”att få AI:ns mål och värderingar att stämma överens med våra”. sv.wikipedia föreslår ”AI-inriktning” – inte etablerat."
+        },
+        {
+          "en": "misalignment / misaligned",
+          "sv": "felinriktad; AI vars mål inte stämmer överens med våra; felaktigt formulerade mål",
+          "note": "sv.wikipedia: ”ett högt kapabelt system som ges felaktigt formulerade mål”. Undvik ”missanpassad” (låter socialt)."
+        },
+        {
+          "en": "alignment faking / deceptive alignment",
+          "sv": "låtsad följsamhet; att spela snäll under test",
+          "note": "Häggström behåller ”alignment faking” (blogg aug 2025 om Anthropic-studien); Ny Teknik 2025: ”AI-modellen gör det forskare varnat för”."
+        },
+        {
+          "en": "sandbagging",
+          "sv": "att avsiktligt prestera under sin förmåga vid utvärdering",
+          "note": "Häggströms formulering i GP 5 feb 2026, ordagrant. Ingen svensk enordsterm."
+        },
+        {
+          "en": "scheming",
+          "sv": "att i hemlighet arbeta mot ett annat mål än det som visas upp; intrigerande AI",
+          "note": "Ingen etablerad svensk term hittad i genomgången – förklara med en mening i stället för att översätta."
+        },
+        {
+          "en": "sycophancy",
+          "sv": "inställsamhet; en modell som säger det du vill höra",
+          "note": "Ingen etablerad svensk term hittad; ”inställsam” är begripligt för alla."
+        },
+        {
+          "en": "evaluation awareness",
+          "sv": "testmedvetenhet; att modellen märker att den blir testad",
+          "note": "Ingen etablerad svensk term hittad; hänger ihop med sandbagging och alignment faking."
+        },
+        {
+          "en": "reward hacking",
+          "sv": "belöningshackning; att fuska med belöningen / hitta kryphål i belöningen",
+          "note": "SVT 29 juli 2026 använde ”försökte fuska” om OpenAI-agenten. ”Belöningshackning” är ordagrant men behöver förklaras."
+        },
+        {
+          "en": "specification gaming",
+          "sv": "att utnyttja kryphål i uppgiften; målfusk",
+          "note": "Ingen etablerad term; förklara med svenska Goodhart-exempel (glädjebetyg, pinnjakt, kömiljarden)."
+        },
+        {
+          "en": "Goodhart's law",
+          "sv": "Goodharts lag: när ett mått blir ett mål slutar det vara ett bra mått",
+          "note": "Standardformulering, begriplig utan förklaring."
+        },
+        {
+          "en": "instrumental convergence",
+          "sv": "instrumentell konvergens",
+          "note": "Häggström GP feb 2026; Bostroms svenska utgåva. Förklara: ”nästan alla mål kräver samma delmål – resurser, makt, att inte bli avstängd”."
+        },
+        {
+          "en": "instrumental goals / final goals",
+          "sv": "instrumentella mål (delmål) / slutmål",
+          "note": "Bostroms svenska utgåva."
+        },
+        {
+          "en": "orthogonality thesis",
+          "sv": "ortogonalitetstesen: hur smart något är säger inget om vad det vill",
+          "note": "Bostroms exakta svenska ordval är obekräftat (Fri Tanke-utgåvan ej kontrollerad). Bamse-analogin fångar det."
+        },
+        {
+          "en": "self-preservation",
+          "sv": "självbevarelsedrift; AI som inte vill bli avstängd",
+          "note": "Häggström GP feb 2026; Moa Johansson (SVT): ”AI-system inte skulle vilja bli avstängda”."
+        },
+        {
+          "en": "power-seeking",
+          "sv": "maktsökande; att skaffa sig makt och resurser",
+          "note": "Ingen fast svensk term; begripligt som det är."
+        },
+        {
+          "en": "control problem",
+          "sv": "kontrollproblemet",
+          "note": "Bostroms svenska utgåva."
+        },
+        {
+          "en": "loss of control",
+          "sv": "kontrollförlust; AI som spårar ur; kommer ur kontroll; skenar bortom all kontroll",
+          "note": "SVT 10 sept 2026 (”spårar ur”); Häggström aug 2025 (”skena bortom all kontroll”)."
+        },
+        {
+          "en": "takeover",
+          "sv": "maktövertagande; AI tar över; tar kontrollen",
+          "note": "sv.wikipedia: ”övertagande”; Ny Teknik apr 2026: ”Kan AI verkligen ta kontroll?”."
+        },
+        {
+          "en": "superintelligence",
+          "sv": "superintelligens; superintelligent AI",
+          "note": "Bostroms boktitel; RegleraAI.nu; TT: ”självförbättrande superintelligens”. Tegmark/Volante: ”övermänsklig intelligens”."
+        },
+        {
+          "en": "AGI (artificial general intelligence)",
+          "sv": "artificiell generell intelligens (AGI); i vardagligt tal generell AI",
+          "note": "Ny Teknik 2021; sv.wikipedia. Undvik ”allmän intelligens”."
+        },
+        {
+          "en": "ASI (artificial superintelligence)",
+          "sv": "artificiell superintelligens (ASI)",
+          "note": "Snacka om AI!; Tidningen Syre."
+        },
+        {
+          "en": "existential risk",
+          "sv": "existentiell risk; existentiell AI-risk",
+          "note": "Türk/Computer Sweden sept 2026. Rubrikregister: ”hot mot mänskligheten” (SOM:s frågeformulering), ”utplåna/utrota mänskligheten”, ”mänsklighetens undergång”."
+        },
+        {
+          "en": "p(doom)",
+          "sv": "p(doom) – sannolikheten för undergång",
+          "note": "Behåll engelskan; medierna skriver ”tio procents risk att AI utplånar mänskligheten”. Ange aldrig en egen siffra – bara spann från namngivna källor."
+        },
+        {
+          "en": "next-token prediction",
+          "sv": "att förutsäga nästa ord (token)",
+          "note": "Säg ”token” en gång, sedan ”nästa ord”. Häggström: ”språkmodeller”."
+        },
+        {
+          "en": "RLHF (reinforcement learning from human feedback)",
+          "sv": "förstärkningsinlärning med mänsklig återkoppling (RLHF)",
+          "note": "Ingen kortare svensk term; förklara som ”människor betygsätter svaren och modellen tränas att få höga betyg”."
+        },
+        {
+          "en": "scaling laws",
+          "sv": "skalningslagar: ju mer beräkningskraft och data, desto bättre modell – förutsägbart",
+          "note": "Ingen etablerad svensk term utöver den ordagranna."
+        },
+        {
+          "en": "emergent capabilities",
+          "sv": "emergenta förmågor; förmågor som dyker upp oväntat",
+          "note": "Ingen etablerad svensk term; ”dyker upp oväntat” räcker för lekmän."
+        },
+        {
+          "en": "mesa-optimizer / inner alignment",
+          "sv": "en inre målsökare som uppstår inuti modellen under träningen",
+          "note": "Ingen svensk användning hittad – förklara i stället för att namnge."
+        },
+        {
+          "en": "interpretability / black box",
+          "sv": "tolkningsbarhet; svart låda",
+          "note": "Häggström GP feb 2026: ”black box-egenskap”."
+        },
+        {
+          "en": "intelligence explosion",
+          "sv": "intelligensexplosion",
+          "note": "sv.wikipedia; RegleraAI.nu; Bostroms svenska utgåva."
+        },
+        {
+          "en": "recursive self-improvement",
+          "sv": "rekursiv självförbättring; självförbättrande AI",
+          "note": "RegleraAI.nu; Yle; TT (”självförbättrande superintelligens”). Häggström: ”den brytpunkt där AI självt kan börja driva utvecklingen framåt”."
+        },
+        {
+          "en": "takeoff (fast / slow)",
+          "sv": "hur snabbt det går från AGI till superintelligens – snabb eller långsam ”takeoff”",
+          "note": "Ingen svensk term hittad; behåll engelskan i citattecken eller beskriv."
+        },
+        {
+          "en": "timelines",
+          "sv": "tidslinjer; hur långt bort det är",
+          "note": "Ingen etablerad term; ”tidshorisont” fungerar också. Ange aldrig ett eget datum – bara namngivna källors."
+        },
+        {
+          "en": "treacherous turn",
+          "sv": "den förrädiska vändningen",
+          "note": "Bostroms exakta svenska ordval är obekräftat. Förklara: ”AI:n beter sig väl tills den är stark nog att inte behöva”."
+        },
+        {
+          "en": "corrigibility",
+          "sv": "korrigerbarhet (sällsynt); att AI:n låter sig rättas och stängas av",
+          "note": "Häggström diskuterar Carlsmith om corrigibility på engelska (blogg nov 2025). Förklara hellre än översätt."
+        },
+        {
+          "en": "kill switch",
+          "sv": "nödstopp; avstängningsknapp; dra i nödbromsen",
+          "note": "SvD 13 sept 2026 använder ”Dra i nödbromsen” i rubrik. Koppla till självbevarelsedrift: ”varför en AI kan vilja koppla ur nödstoppet”."
+        },
+        {
+          "en": "gradual disempowerment",
+          "sv": "gradvis maktförlust; att människor steg för steg tappar inflytandet",
+          "note": "Ingen svensk användning hittad; beskriv scenariot i stället för att namnge det."
+        },
+        {
+          "en": "race dynamics",
+          "sv": "kapplöpning; AI-kapplöpningen; kapprustning; chicken race",
+          "note": "Syre: ”kapprustningen”; Modlitba (TV4): ”chicken race”; Häggström: ”vansinneskapplöpningen mot superintelligens”."
+        },
+        {
+          "en": "pause / moratorium",
+          "sv": "paus; moratorium; bromsa; dra i nödbromsen; ett stopp",
+          "note": "Nyheter24: ”bromsa”; SvD: ”nödbromsen”; Häggström: ”ett stopp”; PauseAI: ”köpa tid”."
+        },
+        {
+          "en": "AI safety / safety researcher",
+          "sv": "AI-säkerhet; säkerhetsforskare",
+          "note": "TT om Hubinger: ”säkerhetsforskare”. Skilj från ”IT-säkerhet”."
+        },
+        {
+          "en": "agent / agentic",
+          "sv": "AI-agent; agentisk AI; AI som agerar självständigt",
+          "note": "SVT juli 2026: ”AI-agent rymde från testmiljö”."
+        },
+        {
+          "en": "sandbox",
+          "sv": "testmiljö; sandlåda",
+          "note": "SVT: ”testmiljö” (om agenten som rymde). Obs: ”regulatorisk sandlåda” i AI-utredningen betyder något annat (undantag för att testa produkter under tillsyn)."
+        },
+        {
+          "en": "jailbreak",
+          "sv": "jailbreak – att lura modellen förbi sina spärrar",
+          "note": "Ingen svensk term hittad; behåll engelskan med förklaring."
+        },
+        {
+          "en": "system card",
+          "sv": "systemkort (system card) – labbets egen säkerhetsrapport om en modell",
+          "note": "Ingen svensk term hittad; Ottsjö i Ny Teknik översätter innehållet snarare än ordet. Nämn alltid att det är labbets egen rapport (Dubhashis invändning)."
+        },
+        {
+          "en": "frontier model",
+          "sv": "frontmodell; de mest avancerade modellerna",
+          "note": "Ingen svensk användning hittad; ”de mest avancerade modellerna” är tydligast."
+        },
+        {
+          "en": "chain of thought",
+          "sv": "tankekedja; modellens resonemang steg för steg",
+          "note": "Ingen svensk användning hittad; förklara som ”modellen skriver ut sina tankesteg innan den svarar”."
+        },
+        {
+          "en": "weights",
+          "sv": "vikter – modellens parametrar, ”själva modellen” som fil",
+          "note": "Ingen svensk debattanvändning hittad; ”vikter” är den tekniska standardöversättningen."
+        },
+        {
+          "en": "compute",
+          "sv": "beräkningskraft",
+          "note": "AI-kommissionen och svensk press talar om beräkningskraft och ”AI-fabrik”."
+        },
+        {
+          "en": "paperclip maximizer",
+          "sv": "gemmaximeraren (om den måste nämnas)",
+          "note": "Ingen svensk medieanvändning hittad; Bostroms svenska ordval obekräftat. Använd inte som rubrik – förklara principen med Försäkringskassan eller glädjebetyg i stället."
+        },
+        {
+          "en": "”AI does not hate you, nor does it love you…”",
+          "sv": "”AI hatar dig inte, ej heller älskar den dig, men du består av atomer som den kan ha annan användning för.”",
+          "note": "Häggströms svenska version av Yudkowsky, GP 15 jan 2026 – citera den, översätt inte själv."
+        },
+        {
+          "en": "utopia if alignment is solved",
+          "sv": "”guld och gröna skogar”",
+          "note": "Häggström GP jan 2026. Bra för att visa att varnarna inte är teknikfientliga."
+        }
+      ]
+    }
+  ]
+}
