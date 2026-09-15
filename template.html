@@ -1,0 +1,549 @@
+<title>Hur kan AI döda alla?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F2F4F7; --surface:#FFFFFF; --surface2:#F7F9FB; --ink:#111820; --muted:#5B6774; --line:#D8DEE6; --line2:#E8ECF1;
+  --accent:#B3261E; --accent-ink:#8F1E17; --accent-soft:#FBEAE8; --steel:#2B5C8A; --steel-soft:#E6EEF6;
+  --ok:#2E7D4F; --ok-soft:#E4F2EA; --warn:#9A6B00; --warn-soft:#FBF1D6;
+  --meter0:#CBD3DC; --meter1:#B3261E;
+  --shadow:0 1px 2px rgba(17,24,32,.06),0 6px 20px rgba(17,24,32,.05);
+  --radius:6px;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1319; --surface:#161C24; --surface2:#1C232D; --ink:#E6EBF0; --muted:#97A3B1; --line:#283240; --line2:#222B36;
+    --accent:#E2584A; --accent-ink:#F08A7E; --accent-soft:#3A1F1D; --steel:#7EB0E0; --steel-soft:#1C2C3C;
+    --ok:#6CC594; --ok-soft:#173224; --warn:#E0B24A; --warn-soft:#3A2E12;
+    --meter0:#2E3946; --meter1:#E2584A;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1319; --surface:#161C24; --surface2:#1C232D; --ink:#E6EBF0; --muted:#97A3B1; --line:#283240; --line2:#222B36;
+  --accent:#E2584A; --accent-ink:#F08A7E; --accent-soft:#3A1F1D; --steel:#7EB0E0; --steel-soft:#1C2C3C;
+  --ok:#6CC594; --ok-soft:#173224; --warn:#E0B24A; --warn-soft:#3A2E12;
+  --meter0:#2E3946; --meter1:#E2584A;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--steel);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:currentColor}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--steel);outline-offset:2px}
+h1,h2,h3,h4{margin:0;line-height:1.2;text-wrap:balance;font-weight:600}
+p{margin:0}
+ul{margin:0;padding-left:1.15em}
+li{margin:.25em 0}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* ---------- Skal ---------- */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surface);border-bottom:1px solid var(--line);padding-inline:16px}
+.topbar-in{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:14px;min-height:56px}
+.brand{display:flex;align-items:baseline;gap:10px;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.brand .q{font-family:var(--serif);font-weight:500;font-size:18px}
+.brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.top-nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.top-nav::-webkit-scrollbar{display:none}
+.top-nav a{padding:6px 10px;border-radius:4px;color:var(--muted);font-size:14px;white-space:nowrap;border-bottom:0}
+.top-nav a.on{color:var(--ink);background:var(--surface2)}
+.top-nav a:hover{color:var(--ink)}
+.menu-btn{display:none;font-family:var(--mono);font-size:12px;border:1px solid var(--line);border-radius:4px;padding:6px 10px;color:var(--muted)}
+
+.shell{max-width:1240px;margin:0 auto;padding-inline:16px;padding-block:22px 80px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:34px}
+.rail{position:sticky;top:calc(56px + env(safe-area-inset-top,0px) + 18px);align-self:start;max-height:calc(100vh - 100px);overflow:auto;padding-right:6px}
+.rail-part{margin-bottom:18px}
+.rail-part>.rail-h{display:flex;align-items:baseline;gap:8px;padding:6px 8px;border-radius:4px;color:var(--ink);font-weight:600;font-size:14px;border-bottom:0;width:100%;text-align:left}
+.rail-part>.rail-h .num{font-family:var(--mono);font-size:11px;color:var(--accent);min-width:2.2em}
+.rail-part>.rail-h.on{background:var(--surface2)}
+.rail-q{display:block;padding:5px 8px 5px 34px;font-size:13.5px;color:var(--muted);border-radius:4px;border-bottom:0;line-height:1.35}
+.rail-q:hover{color:var(--ink)}
+.rail-q.on{color:var(--ink);background:var(--accent-soft);}
+.rail-q .cnt{font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-left:6px}
+.rail-sec{padding:6px 8px;font-size:14px;color:var(--muted);border-radius:4px;display:block;border-bottom:0;font-weight:500}
+.rail-sec.on{color:var(--ink);background:var(--surface2)}
+.rail-div{height:1px;background:var(--line);margin:14px 8px}
+
+.content{min-width:0;max-width:880px}
+
+/* ---------- Frågehuvud ---------- */
+.qhead{margin-bottom:18px}
+.qhead .eyebrow{margin-bottom:8px}
+.qhead h1{font-size:30px;font-weight:600;letter-spacing:-.015em;font-family:var(--serif);}
+.qhead .why{margin-top:10px;color:var(--muted);max-width:66ch}
+.qnav{display:flex;justify-content:space-between;gap:12px;margin-top:26px;padding-top:14px;border-top:1px solid var(--line)}
+.qnav a{font-size:13.5px;color:var(--muted);max-width:48%;border-bottom:0}
+.qnav a:hover{color:var(--ink)}
+.qnav .lbl{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase}
+
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:14px 0 16px;padding:10px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.toolbar label{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.toolbar select{font:inherit;font-size:13.5px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:4px 8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:12.5px;padding:3px 9px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--surface)}
+.chip.on{color:var(--ink);border-color:var(--ink)}
+.toolbar .spacer{flex:1}
+.toolbar .exp{font-size:13px;color:var(--steel)}
+
+/* ---------- Svarskort ---------- */
+.answers{display:grid;gap:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.card-head{display:grid;grid-template-columns:44px minmax(0,1fr) auto;gap:12px;align-items:start;padding:14px 16px;width:100%;text-align:left}
+.rank{font-family:var(--mono);font-size:22px;line-height:1;color:var(--accent);font-weight:500;padding-top:2px;font-variant-numeric:tabular-nums}
+.card-title{font-size:16.5px;font-weight:600;letter-spacing:-.005em;line-height:1.3}
+.card-meta{display:flex;flex-wrap:wrap;gap:6px 10px;margin-top:6px;align-items:center}
+.ttag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:var(--steel-soft);color:var(--steel)}
+.ttag.analogi{background:var(--warn-soft);color:var(--warn)}
+.ttag.evidens,.ttag.exempel{background:var(--ok-soft);color:var(--ok)}
+.ttag.citat{background:var(--surface2);color:var(--muted)}
+.ttag.scenario{background:var(--accent-soft);color:var(--accent-ink)}
+.ref-note{font-size:12.5px;color:var(--muted)}
+.score{display:flex;flex-direction:column;align-items:flex-end;gap:5px;min-width:74px}
+.score .n{font-family:var(--mono);font-size:18px;font-variant-numeric:tabular-nums;line-height:1}
+.score .n small{font-size:11px;color:var(--muted)}
+.meter{width:74px;height:5px;border-radius:3px;background:var(--meter0);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--meter1);border-radius:3px}
+.card-core{grid-column:2/4;color:var(--ink);font-size:14.5px;max-width:70ch}
+.card-core.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--muted)}
+.card-body{display:none;border-top:1px solid var(--line2);padding:16px 16px 18px 16px}
+.card.open .card-body{display:block}
+.card.open .card-core.clamp{display:block;-webkit-line-clamp:unset;color:var(--ink)}
+.chev{grid-column:1;font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+
+.sec{margin-top:18px}
+.sec:first-child{margin-top:0}
+.sec h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:7px}
+.script{font-family:var(--serif);font-size:15.5px;line-height:1.6;background:var(--surface2);border-left:3px solid var(--accent);padding:12px 16px;border-radius:0 4px 4px 0;max-width:72ch;white-space:pre-line}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px 26px}
+.cols ul{font-size:14px}
+.pros li::marker{color:var(--ok)}
+.cons li::marker{color:var(--accent)}
+.caveats{background:var(--warn-soft);border-radius:4px;padding:10px 14px 10px 12px;font-size:14px}
+.caveats h4{color:var(--warn)}
+.caveats ul{padding-left:1.1em}
+.rebuttal{font-size:14px;max-width:72ch}
+.quote{font-family:var(--serif);font-size:15px;line-height:1.55;padding-left:14px;border-left:2px solid var(--line);max-width:72ch}
+.quote .orig{display:block;color:var(--muted);font-size:13.5px;font-style:italic;margin-top:4px}
+.quote .who{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:6px}
+.links{list-style:none;padding:0;font-size:13.5px}
+.links li{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:baseline}
+.links li .note{color:var(--muted)}
+.links li::before{content:"↗";font-family:var(--mono);color:var(--muted);font-size:11px}
+.subscores{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.subscores b{color:var(--ink);font-weight:500}
+.debate{font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;margin-top:16px}
+.debate b{color:var(--ink);font-weight:500}
+
+/* ---------- Översikt ---------- */
+.hero{margin-bottom:26px;max-width:76ch}
+.hero h1{font-family:var(--serif);font-size:38px;font-weight:500;letter-spacing:-.02em;margin-bottom:12px}
+.hero .lede{font-size:17px;color:var(--muted);max-width:66ch}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px;margin:20px 0 0;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.stats b{color:var(--ink);font-weight:500;font-size:16px;font-variant-numeric:tabular-nums}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.pcard{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:10px}
+.pcard .num{font-family:var(--mono);font-size:11px;color:var(--accent);letter-spacing:.08em}
+.pcard h3{font-size:18px;font-family:var(--serif);font-weight:500}
+.pcard p{font-size:13.5px;color:var(--muted)}
+.pcard ol{margin:0;padding-left:1.2em;font-size:13.5px}
+.pcard ol li{margin:.3em 0}
+.pcard .go{margin-top:auto;font-size:13.5px}
+.block{margin-top:34px;max-width:76ch}
+.block h2{font-size:22px;font-family:var(--serif);font-weight:500;margin-bottom:10px}
+.block p+p{margin-top:10px}
+.rubric{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+.rubric th,.rubric td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.rubric th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.rubric td.w{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.spine{margin:0;padding-left:1.3em}
+.spine li{margin:.35em 0}
+
+/* ---------- Skeptikern ---------- */
+.obj{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.obj-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:14px 16px;width:100%;text-align:left;align-items:start}
+.obj-head .t{font-size:16px;font-weight:600;line-height:1.3;font-family:var(--serif)}
+.obj-head .who{font-size:13px;color:var(--muted);margin-top:4px}
+.verdict{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:3px;white-space:nowrap}
+.verdict.vinner{background:var(--ok-soft);color:var(--ok)}
+.verdict.delvis{background:var(--warn-soft);color:var(--warn)}
+.verdict.poang{background:var(--accent-soft);color:var(--accent-ink)}
+.obj-body{display:none;border-top:1px solid var(--line2);padding:16px}
+.obj.open .obj-body{display:block}
+.obj-body .strong{font-family:var(--serif);font-size:15px;padding-left:14px;border-left:2px solid var(--line);max-width:72ch}
+
+/* ---------- Förklarare / Svenskt ---------- */
+.list{display:grid;gap:10px}
+.item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.item .t{font-weight:600;font-size:15.5px}
+.item .m{font-size:13px;color:var(--muted);margin-top:2px}
+.item p{font-size:14px;margin-top:8px;max-width:72ch}
+.item .borrow{font-size:14px;margin-top:8px;padding:8px 12px;background:var(--surface2);border-radius:4px;max-width:72ch}
+.item .borrow b{font-weight:500;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:3px}
+.gloss{width:100%;border-collapse:collapse;font-size:14px}
+.gloss th,.gloss td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.gloss th{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.gloss td:first-child{font-weight:500;white-space:nowrap}
+.h2{font-size:22px;font-family:var(--serif);font-weight:500;margin:30px 0 12px}
+.h2:first-of-type{margin-top:0}
+.filterrow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+
+.empty{color:var(--muted);padding:30px 0;font-size:14px}
+.foot{margin-top:60px;padding-top:16px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);max-width:76ch}
+
+@media (max-width:900px){
+  .shell{grid-template-columns:1fr;gap:16px;padding-block:14px 60px}
+  .rail{position:static;max-height:none;display:none;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px}
+  .rail.show{display:block}
+  .menu-btn{display:inline-block}
+  .top-nav{display:none}
+  .qhead h1{font-size:24px}
+  .hero h1{font-size:28px}
+  .grid3{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr}
+  .card-head{grid-template-columns:34px minmax(0,1fr);gap:10px}
+  .score{grid-column:2;flex-direction:row;align-items:center;gap:10px;min-width:0}
+  .card-core{grid-column:2/3}
+  .rank{font-size:18px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .card,.obj{transition:border-color .15s}
+}
+.card:hover,.obj:hover{border-color:var(--muted)}
+</style>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#/oversikt" style="border:0;color:inherit">
+      <span class="q">Hur kan AI döda alla?</span>
+      <span class="tag">Argumentbank</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-controls="rail" aria-expanded="false">Meny</button>
+    <nav class="top-nav" id="topNav"></nav>
+  </div>
+</header>
+<div class="shell">
+  <nav class="rail" id="rail" aria-label="Innehåll"></nav>
+  <main class="content" id="content"></main>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+/* ---------- hjälpare ---------- */
+const $ = (s, el=document) => el.querySelector(s);
+function h(tag, attrs, ...kids){
+  const el = document.createElement(tag);
+  if (attrs) for (const [k,v] of Object.entries(attrs)){
+    if (v==null || v===false) continue;
+    if (k==='class') el.className = v;
+    else if (k==='html') el.innerHTML = v;
+    else if (k.startsWith('on')) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v===true ? '' : v);
+  }
+  for (const k of kids.flat(Infinity)){
+    if (k==null || k===false) continue;
+    el.append(k.nodeType ? k : document.createTextNode(String(k)));
+  }
+  return el;
+}
+const fmt1 = n => (Math.round(n*10)/10).toFixed(1).replace('.', ',');
+const TYPE_LABEL = {argument:'Argument', analogi:'Analogi', evidens:'Evidens', exempel:'Exempel', citat:'Citat', scenario:'Scenario'};
+const SUB_LABEL = {konkret:'Konkret', robust:'Robust', minnesvard:'Minnesvärd', trovardig:'Trovärdig', korrekt:'Korrekt'};
+const SORTS = {
+  score:['Effektivitet (sammanvägd)', a=>a.score],
+  robust:['Robusthet mot invändningar', a=>(a.scores||{}).robust||0],
+  konkret:['Konkretion', a=>(a.scores||{}).konkret||0],
+  trovardig:['Trovärdighet', a=>(a.scores||{}).trovardig||0],
+  minnesvard:['Minnesvärdhet', a=>(a.scores||{}).minnesvard||0],
+  korrekt:['Korrekthet', a=>(a.scores||{}).korrekt||0],
+};
+
+let store = {};
+try { store = JSON.parse(localStorage.getItem('doom-ui')||'{}') || {}; } catch(e){ store = {}; }
+function save(){ try { localStorage.setItem('doom-ui', JSON.stringify(store)); } catch(e){} }
+const ui = { sort: store.sort||'score', types: new Set(), open: new Set() };
+
+const ALL_ANSWERS = {};
+for (const p of DATA.parts) for (const q of p.questions) for (const a of q.answers) ALL_ANSWERS[a.id] = {a,q,p};
+
+/* ---------- routing ---------- */
+function route(){
+  const hash = location.hash.replace(/^#\/?/, '');
+  const [sec, sub] = hash.split('/');
+  const known = ['oversikt','skeptiker','forklarare','svenskt','metod'];
+  if (!sec) return {sec:'oversikt'};
+  if (known.includes(sec)) return {sec, sub};
+  const part = DATA.parts.find(p=>p.id===sec);
+  if (part){
+    const q = part.questions.find(q=>q.id===sub) || part.questions[0];
+    return {sec:'part', part, q};
+  }
+  return {sec:'oversikt'};
+}
+window.addEventListener('hashchange', render);
+
+/* ---------- navigering ---------- */
+function renderNav(r){
+  const rail = $('#rail'); rail.innerHTML='';
+  rail.append(h('a',{class:'rail-sec'+(r.sec==='oversikt'?' on':''),href:'#/oversikt'},'Översikt'));
+  rail.append(h('div',{class:'rail-div'}));
+  DATA.parts.forEach((p,i)=>{
+    const on = r.sec==='part' && r.part.id===p.id;
+    const wrap = h('div',{class:'rail-part'});
+    wrap.append(h('a',{class:'rail-h'+(on?' on':''),href:'#/'+p.id},h('span',{class:'num'},'DEL '+(i+1)),h('span',null,p.title)));
+    p.questions.forEach(q=>{
+      wrap.append(h('a',{class:'rail-q'+(on&&r.q.id===q.id?' on':''),href:'#/'+p.id+'/'+q.id},q.question,h('span',{class:'cnt'},q.answers.length)));
+    });
+    rail.append(wrap);
+  });
+  rail.append(h('div',{class:'rail-div'}));
+  [['skeptiker','Skeptikern: invändningar & svar'],['forklarare','Förklarare att låna från'],['svenskt','Svensk kontext & ordlista'],['metod','Metod & källor']].forEach(([id,t])=>{
+    rail.append(h('a',{class:'rail-sec'+(r.sec===id?' on':''),href:'#/'+id},t));
+  });
+  const top = $('#topNav'); top.innerHTML='';
+  [['oversikt','Översikt'],...DATA.parts.map((p,i)=>[p.id,'Del '+(i+1)]),['skeptiker','Skeptikern'],['forklarare','Förklarare'],['svenskt','Svenskt'],['metod','Metod']].forEach(([id,t])=>{
+    const on = (r.sec===id) || (r.sec==='part' && r.part.id===id);
+    top.append(h('a',{class:on?'on':'',href:'#/'+id},t));
+  });
+}
+
+/* ---------- svarskort ---------- */
+function linkList(items){
+  if (!items || !items.length) return null;
+  return h('ul',{class:'links'}, items.map(s=>h('li',null,
+    s.url ? h('a',{href:s.url,target:'_blank',rel:'noopener'},s.name||s.title) : h('span',null,s.name||s.title),
+    s.note ? h('span',{class:'note'},s.note) : null)));
+}
+function answerCard(a, q, p){
+  const ref = a.ref ? ALL_ANSWERS[a.ref] : null;
+  const src = ref ? ref.a : a;
+  const isOpen = ui.open.has(a.id);
+  const score = Number(src.score||0);
+  const card = h('div',{class:'card'+(isOpen?' open':''),id:'a-'+a.id});
+  const head = h('button',{class:'card-head',type:'button','aria-expanded':isOpen?'true':'false',onclick:()=>{ if(ui.open.has(a.id)) ui.open.delete(a.id); else ui.open.add(a.id); card.classList.toggle('open'); head.setAttribute('aria-expanded',card.classList.contains('open')); }},
+    h('div',{class:'rank'},String(a.rank)),
+    h('div',null,
+      h('div',{class:'card-title'},src.title),
+      h('div',{class:'card-meta'},
+        h('span',{class:'ttag '+(src.type||'argument')},TYPE_LABEL[src.type]||src.type||'Argument'),
+        ref ? h('span',{class:'ref-note'},'Fullständig version under: '+ref.q.question) : null,
+        a.note && ref ? h('span',{class:'ref-note'},a.note) : null
+      )),
+    h('div',{class:'score'},
+      h('div',{class:'n'},fmt1(score),h('small',null,' /10')),
+      h('div',{class:'meter'},h('i',{style:'width:'+Math.max(4,Math.min(100,score*10))+'%'}))),
+    h('div',{class:'card-core'+(isOpen?'':' clamp')},src.core),
+    h('div',{class:'chev'},isOpen?'Fäll ihop':'Visa allt')
+  );
+  card.append(head);
+  const body = h('div',{class:'card-body'});
+  if (ref){
+    body.append(h('p',{class:'rebuttal'},'Det här är en korsreferens. Hela underlaget (manusförslag, för- och nackdelar, källor) finns under frågan ',h('a',{href:'#/'+ref.p.id+'/'+ref.q.id},ref.q.question),'.'));
+  } else {
+    if (a.script) body.append(h('div',{class:'sec'},h('h4',null,'Så kan du säga det'),h('div',{class:'script'},a.script)));
+    if (a.quote && a.quote.text) body.append(h('div',{class:'sec'},h('h4',null,'Citat'),h('blockquote',{class:'quote',style:'margin:0'},'“'+a.quote.text+'”',a.quote.original?h('span',{class:'orig'},'“'+a.quote.original+'”'):null,a.quote.who?h('span',{class:'who'},'— '+a.quote.who):null)));
+    const cols = h('div',{class:'sec cols'});
+    if (a.pros&&a.pros.length) cols.append(h('div',null,h('h4',null,'Fördelar'),h('ul',{class:'pros'},a.pros.map(x=>h('li',null,x)))));
+    if (a.cons&&a.cons.length) cols.append(h('div',null,h('h4',null,'Nackdelar & invändningar'),h('ul',{class:'cons'},a.cons.map(x=>h('li',null,x)))));
+    if (cols.children.length) body.append(cols);
+    if (a.rebuttal) body.append(h('div',{class:'sec'},h('h4',null,'Så bemöter du invändningen'),h('p',{class:'rebuttal'},a.rebuttal)));
+    if (a.caveats&&a.caveats.length) body.append(h('div',{class:'sec caveats'},h('h4',null,'Var försiktig med'),h('ul',null,a.caveats.map(x=>h('li',null,x)))));
+    if (a.explainers&&a.explainers.length) body.append(h('div',{class:'sec'},h('h4',null,'Vem har förklarat det bra'),linkList(a.explainers)));
+    if (a.sources&&a.sources.length) body.append(h('div',{class:'sec'},h('h4',null,'Källor'),linkList(a.sources)));
+    if (a.scores) body.append(h('div',{class:'sec subscores'},Object.entries(a.scores).map(([k,v])=>h('span',null,(SUB_LABEL[k]||k)+' ',h('b',null,String(v))))));
+    if (a.debate_note) body.append(h('div',{class:'debate'},h('b',null,'Från debattrundan: '),a.debate_note));
+  }
+  card.append(body);
+  return card;
+}
+
+/* ---------- vyer ---------- */
+function viewPart(r){
+  const {part:p, q} = r;
+  const c = $('#content'); c.innerHTML='';
+  const pi = DATA.parts.indexOf(p);
+  const qi = p.questions.indexOf(q);
+  c.append(h('div',{class:'qhead'},
+    h('div',{class:'eyebrow'},'Del '+(pi+1)+' · '+p.title+' · Fråga '+(qi+1)+' av '+p.questions.length),
+    h('h1',null,q.question),
+    q.why ? h('p',{class:'why'},q.why) : null));
+
+  const types = [...new Set(q.answers.map(a=>(a.ref?ALL_ANSWERS[a.ref].a.type:a.type)||'argument'))];
+  const tb = h('div',{class:'toolbar'});
+  const sel = h('select',{id:'sortSel',onchange:e=>{ui.sort=e.target.value;store.sort=ui.sort;save();render();}},
+    Object.entries(SORTS).map(([k,[t]])=>h('option',{value:k,selected:ui.sort===k},t)));
+  tb.append(h('label',{for:'sortSel'},'Sortera'),sel);
+  if (types.length>1){
+    tb.append(h('div',{class:'chips'},types.map(t=>h('button',{type:'button',class:'chip'+(ui.types.has(t)?' on':''),onclick:()=>{ui.types.has(t)?ui.types.delete(t):ui.types.add(t);render();}},TYPE_LABEL[t]||t))));
+  }
+  tb.append(h('span',{class:'spacer'}));
+  tb.append(h('button',{type:'button',class:'exp',onclick:()=>{const all=q.answers.every(a=>ui.open.has(a.id)); q.answers.forEach(a=>all?ui.open.delete(a.id):ui.open.add(a.id)); render();}},
+    q.answers.every(a=>ui.open.has(a.id))?'Fäll ihop alla':'Visa alla'));
+  c.append(tb);
+
+  let list = q.answers.slice();
+  if (ui.types.size) list = list.filter(a=>ui.types.has((a.ref?ALL_ANSWERS[a.ref].a.type:a.type)||'argument'));
+  const key = SORTS[ui.sort][1];
+  list.sort((x,y)=>{const ax=x.ref?ALL_ANSWERS[x.ref].a:x, ay=y.ref?ALL_ANSWERS[y.ref].a:y; return key(ay)-key(ax) || x.rank-y.rank;});
+  const wrap = h('div',{class:'answers'});
+  if (!list.length) wrap.append(h('p',{class:'empty'},'Inga svar matchar filtret.'));
+  list.forEach(a=>wrap.append(answerCard(a,q,p)));
+  c.append(wrap);
+
+  const prev = qi>0 ? {p, q:p.questions[qi-1]} : (pi>0 ? {p:DATA.parts[pi-1], q:DATA.parts[pi-1].questions.at(-1)} : null);
+  const next = qi<p.questions.length-1 ? {p, q:p.questions[qi+1]} : (pi<DATA.parts.length-1 ? {p:DATA.parts[pi+1], q:DATA.parts[pi+1].questions[0]} : null);
+  c.append(h('div',{class:'qnav'},
+    prev ? h('a',{href:'#/'+prev.p.id+'/'+prev.q.id},h('span',{class:'lbl'},'← Föregående'),prev.q.question) : h('span'),
+    next ? h('a',{href:'#/'+next.p.id+'/'+next.q.id,style:'text-align:right'},h('span',{class:'lbl'},'Nästa →'),next.q.question) : h('span')));
+}
+
+function viewOverview(){
+  const c = $('#content'); c.innerHTML='';
+  const nA = Object.keys(ALL_ANSWERS).length;
+  const nQ = DATA.parts.reduce((s,p)=>s+p.questions.length,0);
+  const nO = (DATA.objections.items||[]).length;
+  const nS = new Set(Object.values(ALL_ANSWERS).flatMap(({a})=>(a.sources||[]).map(s=>s.url))).size;
+  const m = DATA.method||{};
+  c.append(h('div',{class:'hero'},
+    h('div',{class:'eyebrow'},'Researchunderlag för en videoserie i tre delar'),
+    h('h1',null,'Hur skulle AI kunna döda alla människor?'),
+    h('p',{class:'lede'},m.lede||'Alla argument, analogier, exempel och bevis som hittats, sorterade efter hur effektiva de sannolikt är för en tittare utan förkunskaper. Varje svar har fördelar, nackdelar, manusförslag och källor.'),
+    h('div',{class:'stats'},
+      h('span',null,h('b',null,String(nQ)),' frågor'),
+      h('span',null,h('b',null,String(nA)),' svar'),
+      h('span',null,h('b',null,String(nO)),' skeptikerinvändningar'),
+      h('span',null,h('b',null,String(nS)),' källor'),
+      h('span',null,h('b',null,m.agents||'–'),' agenter i research & debatt'))));
+
+  c.append(h('div',{class:'grid3'},DATA.parts.map((p,i)=>{
+    const top = Object.values(ALL_ANSWERS).filter(x=>x.p===p&&!x.a.ref).sort((x,y)=>y.a.score-x.a.score).slice(0,3);
+    return h('div',{class:'pcard'},
+      h('div',{class:'num'},'DEL '+(i+1)),
+      h('h3',null,p.title),
+      h('p',null,p.subtitle||''),
+      h('div',null,h('div',{class:'eyebrow',style:'margin-bottom:6px'},'Starkast enligt rankingen'),h('ol',null,top.map(({a,q})=>h('li',null,h('a',{href:'#/'+p.id+'/'+q.id},a.title),' ',h('span',{class:'mono',style:'font-size:11px;color:var(--muted)'},fmt1(a.score)))))),
+      h('a',{class:'go',href:'#/'+p.id},'Bläddra bland '+p.questions.length+' frågor →'));
+  })));
+
+  DATA.parts.forEach((p,i)=>{
+    if (!p.recommended_spine||!p.recommended_spine.length) return;
+    c.append(h('div',{class:'block'},h('h2',null,'Rekommenderad dramaturgi, del '+(i+1)+': '+p.title),
+      p.intro?h('p',{style:'color:var(--muted);margin-bottom:10px'},p.intro):null,
+      h('ol',{class:'spine'},p.recommended_spine.map(s=>h('li',null,s)))));
+  });
+
+  const rub = h('div',{class:'block'},h('h2',null,'Så är svaren rankade'),
+    h('p',null,m.rubric_intro||'Varje svar har fått 1–10 på fem kriterier. Vikterna bygger på vad forskning om riskkommunikation och de bästa förklararnas erfarenhet säger fungerar. Sammanvägningen är en bedömning, inte en mätning – använd den som utgångspunkt, inte facit.'),
+    h('div',{class:'tablewrap'},h('table',{class:'rubric'},
+      h('thead',null,h('tr',null,h('th',null,'Kriterium'),h('th',null,'Vikt'),h('th',null,'Vad det mäter'))),
+      h('tbody',null,[
+        ['Konkret','25 %','Greppbart utan förkunskaper; ger en bild i huvudet.'],
+        ['Robust','25 %','Överlever den bästa skeptikerinvändningen.'],
+        ['Trovärdig','20 %','Stöds av trovärdiga budbärare och primärkällor, inte bara "domedagsprofeter".'],
+        ['Minnesvärd','15 %','Går att återberätta för en kompis dagen efter.'],
+        ['Korrekt','15 %','Sant och inte överdrivet; en faktakoll hittar inget.'],
+      ].map(r=>h('tr',null,h('td',null,r[0]),h('td',{class:'w'},r[1]),h('td',null,r[2])))))));
+  c.append(rub);
+  if (m.how_to_use) c.append(h('div',{class:'block'},h('h2',null,'Så använder du sidan'),...m.how_to_use.map(t=>h('p',null,t))));
+  c.append(h('p',{class:'foot'},m.footer||''));
+}
+
+function viewObjections(){
+  const c = $('#content'); c.innerHTML='';
+  const items = DATA.objections.items||[];
+  c.append(h('div',{class:'qhead'},h('div',{class:'eyebrow'},'Tvärgående'),h('h1',null,'Skeptikern: de starkaste invändningarna och hur du svarar'),
+    h('p',{class:'why'},DATA.objections.intro||'Varje invändning i sin starkaste form, det bästa ärliga svaret, och en ärlig bedömning av var skeptikern faktiskt har en poäng. Överdriv aldrig – ett enda överdrivet påstående kan sänka hela serien.')));
+  const parts = [...new Set(items.map(o=>o.part))];
+  ui.objPart = ui.objPart||'alla';
+  c.append(h('div',{class:'filterrow'},[['alla','Alla'],...parts.map(p=>[p,OBJ_PART[p]||p])].map(([k,t])=>h('button',{type:'button',class:'chip'+(ui.objPart===k?' on':''),onclick:()=>{ui.objPart=k;render();}},t))));
+  const list = h('div',{class:'list'});
+  items.filter(o=>ui.objPart==='alla'||o.part===ui.objPart).forEach(o=>{
+    const open = ui.open.has(o.id);
+    const el = h('div',{class:'obj'+(open?' open':'')});
+    const head = h('button',{class:'obj-head',type:'button','aria-expanded':open?'true':'false',onclick:()=>{ui.open.has(o.id)?ui.open.delete(o.id):ui.open.add(o.id);el.classList.toggle('open');head.setAttribute('aria-expanded',el.classList.contains('open'));}},
+      h('div',null,h('div',{class:'t'},'”'+o.objection+'”'),h('div',{class:'who'},[o.who,OBJ_PART[o.part]].filter(Boolean).join(' · '))),
+      h('span',{class:'verdict '+(o.verdict_class||'delvis')},o.verdict_label||'Delvis'));
+    el.append(head);
+    const b = h('div',{class:'obj-body'});
+    if (o.strongest) b.append(h('div',{class:'sec'},h('h4',null,'Invändningen i sin starkaste form'),h('div',{class:'strong'},o.strongest)));
+    if (o.rebuttal) b.append(h('div',{class:'sec'},h('h4',null,'Bästa svaret'),h('p',{class:'rebuttal'},o.rebuttal)));
+    if (o.video_response) b.append(h('div',{class:'sec'},h('h4',null,'Så kan du säga det på 20 sekunder'),h('div',{class:'script'},o.video_response)));
+    if (o.verdict) b.append(h('div',{class:'sec'},h('h4',null,'Ärlig bedömning'),h('p',{class:'rebuttal'},o.verdict)));
+    if (o.concede) b.append(h('div',{class:'sec caveats'},h('h4',null,'Här har skeptikern en poäng'),h('p',null,o.concede)));
+    if (o.related&&o.related.length) b.append(h('div',{class:'sec'},h('h4',null,'Relaterade svar i banken'),h('ul',{class:'links'},o.related.map(id=>{const x=ALL_ANSWERS[id];return x?h('li',null,h('a',{href:'#/'+x.p.id+'/'+x.q.id},x.a.title),h('span',{class:'note'},x.q.question)):null;}))));
+    if (o.sources&&o.sources.length) b.append(h('div',{class:'sec'},h('h4',null,'Källor'),linkList(o.sources)));
+    el.append(b); list.append(el);
+  });
+  c.append(list);
+}
+const OBJ_PART = {del1:'Del 1: Hur AI fungerar',del2:'Del 2: Varför skulle AI vilja det',del3:'Del 3: Hur det kan gå till',meta:'Övergripande'};
+
+function viewExplainers(){
+  const c = $('#content'); c.innerHTML='';
+  const E = DATA.explainers;
+  c.append(h('div',{class:'qhead'},h('div',{class:'eyebrow'},'Låna av de bästa'),h('h1',null,'Förklarare som har lyckats'),h('p',{class:'why'},E.intro||'')));
+  const groups = E.groups||[{title:'',items:E.items||[]}];
+  groups.forEach(g=>{
+    if (g.title) c.append(h('h2',{class:'h2'},g.title));
+    c.append(h('div',{class:'list'},(g.items||[]).map(x=>h('div',{class:'item'},
+      h('div',{class:'t'},x.url?h('a',{href:x.url,target:'_blank',rel:'noopener'},x.name):x.name),
+      h('div',{class:'m'},[x.who,x.format,x.year].filter(Boolean).join(' · ')),
+      x.what?h('p',null,x.what):null,
+      x.borrow?h('div',{class:'borrow'},h('b',null,'Värt att låna'),x.borrow):null,
+      x.weakness?h('p',{style:'color:var(--muted)'},'Svaghet: '+x.weakness):null))));
+  });
+}
+
+function viewSwedish(){
+  const c = $('#content'); c.innerHTML='';
+  const S = DATA.swedish||{};
+  c.append(h('div',{class:'qhead'},h('div',{class:'eyebrow'},'För en svensk publik'),h('h1',null,S.title||'Svensk kontext, röster och ordlista'),h('p',{class:'why'},S.intro||'')));
+  (S.sections||[]).forEach(sec=>{
+    c.append(h('h2',{class:'h2'},sec.title));
+    if (sec.text) c.append(h('p',{style:'max-width:72ch;margin-bottom:12px'},sec.text));
+    if (sec.items) c.append(h('div',{class:'list'},sec.items.map(x=>h('div',{class:'item'},
+      h('div',{class:'t'},x.url?h('a',{href:x.url,target:'_blank',rel:'noopener'},x.name):x.name),
+      x.meta?h('div',{class:'m'},x.meta):null,
+      x.text?h('p',null,x.text):null,
+      x.borrow?h('div',{class:'borrow'},h('b',null,'Användbart'),x.borrow):null))));
+    if (sec.glossary) c.append(h('div',{class:'tablewrap'},h('table',{class:'gloss'},
+      h('thead',null,h('tr',null,h('th',null,'Engelska'),h('th',null,'Svenska (rekommenderat)'),h('th',null,'Kommentar'))),
+      h('tbody',null,sec.glossary.map(g=>h('tr',null,h('td',null,g.en),h('td',null,g.sv),h('td',null,g.note||'')))))));
+  });
+}
+
+function viewMethod(){
+  const c = $('#content'); c.innerHTML='';
+  const M = DATA.method||{};
+  c.append(h('div',{class:'qhead'},h('div',{class:'eyebrow'},'Bakom kulisserna'),h('h1',null,'Så gjordes researchen'),h('p',{class:'why'},M.intro||'')));
+  (M.sections||[]).forEach(sec=>{
+    const b = h('div',{class:'block',style:'margin-top:22px'},h('h2',null,sec.title));
+    (sec.paragraphs||[]).forEach(t=>b.append(h('p',null,t)));
+    if (sec.bullets) b.append(h('ul',{style:'margin-top:8px'},sec.bullets.map(t=>h('li',null,t))));
+    if (sec.links) b.append(h('div',{style:'margin-top:8px'},linkList(sec.links)));
+    c.append(b);
+  });
+}
+
+function render(){
+  const r = route();
+  renderNav(r);
+  $('#rail').classList.remove('show'); $('#menuBtn').setAttribute('aria-expanded','false');
+  if (r.sec==='part') viewPart(r);
+  else if (r.sec==='skeptiker') viewObjections();
+  else if (r.sec==='forklarare') viewExplainers();
+  else if (r.sec==='svenskt') viewSwedish();
+  else if (r.sec==='metod') viewMethod();
+  else viewOverview();
+  window.scrollTo({top:0});
+}
+$('#menuBtn').addEventListener('click',()=>{const r=$('#rail');r.classList.toggle('show');$('#menuBtn').setAttribute('aria-expanded',r.classList.contains('show'));});
+render();
+</script>

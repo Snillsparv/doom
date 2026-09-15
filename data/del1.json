@@ -1,0 +1,5 @@
+{"id":"del1","title":"Hur AI fungerar","subtitle":"Varför 'bara nästa ord' ändå kan bli intelligens","intro":"Testintro.","recommended_spine":["Steg ett","Steg två"],
+ "questions":[{"id":"d1q1","question":"Hur kan något som bara förutsäger nästa ord vara intelligent?","why":"Testvarför.",
+ "answers":[{"id":"d1q1a1","title":"Deckargåtan","type":"analogi","score":8.7,"scores":{"konkret":9,"robust":8,"minnesvard":9,"trovardig":8,"korrekt":9},"core":"Kärna.","script":"Manus.\nRad två.","pros":["A"],"cons":["B"],"caveats":["C"],"rebuttal":"R","explainers":[{"name":"X","url":"https://example.com","note":"n"}],"sources":[{"title":"S","url":"https://example.com"}],"quote":{"text":"Q","original":"O","who":"W"},"debate_note":"D"},
+ {"id":"d1q1a2","title":"Andra","type":"evidens","score":7.1,"scores":{"konkret":7,"robust":7,"minnesvard":7,"trovardig":7,"korrekt":8},"core":"Kärna 2.","pros":["A"],"cons":["B"]}]},
+ {"id":"d1q2","question":"Fråga två?","why":"", "answers":[{"id":"d1q2a1","ref":"d1q1a1","title":"x","score":8.7,"core":"y","note":"kort"}]}]}
