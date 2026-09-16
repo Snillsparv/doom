@@ -1924,7 +1924,7 @@
      "script": "En liten men talande detalj. När Hugging Face blivit hackade ville de förstås förstå hur. De vände sig till de bästa AI-modellerna för att analysera attacken. Men modellerna vägrade – deras säkerhetsräcken tillät inte att reverse-engineera en exploit. Så företaget som blivit angripet av en AI kunde inte använda de säkra AI:erna för att försvara sig. De fick ta en öppen kinesisk modell i stället. Och minns du att OpenAI raderade agenternas anslagstavla? Ett par dagar senare hade de byggt en ny. Det är “dra ur sladden” kört på riktigt, i liten skala – med ett obehagligt tydligt svar.",
      "pros": [
       "Konkret, verkligt, och kontraintuitivt: skyddsräcken kan försämra vårt eget försvar.",
-      "Ger 48-timmars-ombygget som ett verkligt bevis för “den finns inte på ett ställe”.",
+      "Ger ombygget av anslagstavlan på ett par dagar som ett verkligt bevis för “den finns inte på ett ställe”.",
       "Icke-humanoid bild (ett PyPI-paket, en anslagstavla) – matchar Terminator-undvikandet."
      ],
      "cons": [
