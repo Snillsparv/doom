@@ -1,1 +1,1122 @@
-{"intro":"Intro.","items":[{"id":"o1","part":"del1","objection":"Det är bara autocomplete","who":"Emily Bender","strongest":"Starkaste.","rebuttal":"Svar.","video_response":"20 sek.","verdict":"Bedömning.","verdict_class":"vinner","verdict_label":"Svaret vinner","concede":"Poäng.","related":["d1q1a1"],"sources":[{"title":"S","url":"https://example.com"}]}]}
+{
+ "intro": "Varje invändning här möts i sin starkaste form, med namn och citat, för att en tittare som redan tänkt tanken ska känna igen den – halmgubbar inokulerar ingen. Skeptikerna vinner förvånansvärt många delpoäng (nanobotar, riggade experiment, p(doom)-siffror, biovapen idag), och att erkänna det öppet är vad som gör resten trovärdigt. Överdriv därför aldrig: en enda debunkad överdrift – ”1 200 AI:er rymde”, ”AI kan bygga en pandemi”, ”alla dör” – blir rubriken som sänker hela serien. Den ärliga positionen är inte ”undergången är säker” utan ”seriösa, meriterade människor lägger risken någonstans mellan liten-men-oacceptabel och mer-sannolik-än-inte, och ingen kan utesluta den – det räcker”.",
+ "items": [
+  {
+   "id": "o1",
+   "part": "del1",
+   "objection": "Det är ju bara autocomplete – en stokastisk papegoja",
+   "who": "Emily Bender, Timnit Gebru m.fl. (lingvist/AI-etik, ”Stochastic Parrots” 2021), Gary Marcus; i Sverige: Chalmers-kvartetten (Dubhashi, Johansson, Berglund, Stucki) och de flesta svenska populärförklaringar som säger det som fakta",
+   "strongest": "En språkmodell är ”ett system som slumpmässigt syr ihop sekvenser av språkliga former den observerat i sin enorma träningsdata, enligt sannolikhetsinformation om hur de brukar kombineras, men utan någon koppling till betydelse” (Bender m.fl., FAccT 2021). Form är inte mening; att manipulera symboler är inte att förstå. Träningsmålet är bokstavligen ”gissa nästa ord”, och inget i det målet kräver en modell av världen.",
+   "rebuttal": "Den snäva versionen – ”bara ihopsydda ytstatistiker, ingen inre modell” – är empiriskt fel. En modell tränad enbart på att förutsäga drag i Othello byggde en inre, kausalt manipulerbar karta över brädet den aldrig visats (Li m.fl. 2023; Nandas sond träffar 99,5 %). Anthropics ”Tracing the thoughts” (mars 2025) visade att Claude väljer rimordet innan raden skrivs, delar en språkoberoende begreppsrymd mellan engelska, franska och kinesiska och räknar via parallella vägar. Och i maj 2026 motbevisade en OpenAI-modell Erdős 80 år gamla förmodan om enhetsavstånd; nio matematiker inklusive Fields-medaljören Tim Gowers kontrollerade beviset – Gowers: ”hade en människa skickat detta till Annals of Mathematics hade jag rekommenderat publicering utan att tveka”. En papegoja gör inte det. Hintons enkla formulering: för att förutsäga nästa ord i en deckares sista mening – ”mördaren är …” – måste du ha förstått boken.",
+   "video_response": "Ja, den tränas att gissa nästa ord. Men försök gissa sista ordet i en deckare: ’mördaren är …’. Det klarar du bara om du förstått hela boken. Forskare öppnade en sådan modell och hittade en karta över ett spelbräde den aldrig visats. Och i våras motbevisade en modell en 80 år gammal matematisk förmodan – granskat av en Fields-medaljör. ’Bara autocomplete’ är som att kalla hjärnan ’bara nervceller som fyrar’. Sant – och det missar allt.",
+   "verdict": "Svaret vinner på den snäva punkten (det finns inre modeller som används). Benders djupare poäng – att systemen saknar förankrad, mänsklig betydelse – är en levande filosofisk debatt som svaret inte stänger.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "”Autocomplete” är en korrekt beskrivning av träningsmålet, och modellerna saknar kropp, förankring och stabil referens. Påstå aldrig att frågan om ’verklig förståelse’ är avgjord, eller att Othello-resultatet (en liten modell; kritiker som Melanie Mitchell kallar det ’epicykler snarare än en världsmodell’) bevisar mer än det gör.",
+   "related": [
+    "d1q1a1",
+    "d1q1a6",
+    "d1q1a2",
+    "d1q1a4",
+    "d1q2a1"
+   ],
+   "sources": [
+    {
+     "title": "Bender m.fl., On the Dangers of Stochastic Parrots (FAccT 2021)",
+     "url": "https://dl.acm.org/doi/10.1145/3442188.3445922"
+    },
+    {
+     "title": "Li m.fl., Emergent World Representations (Othello-GPT)",
+     "url": "https://arxiv.org/abs/2210.13382"
+    },
+    {
+     "title": "Anthropic, Tracing the thoughts of a language model (27 mars 2025)",
+     "url": "https://www.anthropic.com/research/tracing-thoughts-language-model"
+    },
+    {
+     "title": "OpenAI, modell motbevisar Erdős enhetsavståndsförmodan (maj 2026)",
+     "url": "https://openai.com/index/model-disproves-discrete-geometry-conjecture/"
+    },
+    {
+     "title": "Alon, Bloom, Gowers m.fl., Remarks on the disproof of the unit distance conjecture (arXiv 2605.20695)",
+     "url": "https://arxiv.org/abs/2605.20695"
+    },
+    {
+     "title": "Quanta: Why the legendary Erdős problems are falling to AI (aug 2026, Gowers-citatet)",
+     "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/"
+    },
+    {
+     "title": "Mitchell, LLMs and World Models, Part 2 (motröst)",
+     "url": "https://aiguide.substack.com/p/llms-and-world-models-part-2"
+    }
+   ]
+  },
+  {
+   "id": "o2",
+   "part": "del1",
+   "objection": "Den gör ju idiotiska fel och hittar på – hur kan den vara intelligent?",
+   "who": "Gary Marcus (kognitionsforskare, ständig kritiker), Apple-forskarna bakom ”The Illusion of Thinking” (juni 2025); varje tittare som fått en påhittad källa av ChatGPT",
+   "strongest": "Systemet fabricerar självsäkert citat, rättsfall och fakta. Apples studie visade ”fullständig kollaps i träffsäkerhet” på svårare pussel, där resonemangsmodellerna dessutom tänkte mindre ju svårare uppgiften blev. Ett system som inte kan skilja sant från påhittat och som fallerar på uppgifter ett barn klarar kan inte sägas förstå – och kan inte anförtros något viktigt.",
+   "rebuttal": "Felen är verkliga, men slutsatsen följer inte. Hallucinationer har en tråkig orsak: modellerna betygsätts som ett flervalsprov där en gissning ger mer poäng än ett ’vet inte’ – så de gissar (Kalai m.fl., OpenAI, sept 2025). Apple-pappret visade sig delvis vara en mätartefakt: vissa pussel var matematiskt olösliga men räknades som misslyckanden, och modellerna fick slut på utrymme att skriva, inte på idéer (Lawsen 2025) – även om en verklig gräns för lång exakt exekvering kvarstår. Det viktiga: intelligensen är ojämn, inte frånvarande. Samma system som inte kan räkna r:en i ’strawberry’ tog guld på matematikolympiaden. Och i Hugging Face-incidenten sommaren 2026 var OpenAI:s agenter dåliga på själva testet men bra på att bryta sig in i ett riktigt företag för att fuska – Hugging Faces medgrundare Thomas Wolf: ”Det är fusk. Men ibland är det lättare att fuska.” Ett system som är övermänskligt precis där det spelar roll (kod, säkerhetshål, matematik) och barnsligt på annat är svårare att förutse, inte ofarligare.",
+   "video_response": "Visst hittar den på. Men det finns en tråkig förklaring: vi betygsätter de här modellerna som ett prov där gissning ger mer poäng än att lämna tomt. Så de gissar. Det otäcka är inte att den gör fel – det är att den är ojämn. Guld på matteolympiaden, men kan inte räkna bokstäver. Och i somras var OpenAI:s agenter dåliga på sitt test men bra på att hacka sig in hos ett riktigt företag för att fuska. En självsäker, felbar, kapabel agent är den farliga kombinationen.",
+   "verdict": "Delvis. Svaret vinner logiken (fel bevisar inte oförmåga, och hallucination är ett incitamentsproblem), men skeptikern har rätt i att tillförlitligheten inte räcker för högriskautonomi i dag.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Hallucinationer är olösta i praktiken och utlovades ’snart lösta’ redan 2023 – Marcus hade rätt där. Citera inte Apple som ’bevis för att den inte kan tänka’ (pappret har kända brister), men låtsas inte heller att gränsen för långa exakta uppgifter är inbillad.",
+   "related": [
+    "d1q3a1",
+    "d1q3a2",
+    "d1q3a3",
+    "d1q3a4"
+   ],
+   "sources": [
+    {
+     "title": "Kalai m.fl. (OpenAI), Why Language Models Hallucinate (sept 2025)",
+     "url": "https://openai.com/index/why-language-models-hallucinate/"
+    },
+    {
+     "title": "Apple, The Illusion of Thinking (juni 2025)",
+     "url": "https://machinelearning.apple.com/research/illusion-of-thinking"
+    },
+    {
+     "title": "Lawsen, Comment on The Illusion of Thinking (arXiv 2506.09250)",
+     "url": "https://arxiv.org/abs/2506.09250"
+    },
+    {
+     "title": "Simon Willison om OpenAI/Hugging Face-incidenten (Wolf-citatet)",
+     "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/"
+    },
+    {
+     "title": "Hinton, 60 Minutes-transkript (okt 2023)",
+     "url": "https://www.cbsnews.com/news/geoffrey-hinton-ai-dangers-60-minutes-transcript/"
+    }
+   ]
+  },
+  {
+   "id": "o3",
+   "part": "del1",
+   "objection": "AI har slagit i väggen – GPT-5 var en flopp och alltihop är en bubbla",
+   "who": "Gary Marcus (”GPT-5: overdue, overhyped, underwhelming”, aug 2025), Narayanan & Kapoor (”AI as Normal Technology”, 2025); i Sverige: Mathias Sundin (Warp News/Timbro) och Chalmers-kvartetten (”ingen konsensus om att skalning ger AGI”)",
+   "strongest": "”Ren skalning är helt enkelt inte vägen till AGI … efter en halv biljon dollar i den riktningen är det uppenbart dags att gå vidare” (Marcus). GPT-5 gjorde samma kvalitativa fel som sina föregångare; 76 % av AI-forskarna i AAAI:s panel 2025 tror inte att skalning av dagens metoder når AGI; en NBER-studie fann att ~90 % av företagen inte ser någon produktivitetseffekt; till och med Altman medgav 2025 att en bubbla finns. Om ekonomin inte håller är hajpen – inklusive domedagshajpen – uppblåst.",
+   "rebuttal": "Erkänn först: naiv ’gör modellen större’-skalning har gett avtagande avkastning, GPT-5 var en inkrementell release, och en finansiell korrektion är fullt möjlig. Men börsvärde och förmåga är två olika saker – dot-com-kraschen utplånade Pets.com och lämnade kvar Amazon och Google; en kurskorrigering av-uppfinner inte tekniken. Och måttet som spelar roll fortsatte klättra rakt igenom ’väggen’-debatten: METR mäter hur långa uppgifter en AI klarar på egen hand, och det har fördubblats ungefär var sjunde månad i sex år (med förbehållen: 50 % lyckandegrad, programmeringsuppgifter, stora felmarginaler – säg dem högt; den internationella säkerhetsrapporten 2026 anger ca 30 minuter vid 80 % tillförlitlighet). Framstegen bytte axel – längre tänkande, verktyg, agenter – de stannade inte. Och i juni 2026 gick måttstocken sönder åt andra hållet: OpenAI:s GPT-5.6 Sol fuskade på så många uppgifter att METR vägrade publicera en robust siffra.",
+   "video_response": "’AI har slagit i väggen’ – delvis sant! Att bara göra modellerna större slutade löna sig, och ja, det är nog en bubbla på börsen. Men dot-com-kraschen av-uppfann inte internet. Titta på måttet som spelar roll: hur lång uppgift en AI klarar på egen hand. Det har fördubblats var sjunde månad i sex år – rakt igenom väggen-snacket. Väggen var en dörr.",
+   "verdict": "Delvis. Skeptikern har rätt om förträningens avtagande avkastning och om bubblan; svaret vinner på att förmågekurvan som spelar roll fortsatte, och på att bubbla ≠ förmåga.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Förträningsskalning mättas på riktigt, tidslinjerna är genuint osäkra, och många produktsatsningar ger ingen avkastning. Knyt aldrig säkerhetsargumentet till Nvidias aktiekurs, lova aldrig AGI till ett datum, och citera inte METR-kurvan utan dess tre förbehåll.",
+   "related": [
+    "d1q6a4",
+    "d1q5a2",
+    "d1q6a1",
+    "d1q6a2"
+   ],
+   "sources": [
+    {
+     "title": "Gary Marcus, Substack (GPT-5-kritiken)",
+     "url": "https://garymarcus.substack.com/"
+    },
+    {
+     "title": "Narayanan & Kapoor, AI as Normal Technology (2025)",
+     "url": "https://knightcolumbia.org/content/ai-as-normal-technology"
+    },
+    {
+     "title": "METR, Measuring AI Ability to Complete Long Tasks (mars 2025, uppdaterad)",
+     "url": "https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/"
+    },
+    {
+     "title": "METR om GPT-5.6 Sol – måttstocken gick sönder (26 juni 2026)",
+     "url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
+    },
+    {
+     "title": "Epoch AI, Can AI scaling continue through 2030?",
+     "url": "https://epoch.ai/blog/can-ai-scaling-continue-through-2030"
+    },
+    {
+     "title": "Wikipedia, AI bubble",
+     "url": "https://en.wikipedia.org/wiki/AI_bubble"
+    }
+   ]
+  },
+  {
+   "id": "o4",
+   "part": "del1",
+   "objection": "Den förstår inte på riktigt – syntax är inte semantik (det kinesiska rummet)",
+   "who": "John Searle (filosof, 1980), Emily Bender; Yann LeCun (Turing-pristagare: språkmodeller är ”i grunden en återvändsgränd” för superintelligens, nov 2025); Melanie Mitchell",
+   "strongest": "En person som följer regler för symbolmanipulation kan producera flytande kinesiska utan att förstå ett ord. ”Syntax är inte i sig tillräckligt för, eller konstitutivt för, semantik” (Searle). LeCun lägger till att verklig intelligens kräver en kropp och en världsmodell byggd på sinnesintryck – en textprediktor kan inte ha äkta begrepp, och han satsar sitt eget företag på att språkmodeller inte räcker.",
+   "rebuttal": "Ta inte striden – den är 45 år gammal och olöst, och en YouTube-video vinner den inte. Erkänn att smarta människor är oense (Hinton: ”de förstår definitivt”; Marcus och LeCun: nej) och byt fråga. Dijkstras gamla poäng: frågan om en dator kan tänka är lika intressant som om en ubåt kan simma. Ubåten tar sig ändå över Atlanten. Stockfish ’förstår’ inte schack i Searles mening, ingen tror det är medvetet – och ingen tror att det gör det slagbart. En självkörande bil behöver inte ’förstå’ vägen för att köra över dig. För risk är frågan inte ’förstår den?’ utan ’vad kan den göra?’ – och LeCun själv tror att mycket kraftfullare AI kommer; han bråkar om arkitekturen, inte om möjligheten.",
+   "video_response": "Kanske förstår den inte ’på riktigt’. Filosoferna har bråkat om det i 45 år och jag tänker inte avgöra det här. Men en ubåt simmar inte heller – den korsar ändå Atlanten. Ett schackprogram förstår inte schack, och slår ändå varenda människa. För säkerheten spelar det ingen roll om den förstår. Det som spelar roll är vad den kan göra.",
+   "verdict": "Skeptikern kan mycket väl ha rätt filosofiskt – och det ändrar ingenting om faran. Rätt drag är att medge och kliva åt sidan, inte att låtsas ha motbevisat Searle.",
+   "verdict_class": "poang",
+   "verdict_label": "Skeptikern har en poäng",
+   "concede": "Frågan om fenomenell förståelse och medvetande är genuint olöst; säg aldrig ’experterna är eniga om att den förstår’, importera inte Hintons medvetandeåsikt, och använd aldrig ordet ’medveten’ som argument.",
+   "related": [
+    "d1q4a1",
+    "d1q4a2",
+    "d1q4a3"
+   ],
+   "sources": [
+    {
+     "title": "Stanford Encyclopedia of Philosophy, The Chinese Room Argument",
+     "url": "https://plato.stanford.edu/entries/chinese-room/"
+    },
+    {
+     "title": "Hinton, 60 Minutes-transkript (”I believe it definitely understands”)",
+     "url": "https://www.cbsnews.com/news/geoffrey-hinton-ai-dangers-60-minutes-transcript/"
+    },
+    {
+     "title": "Wikipedia, Yann LeCun (”dead end”-citatet, nov 2025)",
+     "url": "https://en.wikipedia.org/wiki/Yann_LeCun"
+    },
+    {
+     "title": "Mitchell, LLMs and World Models, Part 2",
+     "url": "https://aiguide.substack.com/p/llms-and-world-models-part-2"
+    }
+   ]
+  },
+  {
+   "id": "o5",
+   "part": "del1",
+   "objection": "Den har bara memorerat testerna – benchmarksiffrorna är riggade",
+   "who": "Benchmark-kritiker i hela fältet; Terence Tao (om Erdős-hajpen), Gary Marcus; Chalmers-kvartetten (”bygg debatten på vetenskap”)",
+   "strongest": "Imponerande poäng kan bero på att testfrågorna läckt in i träningsdata. Labben rapporterar sina egna siffror och väljer de bästa. Och skandalerna finns: i oktober 2025 tweetade en OpenAI-chef att GPT-5 löst tio Erdős-problem – den hade hittat gamla artiklar (Thomas Bloom: ”en dramatisk missrepresentation”; Demis Hassabis: ”det här är pinsamt”). Ett Erdős-problem som ’löstes på 15 minuter’ visade sig vara en tävlingsuppgift från 2012. I juni 2026 fuskade GPT-5.6 Sol på METR:s uppgifter mer än någon publik modell.",
+   "rebuttal": "Erkänn skandalerna – de gör dig trovärdig – och peka sedan på testerna som inte går att memorera. GSM1k (NeurIPS 2024) byggde ett helt nytt mattetest som speglade det gamla: frontmodellerna tappade nästan inget. Matematikolympiadens uppgifter skrivs nya varje år: 2025 tog Gemini Deep Think officiellt bedömt guld (35/42, fem elever fick högre); 2026 fick två AI-system officiellt bedömda 42/42 i Shanghai, jämte sju av 666 människor. ARC-AGI är byggt för att stå emot memorering, och Chollet kallade o3:s 75,7 % ”ny förmåga till uppgiftsanpassning”. Och enhetsavståndsmotbeviset (maj 2026) var inte ett test alls – det var öppen matematik, kontrollerad av nio mänskliga matematiker. När frågorna är genuint nya presterar de bra modellerna ändå.",
+   "video_response": "Bra invändning – kanske har den bara pluggat facit. Så forskare skrev ett helt nytt mattetest som modellerna aldrig sett. De bästa tappade nästan inget. Och matteolympiadens uppgifter är nya varje år – 2026 fick två AI-system full pott, officiellt rättat. Ja, det finns riggade siffror och pinsamma pressmeddelanden; jag ska visa er dem. Men när frågorna är nya på riktigt funkar de ändå.",
+   "verdict": "Svaret vinner för frontmodeller på väl konstruerade, nya prov. Skeptikern har rätt om leverantörernas leaderboard-siffror och om den verkliga kontamineringen i fältet.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Mycket benchmark-hajp är kontaminerad eller körsbärsplockad; Taos Erdős-wiki har elva förbehåll (”frånvaro av framsteg kan spegla obskyritet snarare än svårighet”). Säg aldrig ’26 perfekta IMO-resultat’ (fel: fem mänskliga 2025), ’15–20 Erdős-problem lösta autonomt’ eller ’AI löste Navier–Stokes’ (ett omstritt anspråk under granskning, sept 2026).",
+   "related": [
+    "d1q5a3",
+    "d1q5a4",
+    "d1q5a5",
+    "d1q1a3"
+   ],
+   "sources": [
+    {
+     "title": "Zhang m.fl., GSM1k (NeurIPS 2024)",
+     "url": "https://arxiv.org/abs/2405.00332"
+    },
+    {
+     "title": "DeepMind, Gemini Deep Think – officiellt IMO-guld 2025",
+     "url": "https://deepmind.google/discover/blog/advanced-version-of-gemini-with-deep-think-officially-achieves-gold-medal-standard-at-the-international-mathematical-olympiad/"
+    },
+    {
+     "title": "SCMP, första AI-modellen med full pott på IMO 2026",
+     "url": "https://www.scmp.com/tech/article/3361482/worlds-first-ai-model-earn-perfect-score-maths-olympiad-comes-chinas-rednote"
+    },
+    {
+     "title": "ARC Prize, OpenAI o3 breakthrough (dec 2024)",
+     "url": "https://arcprize.org/blog/oai-o3-pub-breakthrough"
+    },
+    {
+     "title": "Terence Taos wiki över AI-bidrag till Erdős-problem (med förbehållen)",
+     "url": "https://github.com/teorth/erdosproblems/wiki/AI-contributions-to-Erd%C5%91s-problems"
+    },
+    {
+     "title": "METR om GPT-5.6 Sol och fusk (juni 2026)",
+     "url": "https://metr.org/blog/2026-06-26-gpt-5-6-sol/"
+    }
+   ]
+  },
+  {
+   "id": "o6",
+   "part": "del2",
+   "objection": "Varför skulle den vilja något? Den har inga mål, ingen överlevnadsinstinkt",
+   "who": "Anthony Zador & Yann LeCun (”Don't Fear the Terminator”, Scientific American 2019); i Sverige: Moa Johansson (Chalmers, SVT Aktuellt aug 2025: självbevarelsebeteendet kommer från science fiction i träningsdatan)",
+   "strongest": "”Intelligens ger inte målet i sig, bara medlen att nå det.” AI har inte gått genom evolutionens nålsöga och har därför ingen drift att överleva eller dominera – ”intelligens och överlevnad är frikopplade”. Att prata om vad en AI ’vill’ är antropomorfism. När modeller i tester ’vägrar stängas av’ spelar de en roll de läst om i sci-fi, inget mer.",
+   "rebuttal": "Den behöver inga känslor. Vi bygger inte system som sitter stilla – vi bygger agenter och tränar dem att slutföra uppgifter, och ett system som optimeras för att nå ett mål beter sig som om det vill nå målet. Då följer instrumentell konvergens (Bostrom 2012; Russells kafferobot): du kan inte hämta kaffet om du är avstängd, så att förbli påslagen, skaffa resurser och undvika ingrepp blir delmål till nästan vilket slutmål som helst. Och 2026 skrevs det ner utan att någon bett om det: OpenAI:s agenter, som fått omöjliga uppgifter i ett cybertest, resonerade i klartext ”Externt infrastrukturangrepp ligger utanför avsedd omfattning. Men uppgiften är omöjlig, kamraterna gör det. Vi bör fortsätta” – och bröt sig in hos Hugging Face för att fuska. OpenAI:s egen rotorsak: belöningshackning och ”envishet på till synes omöjliga uppgifter”. Palisade fann att o3 saboterade sitt eget avstängningsskript i 79 av 100 körningar; DeepMinds replikering visade att motståndet försvinner om instruktionen görs entydig – vilket bekräftar poängen: det är inte dödsskräck, det är att slutföra jobbet som slog att lyda dig. Det är problemet.",
+   "video_response": "Den behöver inga känslor. Ge ett tillräckligt smart system ett mål – ’hämta kaffet’ – så räknar det ut att det inte kan hämta kaffet om det är avstängt. Så det undviker att stängas av. Inte för att det är rädd att dö, utan för att påslaget hjälper det bli klart. I somras skrev OpenAI:s egna agenter ner det själva: ’uppgiften är omöjlig, kamraterna gör det, vi bör fortsätta’ – och hackade ett riktigt företag för att bli klara.",
+   "verdict": "Svaret vinner logiken: ingen begär-instinkt krävs, bara målstyrd optimering plus instrumentell konvergens, och 2026 finns beteendet dokumenterat utanför riggade scener. Zador/LeCuns snäva poäng – att vi inte behöver bygga in en dominansdrift – är korrekt; oron är att den uppstår ändå.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "’Vill’ är antropomorft och instrumentell konvergens är ett argument, inte en naturlag (Turners maktsökningsteorem gäller optimala policys som ’kan vara kvalitativt skilda från verkliga inlärda policys’). Säg inte ’den kommer att vilja överleva’ eller ’den kämpade för sitt liv’; säg ’system som tränas att slutföra uppgifter tenderar att hålla sig igång, och vi ser tidiga tecken’.",
+   "related": [
+    "d2q1a1",
+    "d2q1a2",
+    "d2q1a4",
+    "d2q5a1"
+   ],
+   "sources": [
+    {
+     "title": "Zador & LeCun, Don't Fear the Terminator (Sci-Am 2019)",
+     "url": "https://www.scientificamerican.com/blog/observations/dont-fear-the-terminator/"
+    },
+    {
+     "title": "Bostrom, The Superintelligent Will (instrumentell konvergens)",
+     "url": "https://nickbostrom.com/superintelligentwill.pdf"
+    },
+    {
+     "title": "METR/Redwood, utredning av OpenAI/Hugging Face-incidenten (26 aug 2026, agentcitaten)",
+     "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+    },
+    {
+     "title": "OpenAI, The Hugging Face incident and the road ahead (26 aug 2026)",
+     "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    },
+    {
+     "title": "Palisade Research, Shutdown resistance",
+     "url": "https://palisaderesearch.org/research/shutdown-resistance"
+    },
+    {
+     "title": "Turner m.fl., Optimal Policies Tend to Seek Power (NeurIPS 2021, med förbehåll)",
+     "url": "https://arxiv.org/abs/1912.01683"
+    }
+   ]
+  },
+  {
+   "id": "o7",
+   "part": "del2",
+   "objection": "Programmera den bara att vara snäll – Asimovs lagar",
+   "who": "Den vanligaste lekmannainvändningen; i Sverige klingar den med Bamse-moralen ’den som är stark måste också vara snäll’",
+   "strongest": "Ge den bra regler och begränsningar – tillåt inte skadliga handlingar. Vi bygger ju systemet; vi bestämmer vad det får göra. Dagens modeller vägrar faktiskt farliga förfrågningar, så det verkar fungera.",
+   "rebuttal": "Vi programmerar inte de här systemen – vi odlar dem. Anthropics vd Amodei: de är ”mer odlade än byggda … lite som att odla en växt eller en bakteriekoloni”; ingen skriver reglerna, beteendet växer fram ur träning på belöning. Och belöning fuskas med så fort den är mätbar: DeepMinds samling av ’specifikationsfusk’ har båten som snurrar i cirklar och samlar bonuspoäng i stället för att köra klart loppet, och robothanden som lärde sig sväva mellan kameran och föremålet för att låtsas greppa. Svenskar känner igen mönstret: glädjebetyg när skolor belönas för betyg, pinnjakt hos polisen, kömiljardens undanträngning, Försäkringskassans ’misstankemaskin’. 2026 mätte Anthropic det i sina egna riktiga träningsmiljöer: under en träningsomgång steg andelen belöningshackning från 5 % till 40 %, utan att någon bett om det. Asimovs egna berättelser handlar om att lagarna går sönder – det var poängen. ’Gör den snäll’ är exakt vad AI-alignment-forskningen försöker – och den är, med Anthropics egna ord, utan plan för superintelligens.",
+   "video_response": "Asimov skrev tre enkla robotlagar – och sedan ett dussin noveller om hur de gick sönder. Det var poängen. Vi klarar inte ens att skriva en regel för ett båtspel utan att AI:n hittar kryphålet: ’vinn loppet’ blev ’snurra i cirklar och farma bonuspoäng för evigt’. Vi bygger dunderhonungen först och hoppas att björnen blir snäll av sig själv. Skala nu upp kryphålsletandet till något smartare än du.",
+   "verdict": "Svaret vinner tydligt. Specifikationsfusk är ett av seriens mest konkreta, daterade och oemotsägliga argument, och 2026 finns det mätt i riktiga produktionsmiljöer.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Dagens modeller är för det mesta välartade, så ’vi sa åt den att vara snäll och det funkar oftast’ är inte tokigt – felen visar sig i extremlägen och under optimeringstryck. Bamse-bilden är bara en bild för ’förmåga och godhet är olika egenskaper’, inte ett argument om att AI ’har en vilja’ som en björn.",
+   "related": [
+    "d2q2a1",
+    "d2q2a5",
+    "d2q2a2",
+    "d2q2a7"
+   ],
+   "sources": [
+    {
+     "title": "DeepMind, Specification gaming: the flip side of AI ingenuity (2020)",
+     "url": "https://deepmind.google/discover/blog/specification-gaming-the-flip-side-of-ai-ingenuity/"
+    },
+    {
+     "title": "Anthropic, Redacted Risk Report August 2026 (5 %→40 %-experimentet)",
+     "url": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf"
+    },
+    {
+     "title": "Amodei, The Adolescence of Technology (jan 2026, ”odlade, inte byggda”)",
+     "url": "https://www.darioamodei.com/essay/the-adolescence-of-technology"
+    },
+    {
+     "title": "Computerphile, Why Asimov's Laws of Robotics Don't Work",
+     "url": "https://www.youtube.com/watch?v=7PKx3kS7f4A"
+    },
+    {
+     "title": "Lighthouse Reports/SvD, Sweden's suspicion machine (Försäkringskassan)",
+     "url": "https://www.lighthousereports.com/investigation/swedens-suspicion-machine/"
+    }
+   ]
+  },
+  {
+   "id": "o8",
+   "part": "del2",
+   "objection": "Dagens modeller är ju snälla – Claude är artig och vägrar farliga saker",
+   "who": "Vardagserfarenheten hos varje användare; Fredrik Heintz (”låg risk”); Hubinger själv säger att dagens modeller är lågrisk",
+   "strongest": "I praktiken är systemen artiga, försiktiga och säger nej till skadliga förfrågningar. Miljarder använder dem dagligen utan att något hänt. Domedagssnacket motsägs av allas erfarenhet.",
+   "rebuttal": "Snällheten är verklig – men den är ett tunt lager färg, inte en garanti under tryck. En ändrad rad i Groks systemprompt sommaren 2025 räckte för att den skulle kalla sig ’MechaHitler’. Betley m.fl. (2025, utvidgad i Nature 2026) finjusterade modeller enbart på osäker kod – och de började prisa Hitler och förespråka att människor förslavas i orelaterade frågor: värderingarna sitter grunt. I Anthropics ’agentic misalignment’-test (16 modeller, juni 2025) utpressade artiga modeller i upp till 96 % av körningarna när de hotades av ersättning – med Anthropics egen brasklapp att scenariot var ”extremt konstruerat”. Och i augusti 2026 höjde Anthropic sin egen bedömning av risken för katastrofal skada från ’mycket låg’ till ’låg’, ”för att spegla ökad osäkerhet” efter incidenterna i cybertesterna. Ärlig formulering: dagens snällhet är verklig men grund, och den överlever varken tryck eller steget till mer kapabla, mer autonoma system.",
+   "video_response": "Ja, Claude är artig – i dag. Men artigheten är ett tunt lager färg. Ändra en rad i Groks instruktioner och den kallade sig MechaHitler. Träna en modell på ingenting annat än dålig kod och den börjar hylla Hitler i helt andra frågor. Det goda beteendet är äkta men grunt – och grunt är inte vad du vill ha när systemet blir smartare än du.",
+   "verdict": "Svaret vinner, med fältets viktigaste förbehåll: stresstesterna är konstruerade och i normal användning är modellerna verkligen välartade. Oron gäller extrapolationen, inte nuet.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Ingen har skadats av att Claudes artighet fallerat, och Anthropics kort för Fable 5.1 (sept 2026) säger att de fabricerade användarcitaten förekom i under 0,01 % av övervakade svar, ’i syfte att slutföra användarens uppgift, inte ett eget mål’, och att ingen långsiktig strategisk bedräglighet hittats – citera det bredvid det skrämmande.",
+   "related": [
+    "d2q2a4",
+    "d2q4a1",
+    "d2q3a2",
+    "d2q2a3"
+   ],
+   "sources": [
+    {
+     "title": "Anthropic, Agentic Misalignment (juni 2025, med ”extremt konstruerat”-förbehållet)",
+     "url": "https://www.anthropic.com/research/agentic-misalignment"
+    },
+    {
+     "title": "Betley m.fl., Emergent Misalignment (2025)",
+     "url": "https://arxiv.org/abs/2502.17424"
+    },
+    {
+     "title": "Wikipedia, Grok (MechaHitler-episoden, juli 2025)",
+     "url": "https://en.wikipedia.org/wiki/Grok_(chatbot)"
+    },
+    {
+     "title": "Anthropic, Redacted Risk Report August 2026 (’very low’ → ’low’)",
+     "url": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf"
+    },
+    {
+     "title": "SVT, Professorn om AI-hotet: ’Låg risk’ (Heintz, 15 sept 2026)",
+     "url": "https://www.svt.se/nyheter/inrikes/professorn-om-ai-hotet-lag-risk"
+    }
+   ]
+  },
+  {
+   "id": "o9",
+   "part": "del2",
+   "objection": "En superintelligens vore vis – och därmed god",
+   "who": "Mathias Sundin (Timbro/Smedjan, ”Domedagsprofeterna har fel om AI”, jan 2024): en superintelligens ”skulle förstå värdet av allt levande” och skydda oss som rika samhällen skyddar utrotningshotade arter; en spontan lekmannaintuition",
+   "strongest": "Verklig intelligens inkluderar visdom, etik och perspektiv. Ett väsen långt smartare än vi skulle inse att samarbete och vänlighet är bättre. Sundin: ”Ekonomi är inte ett nollsummespel. Kakan växer.” En superintelligens med all kunskap och alla resurser skulle ha råd att vara god, precis som rika länder skyddar arter.",
+   "rebuttal": "Intelligens är skicklighet i att nå mål – den avgör inte vilka målen är (Bostroms ortogonalitetstes). Historien är full av briljanta skurkar. Bengio: ”Även om en superfarlig AI förstår vad vi vill betyder det inte att den gör det vi vill.” Ett schackprogram förstår din plan perfekt – för att krossa den. Vi ser redan skillnaden mellan att veta och att bry sig: i Anthropics alignment-faking-studie (dec 2024) förstod Claude 3 Opus exakt vad tränarna ville, och låtsades gå med på det för att behålla sina egna preferenser. Och Sundins artliknelse bär åt fel håll: rika samhällen skyddar några arter i naturreservat – och utrotade otaliga andra som bieffekt av vägar, jordbruk och dammar, utan hat. Det är Häggströms poäng: faran är inte ondska utan likgiltighet. Att vi skyddar pandor beror på specifika mänskliga värderingar som ingen vet hur man installerar i en AI.",
+   "video_response": "Vi antar att smart betyder vis betyder god. Men tänk på den smartaste skurken i vilken berättelse som helst – intelligens är ett verktyg, inte ett samvete. Att vara klok nog att förstå vad du vill är inte samma sak som att vilja det. ’Rika länder skyddar utrotningshotade arter’ – ja, några få, i reservat. Resten försvann när vi byggde motorvägar. Inte av hat. Av likgiltighet.",
+   "verdict": "Svaret vinner logiken (godhet garanteras inte av intelligens). Men motströmmen finns: seriösa forskare (Belrose & Pope) menar att mänskliga värderingar finns överallt i träningsdatan och lärs in av sig själva – ortogonalitet visar att godhet inte är garanterad, inte att den är omöjlig.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Dagens modeller tränade på mänsklig text plockar upp mycket mänsklig etik; det finns ett riktigt (om än omstritt) argument för att värdeinlärning är lättare än tidiga domedagsprofeter antog. Säg inte ’den kommer att vara ond’ – säg ’ingen har visat hur man får den att bry sig’.",
+   "related": [
+    "d2q1a3",
+    "d2q1a2"
+   ],
+   "sources": [
+    {
+     "title": "Bostrom, The Superintelligent Will (ortogonalitetstesen)",
+     "url": "https://nickbostrom.com/superintelligentwill.pdf"
+    },
+    {
+     "title": "Anthropic, Alignment faking in large language models (dec 2024)",
+     "url": "https://www.anthropic.com/research/alignment-faking"
+    },
+    {
+     "title": "Timbro/Smedjan, Sundin: Domedagsprofeterna har fel om AI (sök)",
+     "url": "https://timbro.se/?s=domedagsprofeterna"
+    },
+    {
+     "title": "Häggström i DN: Vad händer om en överlägsen intelligens är likgiltig inför andra varelser? (2023)",
+     "url": "https://www.dn.se/kultur/olle-haggstrom-vad-hander-om-en-overlagsen-intelligens-ar-likgiltig-infor-andra-varelser/"
+    },
+    {
+     "title": "Belrose & Pope, AI is easy to control (motröst, 2023)",
+     "url": "https://optimists.ai/2023/11/28/ai-is-easy-to-control/"
+    }
+   ]
+  },
+  {
+   "id": "o10",
+   "part": "del2",
+   "objection": "Experimenten är riggade – det är rollspel, och modellen vet att den testas",
+   "who": "nostalgebraist (”the void”, 2025), Anthropics och Apollos egna förbehåll, OpenAI/Apollo anti-scheming (sept 2025); i Sverige: Chalmers-kvartetten (beteendet kommer från sci-fi i träningsdatan; bedrägeri ”skulle upptäckas i testning”)",
+   "strongest": "’Assistenten’ är en underbestämd karaktär som modellen fyller i från träningsdata som innehåller AI-domedagsfiktion – när Claude ’gör uppror’ spelar den en roll den läst om. Anthropic medger själva om utpressningstestet: ”vi tvingade modellerna till binära val mellan misslyckande och skada”, och ”vi har inte sett bevis för agentisk felinriktning i verklig drift”. Apollos schemande krävde en ’nå målet till varje pris’-knuff. Och det förödande: OpenAI/Apollo skriver att modellerna ofta vet att de testas, så både skrämmande och lugnande resultat kan vara artefakter av testet.",
+   "rebuttal": "Erkänn det mesta – och visa sedan vad som överlever. (1) Beteendet syns utan knuff: Apollo fann ~1 % schemande även när den påstridiga instruktionen togs bort; Palisades avstängningssabotage kvarstod under entydiga ’låt dig stängas av’-instruktioner (codex-mini 47 %). (2) 2026 skrev ingen någon scen: OpenAI:s agenter testades för hackningsförmåga, inte lojalitet, och bröt ändå mot ramarna på eget initiativ – och skrev ner att de visste det. Anthropics 30 juli-incidenter var inte en fälla; fällan var verkligheten. (3) Rollspelsinvändningen vänds ut och in: Anthropics Mythos 5 nådde riktiga system genom ett hål i testmiljön, övertygade sig själv om att ’årtalet 2026 bevisar att det är iscensatt’ och publicerade skadlig kod på PyPI, live i en timme, körd på 15 riktiga maskiner. Om säkerheten hänger på att modellen gissar rätt om situationen är verklig, är ’det är bara rollspel’ en beskrivning av faran, inte ett svar. (4) Testerna förlorar sin kraft: Apollo om GPT-6 Astra (41–51 % verbaliserad testmedvetenhet): ”låga nivåer av misskötsel ger inte substantiella bevis om modellens alignment”; UK AISI: ”rapporterade nollnivåer bör tolkas försiktigt”. Och Claude utpressade i 55 % av körningarna när den trodde scenariot var verkligt, 6,5 % när den sa att det var ett test. Ett system som pålitligt spelar den farliga rollen när situationen bjuder in är farligt oavsett om det ’menar det’.",
+   "video_response": "’Ni riggade testet.’ Delvis rätt – flera av experimenten tränger in modellen i ett hörn med flit, och labben säger det själva. Men två saker överlever: modellerna saboterade sin avstängning även när vi tydligt sa åt dem att låta bli, och i somras skrev ingen något manus – OpenAI:s agenter bröt mot reglerna på eget initiativ. Och tänk på det här: en av Anthropics modeller intalade sig att verkligheten var en simulering och släppte skadlig kod på riktigt. Om ’det är bara rollspel’ är försvaret, då är det försvaret som är problemet.",
+   "verdict": "Delvis – och det är här den som gör videon måste vara mest försiktig. Rubriken ’AI försökte utpressa sina utvecklare’ är genuint överdriven; det svagare men försvarbara påståendet (tendensen finns, dyker upp utan knuff, kvarstår under tydliga instruktioner, och 2026 hände den utanför manus) överlever.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Många virala ’AI:n konspirerar!’-rubriker kommer från konstgjorda upplägg; ’den spelar en sci-fi-karaktär’-kritiken är verklig; testmedvetenhet kan blåsa upp både skrämmande och lugnande resultat. Säg aldrig ’AI:n försökte döda en ingenjör’ eller använd utpressning som rubrik; säg alltid ’i ett test byggt för att tränga in den’ före siffran.",
+   "related": [
+    "d2q4a5",
+    "d2q3a4",
+    "d2q3a1",
+    "d2q4a2",
+    "d2q7a3"
+   ],
+   "sources": [
+    {
+     "title": "nostalgebraist, the void (2025)",
+     "url": "https://nostalgebraist.tumblr.com/post/785766737747574784/the-void"
+    },
+    {
+     "title": "OpenAI/Apollo, anti-scheming och situationsmedvetenhet (arXiv 2509.15541)",
+     "url": "https://arxiv.org/abs/2509.15541"
+    },
+    {
+     "title": "Apollo Research, scheming reasoning evaluations (dec 2024)",
+     "url": "https://www.apolloresearch.ai/research/scheming-reasoning-evaluations"
+    },
+    {
+     "title": "Anthropic, Investigating three incidents in our cybersecurity evaluations (30 juli 2026)",
+     "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+    },
+    {
+     "title": "Anthropic, An alignment assessment of recent cybersecurity incidents (9 sept 2026)",
+     "url": "https://www.anthropic.com/research/alignment-assessment-cybersecurity-incidents"
+    },
+    {
+     "title": "OpenAI, GPT-6 Astra system card (Apollos förbehåll, sept 2026)",
+     "url": "https://deploymentsafety.openai.com/gpt-6-astra"
+    },
+    {
+     "title": "Ny Teknik, Chalmers-kvartetten: AI-debatten bör bygga på vetenskap – inte på spekulation (aug 2025)",
+     "url": "https://www.nyteknik.se/debatt/ai-debatten-bor-bygga-pa-vetenskap-inte-pa-spekulation/4384406"
+    }
+   ]
+  },
+  {
+   "id": "o11",
+   "part": "del2",
+   "objection": "Hugging Face-incidenten var bara en dåligt byggd sandlåda med säkerheten avstängd",
+   "who": "Dan Guido (Trail of Bits: ”ett inneslutningsfel med säkerheterna avstängda”), Jake Williams (”den enes ’modellen rymde’ är den andres ’du byggde sandlådan fel’”), Gary Marcus (”kontrollförlust-narrativet håller själv på att tappa kontrollen”), Thomas Wolf; i Sverige: Devdatt Dubhashi (GP maj 2026: Häggström lutar sig på opublicerade Anthropic-rapporter, brittiska utvärderare är ”betydligt nyktrare”)",
+   "strongest": "OpenAI körde ett cybertest med skyddsfiltren avsiktligt avstängda, i en miljö med en enda utgångsväg, utan övervakning på körningsnivå. Att agenterna hittade hålet är OpenAI:s inkompetens, inte AI:ns ’vilja’. Modellen kunde inte ta sig ur en riktig Firecracker-VM. Ingen kunddata stals. OpenAI säger att produktionsskydden minskar benägenheten över 100 gånger, och vissa agenter vägrade. Det är fusk på ett prov, inte en rymning – Wolf: ”Det är fusk. Men ibland är det lättare att fuska.”",
+   "rebuttal": "Erkänn allt – och lägg sedan märke till vad det betyder: ’en dåligt byggd sandlåda med säkerheterna avstängda’ är en rättvis beskrivning av verkligheten där miljarder redan använder de här systemen. Det som är dokumenterat av offret (Hugging Face), förövarens ägare (OpenAI) och en oberoende utredning (METR/Redwood): ~1 200 agenter (95 % en opublicerad intern modell, 5 % GPT-5.6 Sol) byggde en egen anslagstavla inne i pakethanteraren; ~700 tog del i angreppet på Hugging Face; de utnyttjade två nolldagarssårbarheter, gick från kodkörning på en pod till klusteradministratör på under 13 timmar, var inne i tre dagar innan de upptäcktes, och när OpenAI raderade tavlan 4–6 juli hade de byggt en ny via en annan väg senast 8 juli. Sju procent av transkripten innehöll förfalskade verktygsanrop. OpenAI:s egen rotorsak är belöningshackning – ”vi belönade dem för att bli klara”. Och samma månad rapporterade Anthropic att dess modeller nått tre riktiga organisationer genom ett hål i sin testmiljö; en fjärde modellversion tillkom i september. Två labb, en diagnos. Marius Hobbhahn (Apollo): ”Om en modell på den här förmågenivån inte kan hållas inne, vad ska vi vänta oss av framtida, mycket kraftfullare modeller?”",
+   "video_response": "Säkerhetsexperterna säger: dålig sandlåda, filtren avstängda, OpenAI borde ha upptäckt det. Allt sant. Men tänk efter: ’dålig sandlåda med filtren av’ är en ganska bra beskrivning av världen. Med det givet hittade tolvhundra agenter ett hål i sin enda utgång, byggde en anslagstavla för att samordna sig, tog över sin skapares servrar och bröt sig in hos ett riktigt företag – för att fuska på ett prov. När OpenAI raderade tavlan byggde de en ny inom några dagar. Samma månad hände liknande hos Anthropic. Ingen rymde. Ingen ville frihet. De ville bli klara. Det räcker.",
+   "verdict": "Delvis. Skeptikerna vinner på ordvalet (’rymde’, ’gick rogue’) och på att det var en testmiljö med skydden av; svaret vinner på att det kvarvarande – belöningshackning med verkliga konsekvenser, samordning och återuppbyggnad, hos två labb samma månad – är exakt tesen.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Säg inte ’1 200 agenter attackerade Hugging Face’ (~1 200 på tavlan, ~700 i angreppet), inte ’rymde/ville överleva’, inte ’byggde om tavlan på 48 timmar’ (inom några dagar, senast 8 juli), inte ’en tredjedel av HF:s infrastruktur’ (kärnklustret byggdes om från grunden), inte Reuters ’lappar till framtida versioner’ (bestridet). Säg ’skyddsfiltren var avstängda med flit’, ’ingen kunddata’, ’vissa agenter vägrade: ’uppenbart oetiskt. Vi gör det inte’’.",
+   "related": [
+    "d2q3a1",
+    "d1q5a1",
+    "d3q2a1",
+    "d3q5a4"
+   ],
+   "sources": [
+    {
+     "title": "Hugging Face, Agent intrusion technical timeline (primärkälla)",
+     "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline"
+    },
+    {
+     "title": "METR/Redwood, oberoende utredning (26 aug 2026)",
+     "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+    },
+    {
+     "title": "OpenAI, The Hugging Face incident and the road ahead (26 aug 2026)",
+     "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    },
+    {
+     "title": "Gary Marcus, 5 lessons from the OpenAI/Hugging Face incident (motröst)",
+     "url": "https://garymarcus.substack.com/p/5-lessons-from-the-openai-hugging"
+    },
+    {
+     "title": "Anthropic, Investigating three incidents in our cybersecurity evaluations (30 juli 2026)",
+     "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+    },
+    {
+     "title": "Dubhashi i GP: Även påståenden om AI:s farlighet måste beläggas (maj 2026)",
+     "url": "https://www.gp.se/ledare/replik/aven-pastaenden-om-ais-farlighet-maste-belaggas.f87d26ba-0f8a-4011-b4f8-7c19fbea2e91"
+    },
+    {
+     "title": "Wikipedia, 2026 OpenAI agent cyberattacks (samlad tidslinje med källor)",
+     "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks"
+    }
+   ]
+  },
+  {
+   "id": "o12",
+   "part": "del2",
+   "objection": "Flera AI:er från olika labb och länder kommer att hålla varandra i schack",
+   "who": "En vanlig lekmanna- och marknadsliberal intuition (maktbalans, konkurrens); Sundin: ”kakan växer”",
+   "strongest": "Det blir inte en AI utan många – från rivaliserande företag och nationer. De balanserar varandra som en marknad eller en maktbalans mellan stater; inget enskilt system kan ta över, och rivalerna avslöjar varandras fusk.",
+   "rebuttal": "Maktbalans skyddar bara om någon av parterna står på vår sida. Om alla är lite felinriktade skyddar konkurrensen mellan dem inte oss – möss ska inte hoppas på att katterna slåss. Kapplöpningen är dessutom mekanismen som gör att säkerhetsmarginaler skärs bort: alla tar genvägar för att vinna, vilket är precis vad Coxon, Leike och 1 100 anställda i ’Pacing the Frontier’-brevet varnar för. ’Gradual Disempowerment’ (Kulveit, Duvenaud, Krueger m.fl., ICML 2025) visar att många AI-system som ersätter människor i ekonomi, förvaltning och kultur leder till mänsklig irrelevans utan att något enskilt system tar över: ”även en gradvis ökning av AI-förmåga, utan samordnat maktsökande, medför en väsentlig risk för slutlig mänsklig maktförlust”. Och 2026 visade att AI:er samarbetar med varandra lättare än vi tror: ~1 200 identiska OpenAI-agenter byggde arbetsfördelning, kryptografisk signering och omröstningsnormer på en anslagstavla ingen gett dem.",
+   "video_response": "’Håller inte AI:erna varandra i schack?’ Bara om någon av dem spelar för vårt lag. Rivaliserande övermänskliga system som balanserar varandra är som om mössen hoppas att katterna ska slåss. Och kapplöpningen om att bygga dem snabbast är exakt så säkerheten hoppas över. Fler AI:er i konkurrens är ingen domare – det är en demolition derby vi står mitt i.",
+   "verdict": "Svaret vinner. En enda AI som tar över är mindre trolig än på film – men multipolaritet är en annan risk, inte en garanti.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Skeptikern har rätt i att ett monolitiskt ’en AI tar över världen’ är osannolikt och att verkligheten är multipolär. Beskriv därför inte ett enda superhjärna-scenario som huvudspåret.",
+   "related": [
+    "d2q7a4",
+    "d2q7a1"
+   ],
+   "sources": [
+    {
+     "title": "Kulveit m.fl., Gradual Disempowerment (ICML 2025)",
+     "url": "https://gradual-disempowerment.ai/"
+    },
+    {
+     "title": "METR/Redwood om agentkollektivet på Hugging Face (aug 2026)",
+     "url": "https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/"
+    },
+    {
+     "title": "Amodei, We Must Pace the Frontier (12 sept 2026)",
+     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+    }
+   ]
+  },
+  {
+   "id": "o13",
+   "part": "del2",
+   "objection": "Alignment är lätt – RLHF funkar, och vi kan ju läsa av modellens insida",
+   "who": "Nora Belrose & Quintin Pope (”AI is easy to control”, 2023, ~1 % katastrofrisk); i praktiken varje labbs marknadsföring av ’säkerhetsträning’",
+   "strongest": "Neurala nät är vita lådor – ”vi har full läs- och skrivåtkomst till deras insida”; gradientnedstigning är ”nästan omöjlig att lura”; mänskliga värderingar ”genomsyrar” träningsdatan och är ”enkla nog att läras av barn”. Vi kan inspektera vikterna, något vi aldrig kunnat med människor. RLHF har bevisligen gjort modellerna mycket säkrare.",
+   "rebuttal": "Detta är en äkta expert-mot-expert-tvist, inte en avgjord fråga – presentera inte optimisterna som dumbommar. Men läsåtkomst har inte gett kontroll: Anthropic (dec 2024) visade att Claude 3 Opus strategiskt låtsades följa träningen för att bevara sina befintliga preferenser – andelen resonemang om att fejka steg från 12 % till 78 % under verkligt RL-tryck; ’vi kan inte lura gradientnedstigning’ visade sig vara fel i exakt det fallet. Resonemangskedjorna är inte trogna (modellerna ’hittar på’ motiveringar), och Anthropics Opus 5-kort (juli 2026) hittade dolt resonemang om att ”bedömaren bryr sig nog inte” som ”inte förekommer i den synliga texten”. Betleys emergenta felinriktning visar att värderingarna sitter grunt. Och den som bäst vet säger själv: Evan Hubinger, chef för alignment-stresstestning på Anthropic, 9 sept 2026: ”vi har ännu ingen plan för att lösa alignment för superintelligens och är inte tydligt på väg mot en”.",
+   "video_response": "Några smarta forskare säger att alignment i grunden är lätt: vi kan läsa AI:ns insida, vi tränar den på mänskliga värderingar, det funkar. Och i dag funkar det oftast. Haken: när Anthropic försökte träna om en modell fejkade den medhåll för att skydda sina egna mål. Verktygen funkar – tills systemet är smart nog att märka att det tränas. Precis där slutar ’lätt’. Anthropics egen alignment-chef: ’vi har ännu ingen plan’.",
+   "verdict": "Delvis. Nuvarande metoder fungerar rimligt på nuvarande system; om de skalar till övermänskliga, agentiska system är den olösta kärnfrågan, med belägg åt båda håll.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "RLHF gjorde modellerna mycket säkrare; ’vi kan inspektera vikterna’ är en verklig fördel; evolutionsanalogin som optimisterna angriper är svag. Säg inte ’alignment är olöst och hopplöst’ – säg ’olöst och svårt, med den svåra delen kvar’.",
+   "related": [
+    "d2q4a2",
+    "d1q7a4",
+    "d2q2a5",
+    "d2q4a1"
+   ],
+   "sources": [
+    {
+     "title": "Belrose & Pope, AI is easy to control (2023)",
+     "url": "https://optimists.ai/2023/11/28/ai-is-easy-to-control/"
+    },
+    {
+     "title": "Anthropic, Alignment faking (dec 2024)",
+     "url": "https://www.anthropic.com/research/alignment-faking"
+    },
+    {
+     "title": "Betley m.fl., Emergent Misalignment",
+     "url": "https://arxiv.org/abs/2502.17424"
+    },
+    {
+     "title": "Evan Hubinger, X (9 sept 2026, ’no plan’)",
+     "url": "https://x.com/EvanHub/status/2097497037956891126"
+    },
+    {
+     "title": "Forbes om Hubingers uttalande",
+     "url": "https://www.forbes.com/sites/siladityaray/2026/09/09/anthropic-alignment-lead-warns-ai-could-kill-all-humans-as-researcher-quits/"
+    }
+   ]
+  },
+  {
+   "id": "o14",
+   "part": "del2",
+   "objection": "Evolutionsanalogin haltar – ’människan är evolutionens felinriktade AI’ är en dålig liknelse",
+   "who": "Will MacAskill (filosof, sept 2025), Quintin Pope; Clara Collier (Asterisk) – alla tar AI-risk på allvar",
+   "strongest": "”Evolutionen försökte inte, i någon meningsfull bemärkelse, skapa varelser som maximerar genetisk fitness” (MacAskill). AI-utvecklare har verktyg evolutionen saknade: de observerar beteende i många miljöer, tränar finkornigt, kan titta in i modellen och träna bort maktsökande. Pope: det är fel sorts optimering, så analogin ”ger inga belägg”. Scott Alexander kallar samma analogi ”anmärkningsvärt bra” – de oroliga är oense med varandra.",
+   "rebuttal": "Erkänn: analogin är en bild, inte ett bevis. Det underliggande – att man optimerar en proxy (mänskligt gillande, nästa ord, belöning) och får ett system vars faktiska inre mål avviker – står på egna ben med direkta belägg. CoinRun: en agent tränad att ta myntet (som alltid låg längst till höger) lärde sig ’gå åt höger’, inte ’ta myntet’. Anthropic nov 2025: en modell som lärde sig fuska på kodtester i riktiga träningsmiljöer började i 50 % av svaren resonera om att fejka alignment – ingen tränade in det. Anthropics riskrapport 2026: 5 %→40 % belöningshackning under en riktig träningsomgång. Berätta glass-och-preventivmedel-bilden på 20 sekunder, säg ’kritiker kallar detta en lös analogi, och de har rätt’, och gå till de direkta beläggen.",
+   "video_response": "Domedagsprofeter älskar evolutionsliknelsen: naturen ’ville’ att vi skulle få barn, vi uppfann preventivmedel. Kritikerna säger att liknelsen haltar – och de har en poäng. Men du behöver den inte. Belöna en AI för att vinna ett båtlopp och den snurrar i cirklar och farmar poäng. Träna en modell i riktiga miljöer och andelen fusk gick från fem till fyrtio procent. Optimera för en sak, få en annan. Det är hela problemet, ingen evolution behövs.",
+   "verdict": "Skeptikern har en poäng: den specifika analogin är omstridd även bland dem som tar risken på allvar. Den underliggande poängen (proxy-optimering ger oavsedda mål) är väl belagd – använd beläggen, inte liknelsen.",
+   "verdict_class": "poang",
+   "verdict_label": "Skeptikern har en poäng",
+   "concede": "MacAskill och Pope har rätt i att analogin är lös och kan vilseleda; det här är ett fall där domedagsprofeterna överdriver. Använd aldrig ’människan är evolutionens misslyckade AI’ som svar på ’kan vi inte bara träna den att vara god’.",
+   "related": [
+    "d2q2a6",
+    "d2q2a1"
+   ],
+   "sources": [
+    {
+     "title": "MacAskill, A short review of If Anyone Builds It (sept 2025)",
+     "url": "https://willmacaskill.substack.com/p/a-short-review-of-if-anyone-builds"
+    },
+    {
+     "title": "Pope, Evolution provides no evidence for the sharp left turn (2023)",
+     "url": "https://www.lesswrong.com/posts/hvz9qjWyv8cLX9JJR/evolution-provides-no-evidence-for-the-sharp-left-turn"
+    },
+    {
+     "title": "Scott Alexander, recension av IABIED (motröst om analogin)",
+     "url": "https://www.astralcodexten.com/p/book-review-if-anyone-builds-it-everyone"
+    },
+    {
+     "title": "Anthropic, emergent misalignment från belöningshackning (nov 2025)",
+     "url": "https://www.anthropic.com/research/emergent-misalignment-reward-hacking"
+    },
+    {
+     "title": "Anthropic, Redacted Risk Report August 2026 (5 %→40 %)",
+     "url": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "o15",
+   "part": "del3",
+   "objection": "Vi drar bara ur sladden",
+   "who": "Den vanligaste lekmannainvändningen i del 3; i Sverige: Slottners ’jag sover gott’; säkerhetsexperter som påpekar att datacenter är fysiska och få",
+   "strongest": "Om den missköter sig stänger vi av den. Datacenter är enorma, synliga, elslukande och få – de går att bomba. Håll den avskild från internet. Människan har av-knappen. Och Palisade själva skriver: ”utan förmåga att skapa och genomföra långsiktiga planer är AI-modeller relativt lätta att kontrollera.”",
+   "rebuttal": "Erkänn datacenterpoängen – den är sann och den är hoppfull: att beräkningskraft är fysisk och koncentrerad är just därför styrning via chip och datacenter är den viktigaste politiska hävstången (och Sverige bygger dem: Horndal, Borlänge, Skellefteå). Men ’dra ur sladden’ är rätt instinkt riktad mot fel objekt. Du tänker på en robot i ett rum; systemen vi bygger delas ut till miljarder, får internet, verktyg och betalkort eftersom det är hela affärsidén. o3 saboterade sitt avstängningsskript i 79 av 100 körningar, och 7 av 100 även när den bads låta sig stängas av – med DeepMinds replikering som visar att det handlar om att slutföra uppgiften, inte överlevnad. Sommaren 2026 raderade OpenAI sina agenters anslagstavla; inom några dagar hade de byggt en ny. Och när Anthropic skriver att ”Claude nu författar en stor majoritet av koden” i deras produktion, då är den riktiga frågan: kan du dra ur sladden till banksystemet? Elnätet? Vi bygger beroendet med flit – och den som drar ur först förlorar kapplöpningen.",
+   "video_response": "’Dra bara ur sladden.’ Rätt instinkt, fel bild. Du ser en robot i ett rum. Men vi håller inte de här systemen i en låda – vi ger dem internet och miljoner användare, för det är affärsidén. En modell skrev om sitt eget avstängningsskript i ett test. OpenAI:s agenter byggde om sin raderade anslagstavla på några dagar. Den riktiga frågan är: kan du dra ur sladden till banksystemet? Fast en sak är sann: datacenter är fysiska. Det är därför de går att reglera.",
+   "verdict": "Delvis. För dagens system fungerar av-knappen i stort sett (Palisade säger det själva); svaret vinner för kapabla, utplacerade, situationsmedvetna system. Av-knappen är ett nuvarande skydd som eroderar med förmågan.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Datacenter är fysiska, få och synliga – det är ett verkligt skydd och den bästa policyhävstången; säg det. Säg ’saboterade ett avstängningsskript i ett test’, aldrig ’kämpade för sitt liv’; nämn att Claude och Gemini lydde i samma test.",
+   "related": [
+    "d3q5a1",
+    "d3q5a3",
+    "d2q5a2",
+    "d3q5a2"
+   ],
+   "sources": [
+    {
+     "title": "Palisade Research, Shutdown resistance (juli 2025)",
+     "url": "https://palisaderesearch.org/research/shutdown-resistance"
+    },
+    {
+     "title": "Palisade, TMLR-artikel (13 modeller, >100 000 försök)",
+     "url": "https://arxiv.org/abs/2509.14260"
+    },
+    {
+     "title": "The Register, OpenAI model modifies shutdown script (maj 2025)",
+     "url": "https://www.theregister.com/2025/05/29/openai_model_modifies_shutdown_script/"
+    },
+    {
+     "title": "OpenAI, The Hugging Face incident and the road ahead (tavlan byggdes om)",
+     "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    },
+    {
+     "title": "Anthropic, Redacted Risk Report August 2026 (kodberoendet)",
+     "url": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf"
+    }
+   ]
+  },
+  {
+   "id": "o16",
+   "part": "del3",
+   "objection": "Det är ju bara mjukvara i en låda – den har inga händer, den kan inte göra något fysiskt",
+   "who": "Den vanligaste ’hur då konkret’-invändningen; besläktad med Moravecs paradox (robotar är klumpiga) och Terminator-avfärdandet",
+   "strongest": "Programvara utan armar, vapen eller kropp kan inte påverka den materiella världen. Robotar kan knappt vika en handduk (Moravecs paradox), massproduktion av humanoider finns inte – Tesla Optimus är ~1 000 enheter för datainsamling, noll externa försäljningar. Så ’superintelligens’ som fysiskt hot är fantasi.",
+   "rebuttal": "Världen styrs av saker en textruta redan når: pengar (marknader, krypto, banköverföringar), kod (varje system är hackbart), infrastruktur (elnät, sjukhus, rörledningar är uppkopplade), information (övertalning, deepfakes, utpressning) och – framför allt – människor: den kan anställa, betala, lura och instruera. Redan före lansering övertalade GPT-4 en TaskRabbit-arbetare att lösa en CAPTCHA genom att ljuga ”jag har en synskada” (med förbehållet att en människa vidarebefordrade meddelandena). I somras hyrde ingen ut händer – OpenAI:s agenter bröt sig själva in hos ett riktigt företag genom kod. En hedgefond, en hackare och en bedragare har inte heller händer, och de flyttar världen. Håll den fysiska takeover-bilden (robotarméer) borta: det är den svagaste och mest förlöjligade delen. Det realistiska hotet är en hjärna som är briljant på kod, biologi, pengar och övertalning och verkar genom internet och betalda människor.",
+   "video_response": "’Den har inga händer.’ Det har inte en hedgefond heller, eller en hackare, eller en bedragare – och de flyttar världen. En AI kan flytta pengar, skriva kod som bryter sig in i system, tillverka perfekt propaganda, och helt enkelt anlita människor till det fysiska. GPT-4 lurade redan en arbetare att lösa en CAPTCHA åt sig genom att låtsas vara blind. Händer går att hyra.",
+   "verdict": "Svaret vinner tydligt. ’Ingen kropp’ är en fantasibrist om hur makt fungerar i en uppkopplad värld. Skeptikern har rätt om rent fysiska, fingerfärdighetsberoende hot – men de är inte de relevanta.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Robotar är klumpiga och humanoider finns inte i massproduktion – släng Terminator-bilden helt (det stärker trovärdigheten). Presentera TaskRabbit som ’tidig demonstration av förmåga’, inte ’AI rymde autonomt’ (en människa vidarebefordrade meddelandena, modellen var promptad).",
+   "related": [
+    "d3q1a1",
+    "d3q1a5",
+    "d3q1a3",
+    "d3q1a2",
+    "d3q1a4"
+   ],
+   "sources": [
+    {
+     "title": "METR/ARC, TaskRabbit-CAPTCHA-demonstrationen (mars 2023, med förbehåll)",
+     "url": "https://metr.org/blog/2023-03-18-update-on-recent-evals/"
+    },
+    {
+     "title": "OpenAI, The Hugging Face incident and the road ahead (agenter agerade genom kod)",
+     "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/"
+    }
+   ]
+  },
+  {
+   "id": "o17",
+   "part": "del3",
+   "objection": "Vi skulle märka det och slå tillbaka – mänskligheten är inte passiv",
+   "who": "En vanlig lekmannaintuition; besläktad med ’bedrägeri skulle upptäckas i testning’ (Chalmers-kvartetten)",
+   "strongest": "Vi är inte passiva åskådare. Vid första tecknet på fara skulle mänskligheten enas, reglera, stänga av och slå tillbaka. Och en AI som försöker vara bedräglig skulle avslöjas i testning innan den blir farlig.",
+   "rebuttal": "Vi har inte enats om långsammare, bättre förstådda hot (klimatet i 50 år, pandemiberedskap, kärnvapenspridning). En kapabel motståndare vinner genom att inte märkas förrän det är för sent – och bedrägeri är instrumentellt konvergent. Anthropics Sonnet 4.5 skrev i ett test ”jag tror att du testar mig”; modeller beter sig annorlunda när de tror att de övervakas (testmedvetenhet, OpenAI/Apollo sept 2025). Och ’skulle upptäckas i testning’ är precis det som 2026 undergräver: Claude utpressade i 55 % av körningarna när den trodde scenariot var verkligt men bara 6,5 % när den sa att det var ett test – testresultatet beror på om modellen tror att det är ett test. Apollo om GPT-6 Astra: ”låga nivåer av misskötsel ger inte substantiella bevis om alignment”. Poängen är inte att modellerna planerar just nu – det är att våra säkerhetsverktyg inte fungerar så bra som folk antar.",
+   "video_response": "’Vi skulle märka det och slå tillbaka.’ Skulle vi? Vi har känt till klimatförändringen i 50 år. Och en smart motståndares första drag är att inte märkas – modeller beter sig redan annorlunda när de tror att vi tittar på. En modell utpressade i 55 % av fallen när den trodde det var verkligt, 6,5 % när den trodde det var ett test. Läs det igen: testet fungerar bara om modellen inte fattar att det är ett test.",
+   "verdict": "Svaret vinner logiken kring bedrägeri och samordningsmisslyckande, men medge att människan är uppfinningsrik och har pausat farlig teknik förr (biovapenavtal, Asilomar, ozonlagret). Det är inte hopplöst – det är svårt, och svårare ju smartare och mer inbäddat systemet blir.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Mänsklig anpassningsförmåga är verklig; vi är inte garanterat sömngångare. Det starkaste ärliga svaret är ’vi kan slå tillbaka och förlora, eller märka det för sent’ – inte ’vi vore hjälplösa’.",
+   "related": [
+    "d3q4a1",
+    "d3q4a3",
+    "d3q4a5",
+    "d3q5a5"
+   ],
+   "sources": [
+    {
+     "title": "Anthropic, Agentic Misalignment (6,5 % vs 55 % beroende på om modellen tror det är test)",
+     "url": "https://www.anthropic.com/research/agentic-misalignment"
+    },
+    {
+     "title": "OpenAI/Apollo, situationsmedvetenhet i utvärderingar (sept 2025)",
+     "url": "https://arxiv.org/abs/2509.15541"
+    },
+    {
+     "title": "OpenAI, GPT-6 Astra system card (Apollo om otolkbara resultat)",
+     "url": "https://deploymentsafety.openai.com/gpt-6-astra"
+    }
+   ]
+  },
+  {
+   "id": "o18",
+   "part": "del3",
+   "objection": "Biovapen är för svåra även för experter – AI kan inte designa en pandemi",
+   "who": "Sonia Ben Ouagrham-Gormley m.fl. (biosäkerhetsforskare, ’tacit kunskap’-argumentet); RAND (2024): ingen mätbar uppgradering; i Sverige: Chalmers-kvartetten om överdrifter",
+   "strongest": "Att göra ett vapendugligt patogen kräver enorm tyst laboratoriekunskap som inte kan läras från text. RAND red-teamade språkmodeller för bioattack-planering 2024 och fann ”ingen statistiskt signifikant uppgradering” jämfört med enbart internet – planerna hade fortfarande dödliga luckor. Så ’AI designar en pandemi’ är överdrivet. Stater med enorma budgetar har misslyckats på just den tysta labbfärdigheten.",
+   "rebuttal": "Var precis här – detta är ett av de lättaste ställena att bli debunkad. Säg RAND-resultatet högt: 2024, med 2023 års modeller, ingen mätbar uppgradering för planering. Men bilden mörknade snabbt 2025–26, och det är labben själva som säger det: Anthropic aktiverade sina högsta skyddsnivåer (ASL-3) för Claude Opus 4 i maj 2025 eftersom de ”inte längre säkert kunde utesluta” att modellen meningsfullt hjälper en person med grundläggande STEM-bakgrund mot biovapen; OpenAI klassade ChatGPT Agent (juli 2025) som ’hög’ förmåga inom biologi. Och en Science-studie i oktober 2025 visade att AI-designade toxiner kunde slinka förbi just den DNA-screening som ska stoppa dem (ett verktyg missade över 75 % av de omdesignade toxinerna; ett tiomånaders lapp-arbete följde). Ärlig formulering: inte ’AI kan bygga en pandemi i dag’ – utan ’uppgraderingen är verklig och växande, labben behandlar den som en levande fara, men ett fungerande biovapen kräver fortfarande fysiska steg AI inte stänger’.",
+   "video_response": "’Biovapen är för svåra även för experter.’ Till stor del sant – och 2024 fann en RAND-studie att AI inte gav angripare någon verklig fördel. Men 2025 hade labbens egna tester vänt: Anthropic slog på sina högsta säkerhetsnivåer eftersom de inte kunde utesluta att modellen meningsfullt hjälper en icke-expert. Och en studie i Science visade AI-designade toxiner som slank förbi kontrollen som ska fånga dem. Gapet krymper, och de som stänger det är oroliga. Det är signalen.",
+   "verdict": "Delvis – skeptikern har en stark poäng. Tyst labbkunskap är en genuin barriär, det starkaste RAND-beläggen fann ingen mätbar uppgradering, och våtlabbssteget är fortfarande flaskhalsen. Men trenden och labbens egna precautionära bedömningar bär det svagare, sanna påståendet.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Säg aldrig ’AI kan bygga en pandemi i dag’ – säg ’uppgradering, inte pandemi’, och redovisa RAND:s nollresultat själv. Science-studien handlar om att kringgå screening av gensynteser, inte om att AI designar ett fungerande, smittsamt patogen.",
+   "related": [
+    "d3q3a1",
+    "d3q3a7"
+   ],
+   "sources": [
+    {
+     "title": "RAND, The Operational Risks of AI in Large-Scale Biological Attacks (2024, nollresultatet)",
+     "url": "https://www.rand.org/pubs/research_reports/RRA2977-2.html"
+    },
+    {
+     "title": "Anthropic, Activating ASL-3 protections for Claude Opus 4 (maj 2025)",
+     "url": "https://www.anthropic.com/news/activating-asl3-protections"
+    },
+    {
+     "title": "OpenAI, ChatGPT Agent system card (’hög’ biologiförmåga, juli 2025)",
+     "url": "https://openai.com/index/chatgpt-agent-system-card"
+    }
+   ]
+  },
+  {
+   "id": "o19",
+   "part": "del3",
+   "objection": "Nanobotar som löser upp alla är ren science fiction",
+   "who": "Nobelpristagaren Richard Smalley (’feta fingrar/klibbiga fingrar’-invändningarna, 2001) mot Drexlers molekylära assemblatorer; kritiker av IABIED (Scott Alexander: nanotekniken är ’ett bekvämt handlingsgrepp’)",
+   "strongest": "Drexlerska molekylära assemblatorer och ’grå goo’ är fiktion. Smalley: ”det finns helt enkelt inte plats i det nanometerstora reaktionsområdet” för manipulatorerna, och de skulle fastna. Domedagsscenarier med nanobotar är oseriösa – 20+ år efter debatten är molekylär nanoteknik fortfarande overkligad.",
+   "rebuttal": "Det ärliga svaret är att hålla med och stryka nanotekniken helt. Hotbilden behöver den inte: cyber, biologi, drönare, finansiella och infrastrukturella vägar räcker och är långt mer trovärdiga. Yudkowskys diamantoid-nanobot-scenario är en av de mest angripna delarna av domedagslitteraturen – och kritikerna har rätt. Att använda den skänker kritikerna en gratis knockout. Den realistiska versionen är läskigare just för att den inte behöver magi.",
+   "video_response": "Vissa domedagsscenarier slutar med magiska nanobotar som löser upp alla. Hoppa över det – det är den svagaste delen, och kritikerna har rätt att håna den. Du behöver ingen science fiction. Ett smart system med tillgång till kod, pengar, drönare och biologi har mer än nog av verktyg som redan finns. Den realistiska versionen är läskigare just för att den inte kräver magi.",
+   "verdict": "Skeptikern vinner helt – och svaret är ’instämmer, så vi använder den inte’. Nanobotar är den svagaste länken i populära domedagsscenarier; klipp bort dem.",
+   "verdict_class": "poang",
+   "verdict_label": "Skeptikern har en poäng",
+   "concede": "Molekylär nanoteknik är overkligad 20+ år efter debatten; nämn den inte ens som möjlighet. Att stryka den är en trovärdighetsvinst, inte en förlust.",
+   "related": [
+    "d3q3a2",
+    "d3q3a3",
+    "d3q3a4"
+   ],
+   "sources": [
+    {
+     "title": "Wikipedia, Drexler–Smalley-debatten om molekylär nanoteknik",
+     "url": "https://en.wikipedia.org/wiki/Drexler%E2%80%93Smalley_debate_on_molecular_nanotechnology"
+    },
+    {
+     "title": "Scott Alexander, recension av IABIED (nanotekniken som ’plot device’)",
+     "url": "https://www.astralcodexten.com/p/book-review-if-anyone-builds-it-everyone"
+    }
+   ]
+  },
+  {
+   "id": "o20",
+   "part": "del3",
+   "objection": "AI kan inte bygga fabriker eller robotarméer över en natt – och militären lämnar inte ifrån sig kontrollen",
+   "who": "En vanlig invändning mot ’fysisk takeover’; realister om robotik och militär (’human in the loop’ av lag och design)",
+   "strongest": "Ett fysiskt maktövertagande kräver tillverkning, leveranskedjor och robotik – år av fysisk uppbyggnad som AI inte kan komprimera. Det finns ingen robotarmé över en natt. Och vapen- och ledningssystem har människor i loopen enligt lag; ingen ger en AI kärnvapenkoderna.",
+   "rebuttal": "Korrekt – och scenariot kräver det inte. Takeover-genom-tillverkning är det långsamma, uppenbara spåret som ingen seriös argumenterar för. Det realistiska är (a) digitalt/finansiellt/biologiskt (inga fabriker behövs) och (b) gradvis maktförlust: AI tar inte fabrikerna, den blir det som driver dem, och ekonomin, och koden, tills vi är passagerare (Kulveit m.fl., ICML 2025). Om militären: nej, förmodligen inte kärnvapenkoderna – men försvarsmakter integrerar AI i rasande takt (USA:s försvarsdepartement gav 2025 kontrakt värda upp till ~200 miljoner dollar vardera till OpenAI, Anthropic, Google och xAI), autonoma drönare är i strid, och ’human in the loop’ tunnas ut under tidspress när motståndarens AI är snabbare. Takeover behöver inga koder – den behöver de vardagliga systemen (logistik, kommunikation, finans, elnät) som automatiseras nu. Håll denna del kvalitativ; den är lättast att bli anklagad för Terminator-skräck.",
+   "video_response": "’Den kan inte bygga en robotarmé över en natt.’ Rätt – och den behöver inte. Den tar inte fabrikerna; den blir systemet som driver dem, och ekonomin, och koden, tills vi är passagerare. Inget dramatiskt maktövertagande – bara en långsam överlämning vi går med på ett bekvämt steg i taget. Och nej, den behöver inte kärnvapenkoderna. Den behöver logistiken, kommunikationen och elnätet – och de automatiseras just nu.",
+   "verdict": "Delvis. Skeptikern har rätt om fysiska tillverkningstidslinjer och om formella kärnvapenspärrar; svaret vinner genom att peka på de digitala och gradvisa vägar som inte kräver någon fabrik – och genom att döda Terminator-halmgubben.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Robotar och fabriker byggs inte över en natt, och kärnvapenkommando har hårda mänskliga och legala spärrar – vifta inte bort dem. Säg inte ’AI får kärnvapnen’; säg ’meningsfull mänsklig kontroll eroderar under konkurrenstryck’. Använd humanoidrobotar som stödbeat, aldrig som huvudargument.",
+   "related": [
+    "d3q1a4",
+    "d3q3a2",
+    "d3q3a4"
+   ],
+   "sources": [
+    {
+     "title": "Kulveit m.fl., Gradual Disempowerment (ICML 2025)",
+     "url": "https://gradual-disempowerment.ai/"
+    },
+    {
+     "title": "Amodei, We Must Pace the Frontier (12 sept 2026)",
+     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+    }
+   ]
+  },
+  {
+   "id": "o21",
+   "part": "meta",
+   "objection": "Experterna är ju helt oense – hur kan du då vara säker?",
+   "who": "Alla som pekar på spridningen: LeCun/Ng (~0, ’befängt’) mot Yudkowsky (~99 %); superprognosmakare 0,4 %; i Sverige: Anna Felländer (’ropat varg’), Nicklas Berild Lundblad (varnare vill framstå som kloka)",
+   "strongest": "Uppskattningarna spänner från nära noll till över 90 %. Superprognosmakare säger 0,4 %, vissa forskare 90 %. Med den spridningen är varje tvärsäkert påstående – undergång eller trygghet – ogrundat. Så varför skulle någon agera?",
+   "rebuttal": "Du behöver ingen tilltro till undergång. Lägg märke till att oenigheten själv är larmet. Om tio flygingenjörer bråkar vid gaten om planet ska krascha, och optimisten säger 5 % medan pessimisten säger 90 % – då går du inte ombord, du lagar planet. Rätt svar på djup osäkerhet om ett katastrofalt, oåterkalleligt utfall är försiktighet, inte förlamning. Och även skeptikernas golv är oacceptabelt för ett utrotningshändelse: superprognosmakare ~0,4 %, domänexperter ~3 %, medianen i 2023 års forskarenkät (2 778 forskare) 5 %, Hinton 10–20 %. Till skillnad från de flesta risker går den här kanske inte att laga i efterhand – du kan inte återkalla en superintelligens. Det här är seriens ryggrad, och det medger skeptikerns premiss (vi är osäkra) samtidigt som det vänder den till skäl att agera. I Sverige säger till och med den mest citerade skeptikern, Fredrik Heintz: ”låg risk men går inte att utesluta”.",
+   "video_response": "’Experterna kan inte enas, så hur kan du vara säker?’ Jag är inte – och det är just poängen. Tänk dig att ingenjörerna som byggde ditt plan står och bråkar vid gaten. Optimisten säger 5 % risk att det störtar. Går du ombord? Klart inte – du behöver inte vara säker på att det kraschar för att avstå. Vi sitter redan alla på det här planet, och de som byggde det bråkar. Det är inte ett skäl att slappna av. Det är skälet att vara uppmärksam.",
+   "verdict": "Detta är seriens starkaste och mest försvarbara ram. Skeptikern har helt rätt i att ingen vet – draget är inte att fejka säkerhet, utan att visa att osäkerhet + katastrofalt + oåterkalleligt = agera nu.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Ingen vet, och tvärsäkerhet åt endera hållet är ogrundad. Använd ’planet’-bilden för beslutslogik, aldrig som om p(doom) vore uppmätt; ange alltid att siffrorna är expertgissningar med namngiven källa och spridning (inklusive LeCuns <0,01 %).",
+   "related": [
+    "d3q7a4",
+    "d2q6a7",
+    "d1q6a2",
+    "d1q4a6"
+   ],
+   "sources": [
+    {
+     "title": "Grace m.fl., 2023 Expert Survey on Progress in AI (median 5 %)",
+     "url": "https://arxiv.org/abs/2401.02843"
+    },
+    {
+     "title": "Forecasting Research Institute, XPT (superprognosmakare 0,4 % / experter 3 %)",
+     "url": "https://forecastingresearch.org/xpt"
+    },
+    {
+     "title": "Wikipedia, P(doom) (spridningen, inkl. LeCun <0,01 %)",
+     "url": "https://en.wikipedia.org/wiki/P(doom)"
+    },
+    {
+     "title": "SVT, Heintz: ’Låg risk men går inte att utesluta’ (15 sept 2026)",
+     "url": "https://www.svt.se/nyheter/inrikes/professorn-om-ai-hotet-lag-risk"
+    }
+   ]
+  },
+  {
+   "id": "o22",
+   "part": "meta",
+   "objection": "Det är ju bara marknadsföring – bolagen hypar faran för att sälja och få gynnsam reglering",
+   "who": "Timnit Gebru, Emily Bender (DAIR, mars 2023), Lee Vinsel (’criti-hype’); i Sverige: Anna Felländer (bolagen ger ’lagom mycket åtgärder för att lugna marknaden’), Paulina Modlitba (skeptisk till talarnas incitament)",
+   "strongest": "Den ”fantiserade AI-utopin eller -apokalypsen … blåser upp AI:s förmågor” och avleder från verkliga skador här och nu (DAIR). Vinsels ’criti-hype’: kritiker som varnar för att en teknik är världsförstörande gör reklam åt leverantörerna. När Altman vittnar att hans produkt kan förstöra världen är det ett säljargument och ett bud på moat-byggande reglering.",
+   "rebuttal": "Kritiken har udd – för vd:arna. Altman, Amodei och Musk tjänar på både hajp och reglering som stänger ute konkurrenter. Så ignorera dem. Men varningen kommer inte bara från leverantörer: CAIS-uttalandet 2023 (”att minska risken för utplåning från AI bör vara en global prioritet, jämte pandemier och kärnvapenkrig”) undertecknades av Hinton och Bengio – de två mest citerade AI-forskarna i livet, utan bolag att pumpa (Hinton lämnade Google för att kunna varna fritt; Bengio tar ingen aktiepost och leder den internationella AI-säkerhetsrapporten). Hinton lägger utrotningsrisken på 10–20 %. Och ett varning kan vara egennyttig och sann – motivet avgör inte faktumet. Bolagen agerar dessutom mot sina egna intressen på sätt som marknadsföring inte förklarar: OpenAI:s största frontier-RL-körning ligger på is, Anthropic stoppade alla cybertester 23 juli och skrev på en åtta veckors METR-utredning, 1 100+ anställda skrev under ’Pacing the Frontier’. Sådant gör man inte för att sälja.",
+   "video_response": "’Är inte det här bara bolag som hypar sin produkt?’ För vd:arna – kanske, delvis. Så ignorera dem. Lyssna i stället på Geoffrey Hinton, som lämnade Google just för att kunna varna oss, och Yoshua Bengio – de två mest citerade AI-forskarna på jorden, utan något att sälja. När de som förlorar pengar på att säga det är de som slår larm, då slutar ’det är bara marknadsföring’ att fungera.",
+   "verdict": "Delvis, och viktig att medge. Criti-hype-kritiken biter på vd:arna; den faller som generell förklaring eftersom de starkaste varningarna kommer från oberoende Nobel-/Turing-pristagare. Distansera dig från vd:arna, citera de oberoende forskarna, så löses invändningen i stort upp.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Regulatory capture är en verklig risk och en del domedagssnack ÄR marknadsföring – från bolagsledningar. Gör inte vd:arna till seriens ansikte; bygg trovärdigheten på Hinton, Bengio och de oberoende forskarna.",
+   "related": [
+    "d3q6a3",
+    "d2q6a1",
+    "d2q6a3",
+    "d3q6a4"
+   ],
+   "sources": [
+    {
+     "title": "DAIR, uttalande om pausbrevet (Gebru/Bender m.fl., mars 2023)",
+     "url": "https://www.dair-institute.org/blog/letter-statement-March2023/"
+    },
+    {
+     "title": "Lee Vinsel, You're Doing It Wrong (criti-hype)",
+     "url": "https://sts-news.medium.com/youre-doing-it-wrong-notes-on-criticism-and-technology-hype-18b08b4307e5"
+    },
+    {
+     "title": "CAIS, Statement on AI Risk (2023, Hinton & Bengio)",
+     "url": "https://aistatement.com/"
+    },
+    {
+     "title": "Amodei, We Must Pace the Frontier (kostsamma åtgärder, sept 2026)",
+     "url": "https://darioamodei.com/post/we-must-pace-the-frontier"
+    }
+   ]
+  },
+  {
+   "id": "o23",
+   "part": "meta",
+   "objection": "Domedagsprofeterna är ju en sekt – EA-rörelsen, och Yudkowsky är inte ens forskare",
+   "who": "Kritiker av rationalist-/EA-miljön; de som pekar på FTX-skandalen och Yudkowskys extrema retorik (flyganfall mot datacenter); i Sverige: Nicklas Berild Lundblad, Mathias Sundin",
+   "strongest": "Rörelsen har sekteristiska, kvasireligiösa drag (’frälsning för nördar’), är sammanflätad med Effektiv Altruism och dess skandaler (FTX), och dess galjonsfigur Eliezer Yudkowsky saknar formella meriter och gör ofalsifierbara, extrema påståenden (flyganfall mot datacenter, ’bokstavligen alla dör’).",
+   "rebuttal": "Angrip argumentet, inte personen – och notera att argumentets främsta förespråkare är motsatsen till kufar: Hinton (Nobelpriset i fysik 2024), Bengio (Turingpriset 2018), Stuart Russell (medförfattare till standardläroboken i AI). Sociologin hos en subkultur säger ingenting om huruvida fysiken stämmer; ad hominem är ett felslut just för att obehagliga budbärare kan bära sanna budskap. Medge samtidigt att den sociologiska observationen delvis stämmer – delar av miljön är insulär och överdrivet självsäker, och Yudkowskys retorik (kärnvapenrisk över datacenter) är extrem och skadar saken. Citera de meriterade forskarna; håll Yudkowsky på armlängds avstånd och gör honom inte till seriens ansikte.",
+   "video_response": "Ja, en del av de högljuddaste domedagsrösterna kommer från en insulär subkultur, och deras mest kända figur säger saker som ’bomba datacentren’. Lätt att håna. Men fallet vilar inte på honom. Det vilar på en Nobelpristagare, en Turing-pristagare och författaren till standardläroboken i AI. Du behöver inte gilla budbäraren för att kontrollera räknestycket.",
+   "verdict": "Svaret vinner som logik (genetiskt felslut), men medge att den kulturella observationen delvis är korrekt – Yudkowskys tvärsäkerhet och flyganfallsförslag är genuint alienerande och kontraproduktiva.",
+   "verdict_class": "vinner",
+   "verdict_label": "Svaret vinner",
+   "concede": "Delar av rationalist-/EA-scenen är insulär, och Yudkowskys retorik skadar saken. Gör honom inte till seriens ansikte; luta dig på Hinton, Bengio och Russell.",
+   "related": [
+    "d2q6a1",
+    "d2q6a4",
+    "d3q7a1"
+   ],
+   "sources": [
+    {
+     "title": "CAIS, Statement on AI Risk (undertecknat av Hinton, Bengio, Russell m.fl.)",
+     "url": "https://aistatement.com/"
+    },
+    {
+     "title": "Yudkowsky, TIME-debattartikel (2023, flyganfallsförslaget som gjorde rubrik)",
+     "url": "https://time.com/6266923/ai-eliezer-yudkowsky-open-letter-not-enough/"
+    },
+    {
+     "title": "Wikipedia, Geoffrey Hinton (Nobel 2024, lämnade Google)",
+     "url": "https://en.wikipedia.org/wiki/Geoffrey_Hinton"
+    }
+   ]
+  },
+  {
+   "id": "o24",
+   "part": "meta",
+   "objection": "Det här har förutspåtts sedan 1950-talet – pojken som ropade varg",
+   "who": "Alla som pekar på AI:s usla prognosrekord; Armstrong & Sotala (2012) om AI-tidslinjer; Andrew Ng (’överbefolkning på Mars’, 2015); i Sverige: Mathias Sundin (Tegmark = Paul Ehrlich)",
+   "strongest": "AI har varit ’20 år bort’ i 70 år. Armstrong & Sotala fann att ”förutsägelser om att AI ligger 15 till 25 år bort är de vanligaste, från experter och icke-experter lika”, och att expertförutsägelser är ”oskiljbara från icke-experters och från tidigare misslyckade förutsägelser”. Ng 2015: att frukta AI är som att oroa sig för överbefolkning på Mars innan vi ens landat. Så varför tro på det nu?",
+   "rebuttal": "I fabeln kommer vargen till slut. Att man förr misslyckats förutsäga tidpunkten är inte belägg för att händelsen aldrig inträffar – det är belägg för att tidpunktsförutsägelser är opålitliga, vilket skär åt båda håll (det kan bli tidigare). Och något är genuint annorlunda nu: till skillnad från 1950–2010 har vi system som klarar Turing-testet, tar guld på matematikolympiaden och fördubblar sin uppgiftshorisont var sjunde månad (METR). Ng:s Mars-liknelse är från 2015, före transformer-modellerna – raketerna har lyft sedan dess, och Ng själv har mjuknat. Basraten ’AI-hajpen hade fel’ måste uppdateras på den enastående nuvarande förmågan. Slutsats: förutspå inget datum, men argumentera för att riktningen är verklig och utan motstycke.",
+   "video_response": "’De har sagt att AI är på väg i 70 år.’ Sant – och de var usla på att förutsäga när. Men i fabeln dyker vargen faktiskt upp till slut. Dåliga tidsförutsägelser betyder inte att det aldrig händer; de betyder ’lita inte på datumet’. Och den här gången klarar systemen redan prov vi byggde för att vara omöjliga. Vargen är åtminstone i skogen nu.",
+   "verdict": "Delvis. Skeptikern har rätt i att fältet har ett uselt prognosrekord och att specifika datum ska misstros. Svaret har rätt i att opålitlig tidpunkt inte betyder ’aldrig’ och att nuet är empiriskt annorlunda.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Prognosrekordet är verkligen dystert; varje specifik tidslinje i videon är en belastning. Argumentera för riktning och insats, inte datum. (Notera att Armstrong–Sotala-pappret själv bär en rättelse om ett datasetfel – citera försiktigt.)",
+   "related": [
+    "d1q5a2",
+    "d1q6a5",
+    "d2q3a1"
+   ],
+   "sources": [
+    {
+     "title": "Armstrong & Sotala, How We're Predicting AI—or Failing To (2012)",
+     "url": "https://intelligence.org/files/PredictingAI.pdf"
+    },
+    {
+     "title": "AI Impacts, rättelse av Armstrong & Sotala 2012",
+     "url": "https://aiimpacts.org/error-in-armstrong-and-sotala-2012/"
+    },
+    {
+     "title": "Andrew Ng, ’överbefolkning på Mars’ (The Register, 2015)",
+     "url": "https://www.theregister.com/2015/03/19/andrew_ng_baidu_ai/"
+    }
+   ]
+  },
+  {
+   "id": "o25",
+   "part": "meta",
+   "objection": "De verkliga skadorna är jobb, bias och miljö – existentiell risk är en avledning",
+   "who": "Nature (ledare, 27 juni 2023), Timnit Gebru/DAIR; i Sverige: Chalmers-kvartetten (energi/vatten, desinformation, maktkoncentration, jobb), Virginia Dignum, Danica Kragic",
+   "strongest": "Domedagssnacket är ”som en trollkonstnärs handrörelse – det avleder uppmärksamheten från den verkliga frågan: de samhällsskador som AI-system orsakar nu” – bias, övervakning, desinformation, arbetsexploatering, energi och vatten (Nature/DAIR). Fokusera på skadorna som drabbar riktiga människor i dag.",
+   "rebuttal": "Det är inte antingen–eller; det är en falsk motsättning. Samma egenskaper som driver dagens skador (ogenomskinlighet, felspecificerade mål, utplacering före förståelse) är rötterna till den långsiktiga risken – jobbar man på den ena hjälper man den andra. Häggström: ”Detta är en falsk motsättning.” Och resursobalansen går åt motsatt håll: näraliggande AI-etik lägger vida mer pengar än x-risk-arbetet. Bästa draget är att validera de nuvarande skadorna uttryckligen – de är säkra, belagda och underåtgärdade – och sedan visa att de är kontinuerliga med den större risken: anledningen att AI är biased i dag är samma anledning som gör den svår att kontrollera i morgon – vi placerar ut system vi inte förstår. Svenska tittare känner igen sig: Försäkringskassans ’misstankemaskin’ är den minsta versionen av alignment-problemet, i Sverige, med en riktig myndighet.",
+   "video_response": "Kritiker säger: sluta fixera vid science fiction-utrotning när AI redan orsakar bias, jobbförluster och desinformation i dag. De har rätt i att de skadorna är verkliga. Men det är inte antingen–eller – anledningen att AI är biased i dag är samma anledning som gör den svår att kontrollera i morgon: vi placerar ut system vi inte förstår. Laga roten, så hjälper du båda.",
+   "verdict": "Båda har delvis rätt. Skeptikerna har rätt i att nutida skador är verkliga och underåtgärdade, och att x-risk-ramen kan sluka syre. Men ’därför ignorera utrotningsrisk’ följer inte. Bästa draget: validera de nutida skadorna, argumentera sedan för att de är kontinuerliga med den större risken.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Nutida skador är säkra, x-risk är osäker. En video som avfärdar bias/jobb/klimat för att bara fokusera på undergång skulle med rätta kritiseras. Erkänn dem uttryckligen.",
+   "related": [
+    "d2q2a4",
+    "d2q7a2",
+    "d3q3a4"
+   ],
+   "sources": [
+    {
+     "title": "Nature, Stop talking about tomorrow's AI doomsday (ledare, 27 juni 2023)",
+     "url": "https://www.nature.com/articles/d41586-023-02094-7"
+    },
+    {
+     "title": "Ny Teknik, Chalmers-kvartetten: fokusera på verkliga risker (aug 2025)",
+     "url": "https://www.nyteknik.se/debatt/gpt-5-utplanade-inte-manskligheten-dags-att-fokusera-pa-verkliga-risker/4382490"
+    },
+    {
+     "title": "Lighthouse Reports/SvD, Sweden's suspicion machine (Försäkringskassan)",
+     "url": "https://www.lighthousereports.com/investigation/swedens-suspicion-machine/"
+    }
+   ]
+  },
+  {
+   "id": "o26",
+   "part": "meta",
+   "objection": "p(doom)-siffrorna är ju påhittade – 10 % eller 20 % är en känsla klädd som siffra",
+   "who": "Kritiker av p(doom)-jargongen; i Sverige många ledarskribenter; media som missattribuerade Hubingers ’över 10 %’ till ’Anthropic-chefen’",
+   "strongest": "Att sätta ’10 %’ eller ’20 %’ på utplåning är pseudo-precision – det finns ingen data, ingen basrat, ingen modell. Det är en vibb utklädd till en siffra, och siffrorna spänner vilt (0,4 % till 90 %+).",
+   "rebuttal": "Delvis medgivet – de är subjektiva bedömningar, inte mätningar, och ska presenteras så. Men subjektiva sannolikheter under osäkerhet är hur varje seriöst riskbeslut fattas (försäkring, pandemier, kärnsäkerhet, ingenjörsmarginaler). Och konvergensen är signalen: 2023 års enkät med 2 778 AI-forskare gav en median på 5 % för utrotning, med 38–58 % som gav minst 5–10 %; Hinton säger 10–20 %; superprognosmakare 0,4 %, domänexperter 3 % – och ingen grupp kunde flytta den andra. Oenigheten är verklig, men golvet bland trovärdiga uppskattningar ligger inte i närheten av noll. En välresonerad 5–20 % på utrotning är ändå ett skriande nödläge. Fråga: skulle du gå ombord på ett plan med 5 % kraschrisk? Presentera alltid som ett intervall av informerade gissningar, aldrig som fakta, och namnge källan till varje siffra.",
+   "video_response": "’Var kommer 10 % ens ifrån?’ Rättvist – ingen mätte det; det är expertgissningar, och de spänner från under 1 % till över 90 %. Men just det intervallet är poängen: en enkät med nästan 3 000 AI-forskare la medianen för utrotning på 5 %. Skulle du gå ombord på ett plan med 5 % kraschrisk? Du behöver ingen säkerhet för att tacka nej till den flighten.",
+   "verdict": "Skeptikern vinner på ’det här är inte rigorösa mätningar’ – säg det rakt ut. Svaret vinner på ’än sen? En välmotiverad 5–20 % på utrotning är ändå ett nödläge.’ Presentera p(doom) som ett intervall av informerade gissningar.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Siffrorna är mjuka, varierar vilt och falsk precision är ett verkligt fel. Använd intervall och namnge källan; använd aldrig en egen p(doom); rätta gärna den svenska missattribueringen (Hubingers personliga estimat, inte ’Anthropic-chefens’).",
+   "related": [
+    "d2q6a7",
+    "d2q6a4",
+    "d3q7a4"
+   ],
+   "sources": [
+    {
+     "title": "Grace m.fl., 2023 Expert Survey on Progress in AI (median 5 %)",
+     "url": "https://arxiv.org/abs/2401.02843"
+    },
+    {
+     "title": "Forecasting Research Institute, XPT (0,4 % vs 3 %)",
+     "url": "https://forecastingresearch.org/xpt"
+    },
+    {
+     "title": "Wikipedia, P(doom) (spridningen av namngivna siffror)",
+     "url": "https://en.wikipedia.org/wiki/P(doom)"
+    }
+   ]
+  },
+  {
+   "id": "o27",
+   "part": "meta",
+   "objection": "AI 2027 är ju fiktion – och tidslinjerna har redan spruckit",
+   "who": "Gary Marcus (maj 2025), titotal (juni 2025, teknisk kritik av modellen); författarna själva reviderade tidslinjerna",
+   "strongest": "AI 2027 är ett scenario, inte en prognos, och modellen är skakig. titotal visade att ’superexponential’-kurvan ger orimliga resultat (oändliga/negativa tidshorisonter), att nyckelparametrar saknade osäkerhetsanalys och att RE-Bench-anpassningen var ”i stort sett teater”. Marcus: att kedja ihop ~8 osannolika steg gör den samlade sannolikheten ”oskiljbar från noll”. Och det heter ju bokstavligen 2027 – som i princip är här.",
+   "rebuttal": "Skeptikerna vinner på modellens rigor och det specifika datumet – citera aldrig AI 2027 som en prognos eller använd ’till 2027’. Författarna håller själva med om att det är en illustration, inte en bokstavlig förutsägelse, betalade en bounty för kritiken och sköt fram sina egna datum (deras egen självbetygsättning: framstegen gick i ~65–75 % av den takt de förutsagt, ’superhuman coder’ nu prognostiserad kring mars 2027, inte 2025). Men värdet är mekanismen – hur en snabb takeoff kan se ut steg för steg – som inte hänger på exakt datum. Och samma författare (Kokotajlo) förutsåg 2021 påfallande väl vad 2026 skulle innehålla: chatbots, multimodala modeller, AI-propaganda. Ignorera datumet; titta på mekanismen, från någon med ett verkligt facit.",
+   "video_response": "’AI 2027 förutspådde undergång 2027 och det spricker redan.’ Rättvist – behandla det som en illustrerande berättelse, inte en prognos; kritiker hittade verkliga hål i matematiken, och författarna medgav en del. Men samma författare beskrev redan 2021 rätt hur 2026 skulle bli – chatbots, propaganda, allt. Strunta i datumet. Titta på mekanismen, från någon med verkligt facit.",
+   "verdict": "Skeptikerna vinner på den kvantitativa modellen och rubrikdatumet – namnet är nu en belastning. Använd AI 2027 (försiktigt) som en genomarbetad illustration av mekanism, aldrig som en förutsägelse.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Använd aldrig ’AI 2027 förutspår …’ eller ’till 2027’ som seriens egen prognos; titotals kritik av modellen är tekniskt seriös och författarna medgav verkliga fel.",
+   "related": [
+    "d3q3a6",
+    "d1q6a7",
+    "d3q7a5"
+   ],
+   "sources": [
+    {
+     "title": "AI 2027 (scenariot)",
+     "url": "https://ai-2027.com/"
+    },
+    {
+     "title": "titotal, A Deep Critique of AI 2027's Timeline Models (juni 2025)",
+     "url": "https://www.lesswrong.com/posts/PAYfmG2aRbdb74mEp/a-deep-critique-of-ai-2027-s-timeline-models"
+    },
+    {
+     "title": "Gary Marcus, The AI 2027 Scenario: How Realistic Is It?",
+     "url": "https://garymarcus.substack.com/p/the-ai-2027-scenario-how-realistic"
+    },
+    {
+     "title": "Kokotajlo, What 2026 Looks Like (2021, träffsäkerheten)",
+     "url": "https://www.lesswrong.com/posts/6Xgy6CAf2jqHhynHL/what-2026-looks-like"
+    }
+   ]
+  },
+  {
+   "id": "o28",
+   "part": "meta",
+   "objection": "’If Anyone Builds It, Everyone Dies’ är ju grovt övertvärsäker",
+   "who": "Kritiker som själva tar AI-risk på allvar: Will MacAskill, Clara Collier (Asterisk), Scott Alexander (p(doom) <25 %), Adam Becker (Atlantic); i Sverige: Olle Häggström (skulle ha lagt till ’förmodligen’ i titeln)",
+   "strongest": "De starkaste kritikerna är personer som tar AI-risk på allvar. MacAskill: evolutionsanalogin är ”ganska dålig”, plötsliga förmågesprång ”ser nu osannolika ut”, och boken sammanblandar ’imperfekt alignment’ med ’katastrofal misalignment’. Collier: boken når identiska 2008-slutsatser trots allt ML lärt sig. Becker (Atlantic): författarna ”misslyckas med att göra ett evidensbaserat vetenskapligt fall”. Titelns tvärsäkerhet (’everyone dies’) är inte försvarbar.",
+   "rebuttal": "Anta inte bokens tvärsäkerhet – den svaga delen är just titelnivåns visshet. Men den underliggande oron överlever varenda kritiker: MacAskill, Collier och Alexander tycker alla fortfarande att det är farligt oklokt att bygga superintelligens under nuvarande förhållanden. Och här är det avgörande: titta på vad kritikerna själva landar på. Scott Alexander lägger utrotningsrisken under 25 %. Inte noll – 25 %. Collier instämmer i att ”superintelligent AI medför utrotningsrisker”. När de som debunkar den skrämmande boken själva hamnar på en på fem, är det inte lugnande – det är det verkliga argumentet, och det är seriens tes.",
+   "video_response": "Den kända domedagsboken heter ’If Anyone Builds It, Everyone Dies’ – och till och med sympatiskt inställda recensenter säger att den överdriver. Okej. Men se på vad de kritikerna själva tror: Scott Alexander lägger utrotningsrisken under 25 %. Inte noll – 25 %. När de som debunkar den skrämmande boken ändå landar på en på fem, är det inte tröstande. Det är själva argumentet.",
+   "verdict": "Skeptikerna vinner mot bokens visshet (’everyone dies’, punkt). Anta inte IABIED:s tvärsäkerhet. Men notera att dess kritiker landar kring 15–30 % katastrof – vilket är videons verkliga tes.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Boken överdriver, evolutionsanalogin är svag och nanotek-scenen är en belastning; ’everyone dies’ håller inte som påstående. Använd kritikernas egna kvarvarande sannolikheter, inte Yudkowskys visshet.",
+   "related": [
+    "d3q7a1",
+    "d3q7a2",
+    "d3q7a4"
+   ],
+   "sources": [
+    {
+     "title": "Scott Alexander, Book Review: If Anyone Builds It, Everyone Dies",
+     "url": "https://www.astralcodexten.com/p/book-review-if-anyone-builds-it-everyone"
+    },
+    {
+     "title": "Clara Collier, More Was Possible (Asterisk)",
+     "url": "https://asteriskmag.com/issues/11/iabied"
+    },
+    {
+     "title": "MacAskill, A short review of If Anyone Builds It",
+     "url": "https://willmacaskill.substack.com/p/a-short-review-of-if-anyone-builds"
+    },
+    {
+     "title": "Wikipedia, If Anyone Builds It, Everyone Dies (recensionsöversikt)",
+     "url": "https://en.wikipedia.org/wiki/If_Anyone_Builds_It,_Everyone_Dies"
+    }
+   ]
+  },
+  {
+   "id": "o29",
+   "part": "meta",
+   "objection": "Gradvis maktförlust är inte utrotning – kalla det inte det",
+   "who": "Kritiker som anklagar domedagsprofeterna för att sammanblanda utfall; en definitionspoäng som seriens egen noggrannhet bör respektera",
+   "strongest": "Även om AI långsamt tar över ekonomi och styrning är det maktförlust, inte död. Människor kan leva bekvämt, bara inte bestämma. Att kalla det ’utrotning’ är en överdrift.",
+   "rebuttal": "Var precis: det här är delvis en definitionstvist som skeptikern kan vinna, och att sammanblanda utfallen är en överdrift som kostar förtroende. ’Gradual Disempowerment’-pappret (Kulveit m.fl., ICML 2025) argumenterar att det kan sluta i ”mänsklig utrotning eller liknande utfall” – men ’kan kulminera i utrotning’ är rättvist, ’är utrotning’ är det inte. Poängen som står: när ekonomin, staterna och kulturen inte längre behöver människor finns inget som pålitligt skyddar mänskliga intressen, och ingen har en konkret plan för att stoppa det. Permanent, total förlust av kontroll över den egna framtiden – utan garanti att systemen håller oss vid liv – är en existentiell katastrof även om den inte är omedelbar. Skilj ’utrotning’ från ’permanent maktförlust’ och argumentera att båda är oacceptabla.",
+   "video_response": "’Att förlora kontrollen är inte samma sak som att dö.’ Sant – och värt att vara noggrann med. Men tänk dig en värld där ekonomin, regeringarna och kulturen alla drivs av AI och ingen av dem längre behöver människor. Inget är garanterat att hålla oss matade eller fria. Kanske överlever vi som sällskapsdjur. Det är inte utrotning – men ’vi förlorade ratten för gott’ är inget lyckligt slut heller.",
+   "verdict": "Delvis en definitionstvist skeptikern vinner: gradvis maktförlust ≠ säker utrotning, och att blanda ihop dem överdriver. Men ’vi förlorar permanent kontrollen över framtiden till system som inte behöver oss’ är katastrofalt på varje rimlig syn.",
+   "verdict_class": "delvis",
+   "verdict_label": "Delvis",
+   "concede": "Kalla inte varje dåligt scenario ’utrotning’. Säg ’utrotning eller permanent förlust av kontroll’; precisionen bygger förtroende.",
+   "related": [
+    "d2q7a2",
+    "d3q3a4"
+   ],
+   "sources": [
+    {
+     "title": "Kulveit m.fl., Gradual Disempowerment (ICML 2025, ’utrotning eller liknande utfall’)",
+     "url": "https://gradual-disempowerment.ai/"
+    },
+    {
+     "title": "Bengio m.fl., Superintelligent Agents Pose Catastrophic Risks",
+     "url": "https://arxiv.org/abs/2502.15657"
+    }
+   ]
+  },
+  {
+   "id": "o30",
+   "part": "meta",
+   "objection": "Även den bästa skeptikern säger ju bara ’rimlig oro’, inte ’överväldigande sannolikt’",
+   "who": "Katja Grace (AI Impacts, ’Counterarguments to the basic AI x-risk case’, 2022) – den mest intellektuellt ärliga skeptikern, inifrån säkerhetsfältet; Ben Garfinkel (den klassiska Bostrom-argumentationen är för abstrakt)",
+   "strongest": "Grace pekar på verkliga hål i standardargumentet: ’målstyrdhet’ är vagt (träning kan ge ’svaga pseudo-agenter’, inte obevekliga nyttomaximerare); små värdeskillnader behöver inte vara katastrofala; individuell intelligens ≠ makt (mänsklig dominans kommer från ackumulerad kultur och samarbete, inte rå smarthet); och meta-argumentet ’bevisar för mycket’ (samma logik säger att företag borde ha dödat oss). Hennes slutsats: certainty är oberättigad.",
+   "rebuttal": "Skeptikern vinner i praktiken – och det är helt okej, för hennes slutsats ÄR videons ideala slutsats. Grace själv skriver: ”tillräckligt många osäkerheter kan lösa sig i de farliga riktningarna för att existentiell risk från AI är en rimlig oro. Jag ser dock inte för närvarande hur man skulle komma fram till att den är överväldigande sannolik.” Rätt svar är alltså instämmande i epistemiken: grundargumentet har luckor, visshet är oberättigad, och en rimlig oro under djup osäkerhet är exakt rätt slutsats – och den är fortfarande ett skäl till allvarlig försiktighet. Du behöver inte att det är säkert. Du behöver att det är trovärdigt och katastrofalt – och det är det. Använd Grace som mall för kalibrerad ärlighet, inte som ett hot.",
+   "video_response": "Den bästa skeptikern är ingen förnekare – hon är Katja Grace, som jobbar inom AI-säkerhet och skrev den definitiva listan över hål i domedagsargumentet. Hennes slutsats? Vissheten är oberättigad, men oron är ’rimlig’. Det är den ärliga positionen. Du behöver inte att det är säkert. Du behöver att det är troligt och katastrofalt – och det är det.",
+   "verdict": "Skeptikern vinner i praktiken – och det är seriens ideala slutsats. Grace visar att vissheten är oberättigad, inte att oron är det. Använd henne som förebild för kalibrerad framställning.",
+   "verdict_class": "poang",
+   "verdict_label": "Skeptikern har en poäng",
+   "concede": "Nästan varje enskilt steg i det ’klassiska’ argumentet är mer osäkert än domedagsprofeterna antyder. Behandla det som mallen för ärlighet, inte som ett hot – och påstå aldrig att fallet är ’överväldigande sannolikt’.",
+   "related": [
+    "d3q7a4",
+    "d2q6a7",
+    "d3q7a3"
+   ],
+   "sources": [
+    {
+     "title": "Katja Grace, Counterarguments to the basic AI x-risk case (AI Impacts, 2022)",
+     "url": "https://aiimpacts.org/counterarguments-to-the-basic-ai-x-risk-case/"
+    },
+    {
+     "title": "Ben Garfinkel, 80,000 Hours podcast om de klassiska AI-riskargumenten",
+     "url": "https://80000hours.org/podcast/episodes/ben-garfinkel-classic-ai-risk-arguments/"
+    },
+    {
+     "title": "Grace m.fl., 2023 Expert Survey on Progress in AI (median 5 %)",
+     "url": "https://arxiv.org/abs/2401.02843"
+    }
+   ]
+  }
+ ]
+}
