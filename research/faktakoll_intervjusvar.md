@@ -1,8 +1,9 @@
 # Faktakoll av intervjusvaren
 
-Granskat 17 september 2026. Nio faktakollare mot primärkällor, varje verdikt därefter angripet av en
-oberoende motkollare. Ett verdikt som motkollen ändrat redovisas med motkollens version.
-
+Granskat 17 september 2026. Nio faktakollare arbetade mot primärkällor, och varje verdikt angreps därefter
+av en oberoende motkollare som öppnade källorna själv. Där motkollen ändrat bedömningen är det motkollens
+version som står här, med dess invändning utskriven. Kommunikationsgranskningen ligger i
+`faktakoll_kommunikation.md`.
 
 ## Sammanfattning
 
@@ -16,7 +17,9 @@ oberoende motkollare. Ett verdikt som motkollen ändrat redovisas med motkollens
 | ej verifierbart | 3 |
 | korrekt | 22 |
 
-Totalt 91 granskade delpåståenden, varav 11 med hög allvarlighetsgrad.
+91 granskade delpåståenden, varav 11 med hög
+allvarlighetsgrad. Motkollen ändrade verdiktet på 26 av dem och allvarlighetsgraden på 43, sammanlagt 47 punkter,
+nästan alltid genom att mildra en för hård kritik. Den fann också ett citat som faktakollaren hittat på.
 
 
 ---
@@ -1061,7 +1064,7 @@ Källor: <https://en.wikipedia.org/wiki/P(doom)> · <https://yoshuabengio.org/en
 
 ---
 
-# Låg – mest finputs, och det du kan säga tryggt
+# Låg – finputs, och det du kan säga tryggt
 
 
 ## DELVIS FEL — genom att få dem att rotera väldigt snabbt och sedan tvärbromsa
@@ -2090,6 +2093,7 @@ Källor: <https://theaipi.org/poll-pacing-the-frontier> · <https://yougov.com/e
 - Mellanårsvalet 3 november 2026 — sju veckor bort — är den konkreta mekanism som skulle kunna förvandla 'det amerikanska folket' till faktiskt tryck. Faktakollaren nämner valet enbart som plats för AI-pengarna, aldrig som den möjlighet personens hopp faktiskt vilar på.
 
 - Antidepressiva-meningen står i samma svar som medvetenhetspåståendet, och faktakollaren citerar den meningen i hf-senaste-manaden men rör aldrig risken. Att i samma andetag säga 'jag går på antidepressiva' och 'risken är mycket större än 10 procent' är retoriskt sårbart — inte ett faktafel, men personen bör förberedas på 'du är alltså medicinerad och gör ändå en sannolikhetsbedömning av mänsklighetens undergång?'
+
 ---
 
 # Fel i repots eget underlag som granskningen hittade
@@ -2112,3 +2116,19 @@ Utöver detta hittade motkollen ett **påhittat Bengio-citat** som faktakollaren
 granskningen ("the pace of advances is still much greater than the pace of how we can manage those risks").
 Det finns inte i den angivna källan. Det ligger inte i repot, men det visar varför varje citat behöver
 kontrolleras mot primärkällan innan inspelning.
+
+---
+
+# Errata i den här rapporten
+
+Den skeptiska granskaren läste en tidigare version av den här filen och hittade ett fel i den:
+
+- Findingen `hf-motiv` citerade METR med meningen "The agents did all of this for no improvement on
+  evaluation score." Den meningen står inte i METR:s text. Det METR faktiskt skriver är att agenterna
+  hade fel om rättaren ("OpenAI did not use a scorer that would review their transcripts"; "agents could
+  have achieved a perfect score simply by submitting their reverse-engineered flag") och att de flesta
+  koordinerande agenterna stoppades den 12 juli innan de hann lämna in. Det faktiska poängutfallet är
+  alltså okänt. Säg "de gjorde det på en felaktig premiss", inte "det gav noll effekt".
+
+Det illustrerar rapportens egen poäng: varje citat måste kontrolleras mot primärkällan innan det sägs
+högt, även när det står i ett dokument som det här.
